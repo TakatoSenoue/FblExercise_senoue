@@ -1,0 +1,491 @@
+
+###############################################################################
+#  Makefile.project.part.defines
+###############################################################################
+
+# MakeSupport type: Vector
+# Derived product: FlashBootLoader
+# Folder structure: ComponentBased
+#------------------------------------------------------------------------------
+#------------------------- MUST be filled out ---------------------------------
+# Root of the project (dir where the additionally used components reside) from the
+# scope of the makefile location.
+# E.g. makefile is located under
+#    d:\usr\develop\can\PAG\HC08\COSMIC\testsuit\appl
+# and the components like drv, il reside under
+#    d:\usr\develop\can\PAG\HC08\COSMIC
+# The root is given (relative to the Makefile)
+#    ROOT = ..\..
+#------------------------------------------------------------------------------
+ROOT = ..\..\external
+
+#------------------------------------------------------------------------------
+#------------------------- OPTIONAL -------------------------------------------
+# $(PRJROOT) specifies the path to the root directory of your project
+# Set the variable if source or header files outside of $(ROOT)/.. are used
+#------------------------------------------------------------------------------
+# PRJROOT =
+
+#------------------------------------------------------------------------------
+#------------------------- MUST be filled out ---------------------------------
+# $(GENTOOL_DIR) contains the path to your version.info file
+# E.g.:    GENTOOL_DIR = $(ROOT)\Generators\Components
+#------------------------------------------------------------------------------
+GENTOOL_DIR = $(ROOT)\Doc\DeliveryInformation
+
+#------------------------------------------------------------------------------
+#------------------------- MUST be filled out ---------------------------------
+# Version of Makefile.project.part.defines
+#------------------------------------------------------------------------------
+MPPD_VERSION = 32
+
+#------------------------------------------------------------------------------
+#------------------------- MUST be filled out ---------------------------------
+# Path to which *.obj, *.err, *.lst will be moved/generated
+#------------------------------------------------------------------------------
+OBJ_PATH = obj
+ERR_PATH = err
+LST_PATH = lst
+LOG_PATH = log
+LIB_PATH = lib
+
+#------------------------------------------------------------------------------
+#------------------------- MUST be filled out ---------------------------------
+# $(GENDATA_DIR) contains the directory into which the ecu specific data is
+# generated
+# E.g.: GENDATA_DIR = GenData
+#------------------------------------------------------------------------------
+GENDATA_DIR = GenData
+
+#------------------------------------------------------------------------------
+#------------------------- MUST be filled out ---------------------------------
+# $(GENDATA_OS_DIR) contains the directory into which the ecu osspecific data is
+# generated
+# E.g.: GENDATA_OS_DIR = GenDataOs
+#------------------------------------------------------------------------------
+GENDATA_OS_DIR = $(GENDATA_DIR)
+
+#------------------------------------------------------------------------------
+# Subfolder of BSW components (mandatory BSW with konStruct 1.7.xx or newer)
+#------------------------------------------------------------------------------
+GLOBAL_COMP_DIR = Components
+
+#------------------------------------------------------------------------------
+# Subfolder which contains the component specific make files
+#------------------------------------------------------------------------------
+BSW_MAKE_DIR = Make
+
+#------------------------------------------------------------------------------
+#------------------------- MUST be filled out ---------------------------------
+# Define MCAL modules that shall be excluded from build
+#------------------------------------------------------------------------------
+MCAL_EXCLUDE_ADC                                                 = 1
+MCAL_EXCLUDE_CRC                                                 = 1
+MCAL_EXCLUDE_DIO                                                 = 1
+MCAL_EXCLUDE_EEP                                                 = 1
+MCAL_EXCLUDE_FLS                                                 = 1
+MCAL_EXCLUDE_GPT                                                 = 1
+MCAL_EXCLUDE_ICU                                                 = 1
+MCAL_EXCLUDE_MCU                                                 = 1
+MCAL_EXCLUDE_OCU                                                 = 1
+MCAL_EXCLUDE_PORT                                                = 1
+MCAL_EXCLUDE_PWM                                                 = 1
+MCAL_EXCLUDE_SPI                                                 = 1
+MCAL_EXCLUDE_WDG                                                 = 1
+MCAL_EXCLUDE_FEE                                                 = 1
+MCAL_EXCLUDE_CRY                                                 = 1
+MCAL_EXCLUDE_FLSTST                                              = 1
+MCAL_EXCLUDE_RAMTST                                              = 1
+MCAL_EXCLUDE_CORTST                                              = 1
+
+MCAL_EXCLUDE_WDG_DRIVER_A                                        = 1
+MCAL_EXCLUDE_WDG_DRIVER_B                                        = 1
+MCAL_EXCLUDE_WDG_DRIVER_C                                        = 1
+
+
+###############################################################################
+#  Modules
+###############################################################################
+MODULE_LIST_PROJECT                                              += DRVCAN_RH850RSCANFDASR
+MODULE_LIST_PROJECT                                              += DRVEEP_DUMMY
+MODULE_LIST_PROJECT                                              += DRVFLS_RH850F1XREN01HISSUB
+MODULE_LIST_PROJECT                                              += DRVMEM_MEM_30_FBLHIS
+MODULE_LIST_PROJECT                                              += FBLASRSTUBS
+MODULE_LIST_PROJECT                                              += FBLBM_HDR
+MODULE_LIST_PROJECT                                              += FBLBM_MAIN
+MODULE_LIST_PROJECT                                              += FBLDIAG_14229_CORE
+MODULE_LIST_PROJECT                                              += FBLDIAG_14229_UDS2
+MODULE_LIST_PROJECT                                              += FBLDRVCAN_RH850RSCANCRX
+MODULE_LIST_PROJECT                                              += FBLDRVFLASH_RH850RV40HIS_IMPL_MAIN
+MODULE_LIST_PROJECT                                              += FBLLIB_FSM
+MODULE_LIST_PROJECT                                              += FBLLIB_LBT
+MODULE_LIST_PROJECT                                              += FBLLIB_MEM
+MODULE_LIST_PROJECT                                              += FBLLIB_NVPATTERN
+MODULE_LIST_PROJECT                                              += FBLMAIN
+MODULE_LIST_PROJECT                                              += FBLMIO
+MODULE_LIST_PROJECT                                              += FBLVTABAPPL_RH850
+MODULE_LIST_PROJECT                                              += FBLWD
+MODULE_LIST_PROJECT                                              += FBLWRAPPERCOM_PDUR
+MODULE_LIST_PROJECT                                              += FBLWRAPPERFLASH_RH850RV40HIS_IMPL_MAIN
+MODULE_LIST_PROJECT                                              += FBLWRAPPERFLASH_XVIRTUALHIS
+MODULE_LIST_PROJECT                                              += SYSSERVICE_CMPRLZMA
+MODULE_LIST_PROJECT                                              += SYSSERVICE_SECMODHIS
+MODULE_LIST_PROJECT                                              += LIBRARY
+MODULE_LIST_PROJECT                                              += MSR_COMPONENTS
+
+
+DRVCAN_RH850RSCANFDASR_USED                                      = 0
+DRVEEP_DUMMY_USED                                                = 1
+DRVFLS_RH850F1XREN01HISSUB_USED                                  = 0
+DRVMEM_MEM_30_FBLHIS_USED                                        = 0
+FBLASRSTUBS_USED                                                 = 1
+FBLBM_HDR_USED                                                   = 1
+FBLBM_MAIN_USED                                                  = 1
+FBLDIAG_14229_CORE_USED                                          = 1
+FBLDIAG_14229_UDS2_USED                                          = 1
+FBLDRVCAN_RH850RSCANCRX_USED                                     = 1
+FBLDRVFLASH_RH850RV40HIS_IMPL_MAIN_USED                          = 0
+FBLLIB_FSM_USED                                                  = 0
+FBLLIB_LBT_USED                                                  = 1
+FBLLIB_MEM_USED                                                  = 1
+FBLLIB_NVPATTERN_USED                                            = 1
+FBLMAIN_USED                                                     = 1
+FBLMIO_USED                                                      = 1
+FBLVTABAPPL_RH850_USED                                           = 1
+FBLWD_USED                                                       = 1
+FBLWRAPPERCOM_PDUR_USED                                          = 1
+FBLWRAPPERFLASH_RH850RV40HIS_IMPL_MAIN_USED                      = 1
+FBLWRAPPERFLASH_XVIRTUALHIS_USED                                 = 0
+SYSSERVICE_CMPRLZMA_USED                                         = 1
+SYSSERVICE_SECMODHIS_USED                                        = 1
+# LIBRARY files: 1=compile files / 0=use library
+LIBRARY_USED                                                     = 1
+
+# Support for MSR components with makefile
+# Setting MSR_COMPONENTS_USED = 0 will exclude ALL MSR components at once
+MSR_COMPONENTS_USED                                              = 1
+
+DRVCAN__COREASR_USED                                             = 1
+DRVCRYPTO_CRYWRAPPER_USED                                        = 0
+DRVCRYPTO_LIBCV_USED                                             = 1
+GW_ASRPDURCFG5_USED                                              = 1
+IF_ASRIFCAN_USED                                                 = 1
+IF_ASRIFCRY_USED                                                 = 1
+IF_ASRIFFEESMALLSECTOR_USED                                      = 0
+IF_FEE_FLEXNOR_USED                                              = 0
+MCAL_RH850F1XREN03ASR4SUB_USED                                   = 1
+SECURITY_ASRCSM_USED                                             = 1
+SECURITY_VSECPRIM_USED                                           = 1
+SYSSERVICE_ASRDET_USED                                           = 1
+SYSSERVICE_SECMODHIS_USED                                        = 1
+SYSSERVICE_WRAPPERNV_USED                                        = 1
+TP_ASR4TPCAN_USED                                                = 1
+VLINKGEN_USED                                                    = 1
+VSTDLIB_GENERICASR_USED                                          = 1
+
+
+# DrvCan_Rh850RscanfdAsr@Implementation
+DRVCAN_RH850RSCANFDASR_SOURCES                                   += Components\Can\Implementation\Can_Irq.c
+DRVCAN_RH850RSCANFDASR_SOURCES                                   += Components\Can\Implementation\Can.c
+
+# DrvEep_Dummy@Implementation
+DRVEEP_DUMMY_SOURCES                                             += Components\Eep\Implementation\EepIO.c
+
+# DrvFls_Rh850F1xRen01HisSub@Implementation
+DRVFLS_RH850F1XREN01HISSUB_SOURCES                               += ThirdParty\FlashLib\DrvFls_Rh850F1xRen01HisSub\r_fcl_hw_access.c
+DRVFLS_RH850F1XREN01HISSUB_SOURCES                               += ThirdParty\FlashLib\DrvFls_Rh850F1xRen01HisSub\r_fcl_user_if.c
+
+# DrvMem_Mem_30_FblHis@Implementation
+DRVMEM_MEM_30_FBLHIS_SOURCES                                     += Components\Mem_30_FblHis\Implementation\Mem_30_FblHis.c
+
+# FblAsrStubs@Impl_BswStub
+FBLASRSTUBS_SOURCES                                              += Components\FblAsrStubs\Implementation\Dem.c
+
+# FblBm_Hdr@Implementation
+FBLBM_HDR_SOURCES                                                += Components\FblBmHdr\Implementation\bm_hdr.c
+FBLBM_HDR_DATA                                                   += $(GENDATA_DIR)\FblBmHdr_Lcfg.c
+
+# FblBm_Main@Implementation
+# FBLBM_MAIN_SOURCES                                               += Components\FblBm\Implementation\bm_main.c
+FBLBM_MAIN_SOURCES                                               += Components\FblBm\Implementation\bm_shared.c
+FBLBM_MAIN_DATA                                                  += $(GENDATA_DIR)\FblBm_Lcfg.c
+
+# FblDiag_14229_Core@Implementation
+FBLDIAG_14229_CORE_SOURCES                                       += Components\Fbl\Implementation\fbl_diag_core.c
+
+# FblDiag_14229_Uds2@Implementation
+FBLDIAG_14229_UDS2_SOURCES                                       += Components\Fbl\Implementation\fbl_diag_oem.c
+FBLDIAG_14229_UDS2_SOURCES                                       += Components\Fbl\Implementation\fbl_nvpattern_oem.c
+FBLDIAG_14229_UDS2_DATA                                          += $(GENDATA_DIR)\Fbl_Lbt.c
+
+# FblDrvCan_Rh850RscanCrx@Implementation
+FBLDRVCAN_RH850RSCANCRX_SOURCES                                  += Components\Fbl\Implementation\fbl_hw.c
+
+# FblDrvFlash_Rh850Rv40His@Impl_Main
+FBLDRVFLASH_RH850RV40HIS_IMPL_MAIN_SOURCES                       += Components\Flash\Implementation\flashdrv.c
+
+# FblLib_Fsm@Implementation
+FBLLIB_FSM_SOURCES                                               += Components\Fbl\Implementation\fbl_fsm.c
+
+# FblLib_Lbt@Implementation
+FBLLIB_LBT_SOURCES                                               += Components\Fbl\Implementation\fbl_lbt_access.c
+
+# FblLib_Mem@Implementation
+FBLLIB_MEM_SOURCES                                               += Components\Fbl\Implementation\fbl_mem.c
+
+# FblLib_NvPattern@Implementation
+FBLLIB_NVPATTERN_SOURCES                                         += Components\FblNvPattern\Implementation\fbl_nvpattern.c
+
+# FblMain@Implementation
+FBLMAIN_SOURCES                                                  += Components\Fbl\Implementation\fbl_main.c
+
+# FblMio@Implementation
+FBLMIO_SOURCES                                                   += Components\FblMio\Implementation\fbl_mio.c
+FBLMIO_DATA                                                      += $(GENDATA_DIR)\FblMio_Cfg.c
+
+# FblVtabAppl_Rh850@Implementation
+FBLVTABAPPL_RH850_SOURCES                                        += Components\Fbl\Implementation\fbl_applvect.c
+
+# FblWd@Implementation
+FBLWD_SOURCES                                                    += Components\Fbl\Implementation\fbl_wd.c
+
+# FblWrapperCom_PduR@Implementation
+FBLWRAPPERCOM_PDUR_SOURCES                                       += Components\FblCw\Implementation\fbl_cw.c
+FBLWRAPPERCOM_PDUR_DATA                                          += $(GENDATA_DIR)\FblCw_Cfg.c
+FBLWRAPPERCOM_PDUR_DATA                                          += $(GENDATA_DIR)\FblCw_Lcfg.c
+FBLWRAPPERCOM_PDUR_DATA                                          += $(GENDATA_DIR)\FblCw_PBcfg.c
+
+# FblWrapperFlash_Rh850Rv40His@Impl_Main
+FBLWRAPPERFLASH_RH850RV40HIS_IMPL_MAIN_SOURCES                   += Components\Fbl\Implementation\fbl_flio.c
+
+# FblWrapperFlash_XVirtualHis@Implementation
+FBLWRAPPERFLASH_XVIRTUALHIS_SOURCES                              += Components\FblVirtual\Implementation\fbl_virtualio.c
+FBLWRAPPERFLASH_XVIRTUALHIS_DATA                                 += $(GENDATA_DIR)\fbl_virtualio_cfg.c
+
+# SysService_CmprLzma@Impl_Wrapper
+SYSSERVICE_CMPRLZMA_SOURCES                                      += Components\Cmpr_Lzma\Implementation\cmpr_lzma.c
+
+# SysService_CmprLzma@Implementation
+SYSSERVICE_CMPRLZMA_SOURCES                                      += Components\Cmpr_Lzma\Implementation\COMPRESS_LZMA_Decode.c
+
+# SysService_SecModHis@Implementation
+SYSSERVICE_SECMODHIS_SOURCES                                     += Components\SecMod\Implementation\Sec.c
+SYSSERVICE_SECMODHIS_SOURCES                                     += Components\SecMod\Implementation\Sec_Cert.c
+SYSSERVICE_SECMODHIS_SOURCES                                     += Components\SecMod\Implementation\Sec_Crc.c
+SYSSERVICE_SECMODHIS_SOURCES                                     += Components\SecMod\Implementation\Sec_Decryption.c
+SYSSERVICE_SECMODHIS_SOURCES                                     += Components\SecMod\Implementation\Sec_Job.c
+SYSSERVICE_SECMODHIS_SOURCES                                     += Components\SecMod\Implementation\Sec_SeedKey.c
+SYSSERVICE_SECMODHIS_SOURCES                                     += Components\SecMod\Implementation\Sec_Verification.c
+SYSSERVICE_SECMODHIS_DATA                                        += $(GENDATA_DIR)\SecMPar.c
+
+# LIBRARY: all sources that shall/can be delivered as part of a library
+LIBRARY_SOURCES                                                  += 
+
+
+
+# Support for MSR components with makefile
+ifeq ($(DRVCAN__COREASR_USED),1)
+  include $(ROOT)\Components\Can\Make\Can_cfg.mak
+  include $(ROOT)\Components\Can\Make\Can_rules.mak
+  include $(ROOT)\Components\Can\Make\Can_defs.mak
+  include $(ROOT)\Components\Can\Make\Can_check.mak
+endif
+
+ifeq ($(DRVCRYPTO_CRYWRAPPER_USED),1)
+  include $(ROOT)\Components\Crypto_30_CryWrapper\Make\Crypto_30_CryWrapper_cfg.mak
+  include $(ROOT)\Components\Crypto_30_CryWrapper\Make\Crypto_30_CryWrapper_rules.mak
+  include $(ROOT)\Components\Crypto_30_CryWrapper\Make\Crypto_30_CryWrapper_defs.mak
+  include $(ROOT)\Components\Crypto_30_CryWrapper\Make\Crypto_30_CryWrapper_check.mak
+endif
+
+ifeq ($(DRVCRYPTO_LIBCV_USED),1)
+  include $(ROOT)\Components\Crypto_30_LibCv\Make\Crypto_30_LibCv_cfg.mak
+  include $(ROOT)\Components\Crypto_30_LibCv\Make\Crypto_30_LibCv_rules.mak
+  include $(ROOT)\Components\Crypto_30_LibCv\Make\Crypto_30_LibCv_defs.mak
+  include $(ROOT)\Components\Crypto_30_LibCv\Make\Crypto_30_LibCv_check.mak
+endif
+
+ifeq ($(GW_ASRPDURCFG5_USED),1)
+  include $(ROOT)\Components\PduR\Make\PduR_cfg.mak
+  include $(ROOT)\Components\PduR\Make\PduR_rules.mak
+  include $(ROOT)\Components\PduR\Make\PduR_defs.mak
+  include $(ROOT)\Components\PduR\Make\PduR_check.mak
+endif
+
+ifeq ($(IF_ASRIFCAN_USED),1)
+  include $(ROOT)\Components\CanIf\Make\CanIf_cfg.mak
+  include $(ROOT)\Components\CanIf\Make\CanIf_rules.mak
+  include $(ROOT)\Components\CanIf\Make\CanIf_defs.mak
+  include $(ROOT)\Components\CanIf\Make\CanIf_check.mak
+endif
+
+ifeq ($(IF_ASRIFCRY_USED),1)
+  include $(ROOT)\Components\CryIf\Make\CryIf_cfg.mak
+  include $(ROOT)\Components\CryIf\Make\CryIf_rules.mak
+  include $(ROOT)\Components\CryIf\Make\CryIf_defs.mak
+  include $(ROOT)\Components\CryIf\Make\CryIf_check.mak
+endif
+
+ifeq ($(IF_ASRIFFEESMALLSECTOR_USED),1)
+  include $(ROOT)\Components\Fee_30_SmallSector\Make\Fee_30_SmallSector_cfg.mak
+  include $(ROOT)\Components\Fee_30_SmallSector\Make\Fee_30_SmallSector_rules.mak
+  include $(ROOT)\Components\Fee_30_SmallSector\Make\Fee_30_SmallSector_defs.mak
+  include $(ROOT)\Components\Fee_30_SmallSector\Make\Fee_30_SmallSector_check.mak
+endif
+
+ifeq ($(IF_FEE_FLEXNOR_USED),1)
+  include $(ROOT)\Components\Fee_30_FlexNor\Make\Fee_30_FlexNor_cfg.mak
+  include $(ROOT)\Components\Fee_30_FlexNor\Make\Fee_30_FlexNor_rules.mak
+  include $(ROOT)\Components\Fee_30_FlexNor\Make\Fee_30_FlexNor_defs.mak
+  include $(ROOT)\Components\Fee_30_FlexNor\Make\Fee_30_FlexNor_check.mak
+endif
+
+ifeq ($(MCAL_RH850F1XREN03ASR4SUB_USED),1)
+  include $(ROOT)\Components\Mcal_Rh850F1x\Make\Mcal_Rh850F1x_cfg.mak
+  include $(ROOT)\Components\Mcal_Rh850F1x\Make\Mcal_Rh850F1x_rules.mak
+  include $(ROOT)\Components\Mcal_Rh850F1x\Make\Mcal_Rh850F1x_defs.mak
+  include $(ROOT)\Components\Mcal_Rh850F1x\Make\Mcal_Rh850F1x_check.mak
+endif
+
+ifeq ($(SECURITY_ASRCSM_USED),1)
+  include $(ROOT)\Components\Csm\Make\Csm_cfg.mak
+  include $(ROOT)\Components\Csm\Make\Csm_rules.mak
+  include $(ROOT)\Components\Csm\Make\Csm_defs.mak
+  include $(ROOT)\Components\Csm\Make\Csm_check.mak
+endif
+
+ifeq ($(SECURITY_VSECPRIM_USED),1)
+  include $(ROOT)\Components\vSecPrim\Make\vSecPrim_cfg.mak
+  include $(ROOT)\Components\vSecPrim\Make\vSecPrim_rules.mak
+  include $(ROOT)\Components\vSecPrim\Make\vSecPrim_defs.mak
+  include $(ROOT)\Components\vSecPrim\Make\vSecPrim_check.mak
+endif
+
+ifeq ($(SYSSERVICE_ASRDET_USED),1)
+  include $(ROOT)\Components\Det\Make\Det_cfg.mak
+  include $(ROOT)\Components\Det\Make\Det_rules.mak
+  include $(ROOT)\Components\Det\Make\Det_defs.mak
+  include $(ROOT)\Components\Det\Make\Det_check.mak
+endif
+
+ifeq ($(SYSSERVICE_SECMODHIS_USED),1)
+  include $(ROOT)\Components\SecMod\Make\SecMod_cfg.mak
+  include $(ROOT)\Components\SecMod\Make\SecMod_rules.mak
+  include $(ROOT)\Components\SecMod\Make\SecMod_defs.mak
+  include $(ROOT)\Components\SecMod\Make\SecMod_check.mak
+endif
+
+ifeq ($(SYSSERVICE_WRAPPERNV_USED),1)
+  include $(ROOT)\Components\WrapNv\Make\WrapNv_cfg.mak
+  include $(ROOT)\Components\WrapNv\Make\WrapNv_rules.mak
+  include $(ROOT)\Components\WrapNv\Make\WrapNv_defs.mak
+  include $(ROOT)\Components\WrapNv\Make\WrapNv_check.mak
+endif
+
+ifeq ($(TP_ASR4TPCAN_USED),1)
+  include $(ROOT)\Components\CanTp\Make\CanTp_cfg.mak
+  include $(ROOT)\Components\CanTp\Make\CanTp_rules.mak
+  include $(ROOT)\Components\CanTp\Make\CanTp_defs.mak
+  include $(ROOT)\Components\CanTp\Make\CanTp_check.mak
+endif
+
+ifeq ($(VLINKGEN_USED),1)
+  include $(ROOT)\DemoComponents\vLinkGen\Make\vLinkGen_cfg.mak
+  include $(ROOT)\DemoComponents\vLinkGen\Make\vLinkGen_rules.mak
+  include $(ROOT)\DemoComponents\vLinkGen\Make\vLinkGen_defs.mak
+  include $(ROOT)\DemoComponents\vLinkGen\Make\vLinkGen_check.mak
+endif
+
+ifeq ($(VSTDLIB_GENERICASR_USED),1)
+  include $(ROOT)\Components\VStdLib\Make\VStdLib_cfg.mak
+  include $(ROOT)\Components\VStdLib\Make\VStdLib_rules.mak
+  include $(ROOT)\Components\VStdLib\Make\VStdLib_defs.mak
+  include $(ROOT)\Components\VStdLib\Make\VStdLib_check.mak
+endif
+
+MSR_COMPONENTS_SOURCES                                           += $(addprefix $(GLOBAL_COMP_DIR)\,$(CC_FILES_TO_BUILD))
+MSR_COMPONENTS_ASM_SOURCES                                       += $(addprefix $(GLOBAL_COMP_DIR)\,$(ASM_FILES_TO_BUILD))
+MSR_COMPONENTS_DATA                                              += $(GENERATED_SOURCE_FILES)
+ADDITIONAL_INCLUDES                                              += $(addprefix $(ROOT)\$(GLOBAL_COMP_DIR)\,$(CC_INCLUDE_PATH))
+
+# BSW components in internal folder. Enable, if required
+# MSR_COMPONENTS_SOURCES                                         += $(addprefix ..\internal\external\$(GLOBAL_COMP_DIR)\,$(CC_FILES_TO_BUILD))
+# MSR_COMPONENTS_ASM_SOURCES                                     += $(addprefix ..\internal\external\$(GLOBAL_COMP_DIR)\,$(ASM_FILES_TO_BUILD))
+# ADDITIONAL_INCLUDES                                            += $(addprefix ..\internal\external\$(GLOBAL_COMP_DIR)\,$(CC_INCLUDE_PATH))
+
+# Additional BSW include directories
+ADDITIONAL_INCLUDES                                              += $(ROOT)\Components\_Common\Implementation
+ADDITIONAL_INCLUDES                                              += $(ROOT)\Components\Flash\Implementation
+ADDITIONAL_INCLUDES                                              += $(ROOT)\Components\FblBm\Implementation
+
+
+###############################################################################
+#  Application (DemoFblBrs)
+###############################################################################
+# FblKbApi_Frame_Uds1@Implementation
+APP_SOURCE_LST += Source\fbl_ap.c
+
+
+# FblKbApi_FrameDiag_Uds1@Implementation
+APP_SOURCE_LST += Source\fbl_apdi.c
+
+
+# FblKbApi_FrameNv_Uds1@Implementation
+APP_SOURCE_LST += Source\fbl_apnv.c
+
+
+# FblKbApi_FrameWd@Implementation
+APP_SOURCE_LST += Source\fbl_apwd.c
+
+
+# additional application include directories
+ADDITIONAL_INCLUDES += Include
+
+
+# application source files
+APP_SOURCE_LST += Source\BrsHw.c
+APP_SOURCE_LST += Source\BrsHwIntTb.c
+APP_SOURCE_LST += Source\BrsHwStartup.c
+APP_SOURCE_LST += Source\bm_ap.c
+APP_SOURCE_LST += Source\Sec_SeedKeyVendor.c
+APP_SOURCE_LST += Source\BrsMain.c
+APP_SOURCE_LST += Source\BrsMainStartup.c
+APP_SOURCE_LST += Source\BrsMain_Appl.c
+APP_SOURCE_LST += Source\BrsMain_Callout_Stubs.c
+APP_SOURCE_LST += Source\BrsMain_FblOsStub.c
+# APP_SOURCE_LST += Source\BrsHw.c
+# APP_SOURCE_LST += Source\BrsHwIntTb.c
+# APP_SOURCE_LST += Source\BrsHwStartup.c
+# APP_SOURCE_LST += Source\BrsMain.c
+# APP_SOURCE_LST += Source\BrsMainStartup.c
+# APP_SOURCE_LST += Source\BrsMain_Appl.c
+# APP_SOURCE_LST += Source\BrsMain_Callout_Stubs.c
+# APP_SOURCE_LST += Source\BrsMain_FblOsStub.c
+
+APP_SOURCE_LST += $(GENDATA_DIR)\FblBmHdr_Lcfg.c
+
+APP_SOURCE_LST += $(GENDATA_DIR)\FblBm_Lcfg.c
+
+# APP_SOURCE_LST += $(ROOT)\Components\FblBm\Implementation\bm_shared.c
+
+ADDITIONAL_INCLUDES += $(ROOT)\Components\FblBmHdr\Implementation\
+
+# ADDITIONAL_INCLUDES += $(ROOT)\Components\FblAsrStubs\Implementation\
+
+ADDITIONAL_INCLUDES += ..\..\DemoFlashDrv
+
+APP_SOURCE_LST += $(GENDATA_DIR)\Fbl_Lbt.c
+APP_SOURCE_LST += $(GENDATA_DIR)\Fbl_Fbt.c
+APP_SOURCE_LST += $(GENDATA_DIR)\CanTp_Lcfg.c
+APP_SOURCE_LST += $(GENDATA_DIR)\PduR_Lcfg.c
+
+##################################################
+# 不足分追加
+##################################################
+
+# ADDITIONAL_INCLUDES += $(ROOT)\Components\Cmpr_Lzma\Implementation\
+
+# ADDITIONAL_INCLUDES += $(ROOT)\Components\PduR\Implementation\
+
+APP_SOURCE_LST += Source\Appl_Stub.c
+
