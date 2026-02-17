@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2023 rel. 2 (x64) (http://www.altova.com) by  (Vector Informatik GmbH) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="EndTime" type="ST_Time"/>
+	<xs:element name="LogTime" type="ST_Time"/>
+	<xs:element name="StartTime" type="ST_Time"/>
+	<xs:element name="ErrorLevel">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:enumeration value="INFO"/>
+				<xs:enumeration value="WARNING"/>
+				<xs:enumeration value="ERROR"/>
+				<xs:enumeration value="FATAL_ERROR"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="WorkflowMessage">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="LogTime"/>
+				<xs:element ref="ErrorLevel"/>
+				<xs:element ref="ShortDescription"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ShortDescription" type="xs:string"/>
+	<xs:element name="VariantMergerReport">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="StartTime"/>
+				<xs:element ref="WorkflowMessage" maxOccurs="unbounded"/>
+				<xs:element ref="EndTime"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:simpleType name="ST_Time">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="[\d]{4}[-][\d]{2}[-][\d]{2}[T][\d]{2}[:][\d]{2}[:][\d]{2}([\.][\d]{3})?[\+][\d]{2}[:][\d]{2}[\[].+[\]]"/>
+			<!-- 2021-01-26T12:48:47.107+01:00[Europe/Berlin] -->
+		</xs:restriction>
+	</xs:simpleType>
+</xs:schema>

@@ -1,0 +1,502 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_00049.xsd">
+  <AR-PACKAGES>
+    <AR-PACKAGE>
+      <SHORT-NAME>ActiveEcuC</SHORT-NAME>
+      <ELEMENTS>
+        <ECUC-MODULE-CONFIGURATION-VALUES UUID="62d455f1-2765-43d7-b591-79931f963eb7">
+          <SHORT-NAME>WrapNv</SHORT-NAME>
+          <DEFINITION-REF DEST="ECUC-MODULE-DEF">/MICROSAR/WrapNv</DEFINITION-REF>
+          <IMPLEMENTATION-CONFIG-VARIANT>VARIANT-PRE-COMPILE</IMPLEMENTATION-CONFIG-VARIANT>
+          <MODULE-DESCRIPTION-REF DEST="BSW-IMPLEMENTATION">/MICROSAR/WrapNv_Impl</MODULE-DESCRIPTION-REF>
+          <CONTAINERS>
+            <ECUC-CONTAINER-VALUE UUID="9b2e83fd-143b-45b0-b12f-a40a73078396">
+              <SHORT-NAME>WrapNvMemoryLayout</SHORT-NAME>
+              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/WrapNv/WrapNvMemoryLayout</DEFINITION-REF>
+              <SUB-CONTAINERS>
+                <ECUC-CONTAINER-VALUE UUID="bd96b824-8bb9-498f-850b-56b6db7c85f2">
+                  <SHORT-NAME>ProgReqFlag</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/WrapNv/WrapNvMemoryLayout/WrapNvDataBlock</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/MICROSAR/WrapNv/WrapNvMemoryLayout/WrapNvDataBlock/WrapNvDbDescription</DEFINITION-REF>
+                      <VALUE>Programming indication set by application software</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/WrapNv/WrapNvMemoryLayout/WrapNvDataBlock/WrapNvDbIndex</DEFINITION-REF>
+                      <VALUE>0</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/WrapNv/WrapNvMemoryLayout/WrapNvDataBlock/WrapNvDbType</DEFINITION-REF>
+                      <VALUE>SINGLE</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/WrapNv/WrapNvMemoryLayout/WrapNvDataBlock/WrapNvDbCount</DEFINITION-REF>
+                      <VALUE>1</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/WrapNv/WrapNvMemoryLayout/WrapNvDataBlock/WrapNvDbAccessMacro</DEFINITION-REF>
+                      <VALUE>false</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                  <SUB-CONTAINERS>
+                    <ECUC-CONTAINER-VALUE UUID="304544d8-6eb5-4592-bbeb-b2e8402a582a">
+                      <SHORT-NAME>ProgReqFlag</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/WrapNv/WrapNvMemoryLayout/WrapNvDataBlock/WrapNvDataElement</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-TEXTUAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/MICROSAR/WrapNv/WrapNvMemoryLayout/WrapNvDataBlock/WrapNvDataElement/WrapNvDeDescription</DEFINITION-REF>
+                          <VALUE>Programming indication set by application software</VALUE>
+                        </ECUC-TEXTUAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/WrapNv/WrapNvMemoryLayout/WrapNvDataBlock/WrapNvDataElement/WrapNvDeIndex</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/WrapNv/WrapNvMemoryLayout/WrapNvDataBlock/WrapNvDataElement/WrapNvDeLength</DEFINITION-REF>
+                          <VALUE>1</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-TEXTUAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/MICROSAR/WrapNv/WrapNvMemoryLayout/WrapNvDataBlock/WrapNvDataElement/WrapNvDeDefaultValue</DEFINITION-REF>
+                          <VALUE>0xFF</VALUE>
+                        </ECUC-TEXTUAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                  </SUB-CONTAINERS>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE UUID="89f82631-d023-42dc-9242-d22eadde82fe">
+                  <SHORT-NAME>ResetResponseFlag</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/WrapNv/WrapNvMemoryLayout/WrapNvDataBlock</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/MICROSAR/WrapNv/WrapNvMemoryLayout/WrapNvDataBlock/WrapNvDbDescription</DEFINITION-REF>
+                      <VALUE>Flag if a response to a request received before response is required</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/WrapNv/WrapNvMemoryLayout/WrapNvDataBlock/WrapNvDbIndex</DEFINITION-REF>
+                      <VALUE>1</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/WrapNv/WrapNvMemoryLayout/WrapNvDataBlock/WrapNvDbType</DEFINITION-REF>
+                      <VALUE>SINGLE</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/WrapNv/WrapNvMemoryLayout/WrapNvDataBlock/WrapNvDbCount</DEFINITION-REF>
+                      <VALUE>1</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/WrapNv/WrapNvMemoryLayout/WrapNvDataBlock/WrapNvDbAccessMacro</DEFINITION-REF>
+                      <VALUE>false</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                  <SUB-CONTAINERS>
+                    <ECUC-CONTAINER-VALUE UUID="31a79881-bf63-4d88-b566-a23700cb34ba">
+                      <SHORT-NAME>ResetResponseFlag</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/WrapNv/WrapNvMemoryLayout/WrapNvDataBlock/WrapNvDataElement</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-TEXTUAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/MICROSAR/WrapNv/WrapNvMemoryLayout/WrapNvDataBlock/WrapNvDataElement/WrapNvDeDescription</DEFINITION-REF>
+                          <VALUE>Flag if a response to a request received before response is required</VALUE>
+                        </ECUC-TEXTUAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/WrapNv/WrapNvMemoryLayout/WrapNvDataBlock/WrapNvDataElement/WrapNvDeIndex</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/WrapNv/WrapNvMemoryLayout/WrapNvDataBlock/WrapNvDataElement/WrapNvDeLength</DEFINITION-REF>
+                          <VALUE>1</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-TEXTUAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/MICROSAR/WrapNv/WrapNvMemoryLayout/WrapNvDataBlock/WrapNvDataElement/WrapNvDeDefaultValue</DEFINITION-REF>
+                          <VALUE>0xFF</VALUE>
+                        </ECUC-TEXTUAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                  </SUB-CONTAINERS>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE UUID="1f5a85f5-05bf-4a21-bee4-007d4641f4a1">
+                  <SHORT-NAME>ApplValidity</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/WrapNv/WrapNvMemoryLayout/WrapNvDataBlock</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/MICROSAR/WrapNv/WrapNvMemoryLayout/WrapNvDataBlock/WrapNvDbDescription</DEFINITION-REF>
+                      <VALUE>Application validity flag</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/WrapNv/WrapNvMemoryLayout/WrapNvDataBlock/WrapNvDbIndex</DEFINITION-REF>
+                      <VALUE>2</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/WrapNv/WrapNvMemoryLayout/WrapNvDataBlock/WrapNvDbType</DEFINITION-REF>
+                      <VALUE>SINGLE</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/WrapNv/WrapNvMemoryLayout/WrapNvDataBlock/WrapNvDbCount</DEFINITION-REF>
+                      <VALUE>1</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/WrapNv/WrapNvMemoryLayout/WrapNvDataBlock/WrapNvDbAccessMacro</DEFINITION-REF>
+                      <VALUE>false</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                  <SUB-CONTAINERS>
+                    <ECUC-CONTAINER-VALUE UUID="ab5e7866-af7c-4cc9-92d5-ed1f48d21510">
+                      <SHORT-NAME>ApplValidity</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/WrapNv/WrapNvMemoryLayout/WrapNvDataBlock/WrapNvDataElement</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-TEXTUAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/MICROSAR/WrapNv/WrapNvMemoryLayout/WrapNvDataBlock/WrapNvDataElement/WrapNvDeDescription</DEFINITION-REF>
+                          <VALUE>Application validity flag</VALUE>
+                        </ECUC-TEXTUAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/WrapNv/WrapNvMemoryLayout/WrapNvDataBlock/WrapNvDataElement/WrapNvDeIndex</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/WrapNv/WrapNvMemoryLayout/WrapNvDataBlock/WrapNvDataElement/WrapNvDeLength</DEFINITION-REF>
+                          <VALUE>1</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-TEXTUAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/MICROSAR/WrapNv/WrapNvMemoryLayout/WrapNvDataBlock/WrapNvDataElement/WrapNvDeDefaultValue</DEFINITION-REF>
+                          <VALUE>0xFF</VALUE>
+                        </ECUC-TEXTUAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                  </SUB-CONTAINERS>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE UUID="5de10dfa-0f0c-4abe-ac34-0a4b1502e70d">
+                  <SHORT-NAME>ValidityFlags</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/WrapNv/WrapNvMemoryLayout/WrapNvDataBlock</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/MICROSAR/WrapNv/WrapNvMemoryLayout/WrapNvDataBlock/WrapNvDbDescription</DEFINITION-REF>
+                      <VALUE>Logical block validity information</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/WrapNv/WrapNvMemoryLayout/WrapNvDataBlock/WrapNvDbIndex</DEFINITION-REF>
+                      <VALUE>3</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/WrapNv/WrapNvMemoryLayout/WrapNvDataBlock/WrapNvDbType</DEFINITION-REF>
+                      <VALUE>SINGLE</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/WrapNv/WrapNvMemoryLayout/WrapNvDataBlock/WrapNvDbCount</DEFINITION-REF>
+                      <VALUE>1</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/WrapNv/WrapNvMemoryLayout/WrapNvDataBlock/WrapNvDbAccessMacro</DEFINITION-REF>
+                      <VALUE>false</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                  <SUB-CONTAINERS>
+                    <ECUC-CONTAINER-VALUE UUID="a7aba6fb-3ae9-4862-93bf-2130c7222407">
+                      <SHORT-NAME>ValidityFlags</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/WrapNv/WrapNvMemoryLayout/WrapNvDataBlock/WrapNvDataElement</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-TEXTUAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/MICROSAR/WrapNv/WrapNvMemoryLayout/WrapNvDataBlock/WrapNvDataElement/WrapNvDeDescription</DEFINITION-REF>
+                          <VALUE>Logical block validity information</VALUE>
+                        </ECUC-TEXTUAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/WrapNv/WrapNvMemoryLayout/WrapNvDataBlock/WrapNvDataElement/WrapNvDeIndex</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/WrapNv/WrapNvMemoryLayout/WrapNvDataBlock/WrapNvDataElement/WrapNvDeLength</DEFINITION-REF>
+                          <VALUE>1</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-TEXTUAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/MICROSAR/WrapNv/WrapNvMemoryLayout/WrapNvDataBlock/WrapNvDataElement/WrapNvDeDefaultValue</DEFINITION-REF>
+                          <VALUE>0xFF</VALUE>
+                        </ECUC-TEXTUAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                  </SUB-CONTAINERS>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE UUID="1a10886f-1448-4737-be9e-6cc4aea68d87">
+                  <SHORT-NAME>SecAccessDelayFlag</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/WrapNv/WrapNvMemoryLayout/WrapNvDataBlock</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/MICROSAR/WrapNv/WrapNvMemoryLayout/WrapNvDataBlock/WrapNvDbDescription</DEFINITION-REF>
+                      <VALUE>Security Access delay flag</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/WrapNv/WrapNvMemoryLayout/WrapNvDataBlock/WrapNvDbIndex</DEFINITION-REF>
+                      <VALUE>4</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/WrapNv/WrapNvMemoryLayout/WrapNvDataBlock/WrapNvDbType</DEFINITION-REF>
+                      <VALUE>SINGLE</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/WrapNv/WrapNvMemoryLayout/WrapNvDataBlock/WrapNvDbCount</DEFINITION-REF>
+                      <VALUE>1</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/WrapNv/WrapNvMemoryLayout/WrapNvDataBlock/WrapNvDbAccessMacro</DEFINITION-REF>
+                      <VALUE>false</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                  <SUB-CONTAINERS>
+                    <ECUC-CONTAINER-VALUE UUID="bec2dbf4-3f53-467d-8e2b-194b6971c721">
+                      <SHORT-NAME>SecAccessDelayFlag</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/WrapNv/WrapNvMemoryLayout/WrapNvDataBlock/WrapNvDataElement</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-TEXTUAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/MICROSAR/WrapNv/WrapNvMemoryLayout/WrapNvDataBlock/WrapNvDataElement/WrapNvDeDescription</DEFINITION-REF>
+                          <VALUE>Security Access delay flag</VALUE>
+                        </ECUC-TEXTUAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/WrapNv/WrapNvMemoryLayout/WrapNvDataBlock/WrapNvDataElement/WrapNvDeIndex</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/WrapNv/WrapNvMemoryLayout/WrapNvDataBlock/WrapNvDataElement/WrapNvDeLength</DEFINITION-REF>
+                          <VALUE>1</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-TEXTUAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/MICROSAR/WrapNv/WrapNvMemoryLayout/WrapNvDataBlock/WrapNvDataElement/WrapNvDeDefaultValue</DEFINITION-REF>
+                          <VALUE>0xFF</VALUE>
+                        </ECUC-TEXTUAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                  </SUB-CONTAINERS>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE UUID="d4bd74e1-02bd-45fd-895b-7407cf99103a">
+                  <SHORT-NAME>SecAccessInvalidCount</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/WrapNv/WrapNvMemoryLayout/WrapNvDataBlock</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/MICROSAR/WrapNv/WrapNvMemoryLayout/WrapNvDataBlock/WrapNvDbDescription</DEFINITION-REF>
+                      <VALUE>Invalid security access attempt counter</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/WrapNv/WrapNvMemoryLayout/WrapNvDataBlock/WrapNvDbIndex</DEFINITION-REF>
+                      <VALUE>5</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/WrapNv/WrapNvMemoryLayout/WrapNvDataBlock/WrapNvDbType</DEFINITION-REF>
+                      <VALUE>SINGLE</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/WrapNv/WrapNvMemoryLayout/WrapNvDataBlock/WrapNvDbCount</DEFINITION-REF>
+                      <VALUE>1</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/WrapNv/WrapNvMemoryLayout/WrapNvDataBlock/WrapNvDbAccessMacro</DEFINITION-REF>
+                      <VALUE>false</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                  <SUB-CONTAINERS>
+                    <ECUC-CONTAINER-VALUE UUID="ba221018-53a3-4ca8-b703-174a6832047e">
+                      <SHORT-NAME>SecAccessInvalidCount</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/WrapNv/WrapNvMemoryLayout/WrapNvDataBlock/WrapNvDataElement</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-TEXTUAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/MICROSAR/WrapNv/WrapNvMemoryLayout/WrapNvDataBlock/WrapNvDataElement/WrapNvDeDescription</DEFINITION-REF>
+                          <VALUE>Invalid security access attempt counter</VALUE>
+                        </ECUC-TEXTUAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/WrapNv/WrapNvMemoryLayout/WrapNvDataBlock/WrapNvDataElement/WrapNvDeIndex</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/WrapNv/WrapNvMemoryLayout/WrapNvDataBlock/WrapNvDataElement/WrapNvDeLength</DEFINITION-REF>
+                          <VALUE>1</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-TEXTUAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/MICROSAR/WrapNv/WrapNvMemoryLayout/WrapNvDataBlock/WrapNvDataElement/WrapNvDeDefaultValue</DEFINITION-REF>
+                          <VALUE>0xFF</VALUE>
+                        </ECUC-TEXTUAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                  </SUB-CONTAINERS>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE UUID="6552f86a-738c-48ec-8f96-f182e84ac2af">
+                  <SHORT-NAME>DcmDslRxTesterSourceAddr</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/WrapNv/WrapNvMemoryLayout/WrapNvDataBlock</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/MICROSAR/WrapNv/WrapNvMemoryLayout/WrapNvDataBlock/WrapNvDbDescription</DEFINITION-REF>
+                      <VALUE>Diagnostic connection tester source address to synchronize address between application and bootloader</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/WrapNv/WrapNvMemoryLayout/WrapNvDataBlock/WrapNvDbIndex</DEFINITION-REF>
+                      <VALUE>6</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/WrapNv/WrapNvMemoryLayout/WrapNvDataBlock/WrapNvDbType</DEFINITION-REF>
+                      <VALUE>SINGLE</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/WrapNv/WrapNvMemoryLayout/WrapNvDataBlock/WrapNvDbCount</DEFINITION-REF>
+                      <VALUE>1</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/WrapNv/WrapNvMemoryLayout/WrapNvDataBlock/WrapNvDbAccessMacro</DEFINITION-REF>
+                      <VALUE>false</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                  <SUB-CONTAINERS>
+                    <ECUC-CONTAINER-VALUE UUID="122ea2f7-27a6-4ffb-b4a3-834e0a8b4450">
+                      <SHORT-NAME>DcmDslRxTesterSourceAddr</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/WrapNv/WrapNvMemoryLayout/WrapNvDataBlock/WrapNvDataElement</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-TEXTUAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/MICROSAR/WrapNv/WrapNvMemoryLayout/WrapNvDataBlock/WrapNvDataElement/WrapNvDeDescription</DEFINITION-REF>
+                          <VALUE>Diagnostic connection tester source address to synchronize address between application and bootloader</VALUE>
+                        </ECUC-TEXTUAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/WrapNv/WrapNvMemoryLayout/WrapNvDataBlock/WrapNvDataElement/WrapNvDeLength</DEFINITION-REF>
+                          <VALUE>2</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/WrapNv/WrapNvMemoryLayout/WrapNvDataBlock/WrapNvDataElement/WrapNvDeIndex</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-TEXTUAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/MICROSAR/WrapNv/WrapNvMemoryLayout/WrapNvDataBlock/WrapNvDataElement/WrapNvDeDefaultValue</DEFINITION-REF>
+                          <VALUE>0xFF</VALUE>
+                        </ECUC-TEXTUAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                  </SUB-CONTAINERS>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE UUID="37170830-eb23-4a04-82ff-d125b71dcdbd">
+                  <SHORT-NAME>MetaData</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/WrapNv/WrapNvMemoryLayout/WrapNvDataBlock</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/MICROSAR/WrapNv/WrapNvMemoryLayout/WrapNvDataBlock/WrapNvDbDescription</DEFINITION-REF>
+                      <VALUE>Process data stored for each logical block</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/WrapNv/WrapNvMemoryLayout/WrapNvDataBlock/WrapNvDbCount</DEFINITION-REF>
+                      <VALUE>3</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/WrapNv/WrapNvMemoryLayout/WrapNvDataBlock/WrapNvDbIndex</DEFINITION-REF>
+                      <VALUE>16</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/WrapNv/WrapNvMemoryLayout/WrapNvDataBlock/WrapNvDbType</DEFINITION-REF>
+                      <VALUE>TABLE</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/WrapNv/WrapNvMemoryLayout/WrapNvDataBlock/WrapNvDbAccessMacro</DEFINITION-REF>
+                      <VALUE>false</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                  <SUB-CONTAINERS>
+                    <ECUC-CONTAINER-VALUE UUID="e3fb3b43-45bb-4362-b2ff-539c697a742e">
+                      <SHORT-NAME>Fingerprint</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/WrapNv/WrapNvMemoryLayout/WrapNvDataBlock/WrapNvDataElement</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/WrapNv/WrapNvMemoryLayout/WrapNvDataBlock/WrapNvDataElement/WrapNvDeLength</DEFINITION-REF>
+                          <VALUE>9</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-TEXTUAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/MICROSAR/WrapNv/WrapNvMemoryLayout/WrapNvDataBlock/WrapNvDataElement/WrapNvDeDescription</DEFINITION-REF>
+                          <VALUE>Fingerprint (programming date and tester serial number)</VALUE>
+                        </ECUC-TEXTUAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/WrapNv/WrapNvMemoryLayout/WrapNvDataBlock/WrapNvDataElement/WrapNvDeIndex</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-TEXTUAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/MICROSAR/WrapNv/WrapNvMemoryLayout/WrapNvDataBlock/WrapNvDataElement/WrapNvDeDefaultValue</DEFINITION-REF>
+                          <VALUE>0xFF</VALUE>
+                        </ECUC-TEXTUAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE UUID="fee2b614-9c1a-49da-a477-6e551b0b9e71">
+                      <SHORT-NAME>ProgCounter</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/WrapNv/WrapNvMemoryLayout/WrapNvDataBlock/WrapNvDataElement</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/WrapNv/WrapNvMemoryLayout/WrapNvDataBlock/WrapNvDataElement/WrapNvDeLength</DEFINITION-REF>
+                          <VALUE>2</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-TEXTUAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/MICROSAR/WrapNv/WrapNvMemoryLayout/WrapNvDataBlock/WrapNvDataElement/WrapNvDeDescription</DEFINITION-REF>
+                          <VALUE>Successful reprogramming attempts</VALUE>
+                        </ECUC-TEXTUAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/WrapNv/WrapNvMemoryLayout/WrapNvDataBlock/WrapNvDataElement/WrapNvDeIndex</DEFINITION-REF>
+                          <VALUE>1</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-TEXTUAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/MICROSAR/WrapNv/WrapNvMemoryLayout/WrapNvDataBlock/WrapNvDataElement/WrapNvDeDefaultValue</DEFINITION-REF>
+                          <VALUE>0xFF</VALUE>
+                        </ECUC-TEXTUAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE UUID="c947d8a8-0a37-4591-a220-53951e84208d">
+                      <SHORT-NAME>ProgAttempts</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/WrapNv/WrapNvMemoryLayout/WrapNvDataBlock/WrapNvDataElement</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/WrapNv/WrapNvMemoryLayout/WrapNvDataBlock/WrapNvDataElement/WrapNvDeLength</DEFINITION-REF>
+                          <VALUE>2</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-TEXTUAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/MICROSAR/WrapNv/WrapNvMemoryLayout/WrapNvDataBlock/WrapNvDataElement/WrapNvDeDescription</DEFINITION-REF>
+                          <VALUE>Reprogramming attempts</VALUE>
+                        </ECUC-TEXTUAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/WrapNv/WrapNvMemoryLayout/WrapNvDataBlock/WrapNvDataElement/WrapNvDeIndex</DEFINITION-REF>
+                          <VALUE>2</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-TEXTUAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/MICROSAR/WrapNv/WrapNvMemoryLayout/WrapNvDataBlock/WrapNvDataElement/WrapNvDeDefaultValue</DEFINITION-REF>
+                          <VALUE>0xFF</VALUE>
+                        </ECUC-TEXTUAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                  </SUB-CONTAINERS>
+                </ECUC-CONTAINER-VALUE>
+              </SUB-CONTAINERS>
+            </ECUC-CONTAINER-VALUE>
+            <ECUC-CONTAINER-VALUE UUID="e39a0453-1f84-4e03-8e8b-f8e4a4a6961f">
+              <SHORT-NAME>WrapNvGeneral</SHORT-NAME>
+              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/WrapNv/WrapNvGeneral</DEFINITION-REF>
+              <PARAMETER-VALUES>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/WrapNv/WrapNvGeneral/WrapNvMainFunctionPolling</DEFINITION-REF>
+                  <VALUE>true</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/WrapNv/WrapNvGeneral/WrapNvEEPROMBaseAddress</DEFINITION-REF>
+                  <VALUE>4277153800</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/WrapNv/WrapNvGeneral/WrapNvFirstHandle</DEFINITION-REF>
+                  <VALUE>1</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-TEXTUAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/WrapNv/WrapNvGeneral/WrapNvNVMDataHandling</DEFINITION-REF>
+                  <VALUE>EXTERNAL_EEPROM_DRIVER</VALUE>
+                </ECUC-TEXTUAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/WrapNv/WrapNvGeneral/WrapNvDevErrorDetect</DEFINITION-REF>
+                  <VALUE>true</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/WrapNv/WrapNvGeneral/WrapNvHandleNvmApis</DEFINITION-REF>
+                  <VALUE>false</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/WrapNv/WrapNvGeneral/WrapNvAutoSyncRamBlocks</DEFINITION-REF>
+                  <VALUE>false</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+              </PARAMETER-VALUES>
+            </ECUC-CONTAINER-VALUE>
+          </CONTAINERS>
+        </ECUC-MODULE-CONFIGURATION-VALUES>
+      </ELEMENTS>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

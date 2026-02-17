@@ -1,0 +1,456 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ProjectAssistant Version="5.31.24">
+    <General>
+        <Name>DemoFbl</Name>
+        <Version>1.0</Version>
+        <Author>tsenoue</Author>
+    </General>
+    <Environment>
+        <Platform></Platform>
+        <Derivative UUID="B5373785-9369-48F2-8946-2A8E5EC52D91">RH850_1649</Derivative>
+        <Compiler UUID="BBC47DF5-C78B-4E8E-8F86-0EF503FD3198">GreenHills</Compiler>
+        <SipIds>
+            <SipId>CBD1900263_D01</SipId>
+        </SipIds>
+        <TargetType>Real Target</TargetType>
+        <UseCases>
+            <UseCase Vector="MemMap_ARM_Derivative" Value="None"/>
+        </UseCases>
+        <PostBuildLoadableSupport>false</PostBuildLoadableSupport>
+        <PostBuildSelectableSupport>false</PostBuildSelectableSupport>
+        <ModuleSpecificDerivatives/>
+        <ProjectType>
+            <Type>Standard</Type>
+            <Domain></Domain>
+        </ProjectType>
+    </Environment>
+    <Folders>
+        <ECUC>.\Config\ECUC</ECUC>
+        <GenData>.\Appl\GenData</GenData>
+        <GenDataVtt>.\Appl\GenDataVtt</GenDataVtt>
+        <Source>.\Appl\Source</Source>
+        <ServiceComponents>.\Config\ServiceComponents</ServiceComponents>
+        <Logs>.\Log</Logs>
+        <SIP>.\..\..\..\external</SIP>
+        <StartMenu></StartMenu>
+        <ApplicationComponentFolders>
+            <ApplicationComponentFolder>.\Config\ApplicationComponents</ApplicationComponentFolder>
+        </ApplicationComponentFolders>
+        <TimingExtensionFolders>
+            <TimingExtensionFolder>.\Config\TimingExtensions</TimingExtensionFolder>
+        </TimingExtensionFolders>
+        <BswInternalBehaviour>.\Config\InternalBehavior</BswInternalBehaviour>
+        <McData>.\Config\McData</McData>
+        <DefinitionRestriction>.\DefRestrict</DefinitionRestriction>
+        <AUTOSAR>.\Config\AUTOSAR</AUTOSAR>
+    </Folders>
+    <Tools>
+        <LegacyConverter Version="2.0.2.0"/>
+        <DDM Version="28.0.0.7"/>
+    </Tools>
+    <Input>
+        <ECUEX>Config\System\SystemExtract.arxml</ECUEX>
+        <Options>
+            <IgnoreUuidsSystemDescriptionFiles>false</IgnoreUuidsSystemDescriptionFiles>
+            <IgnoreUuidsSystemDescriptionFilesLegacyDcf>false</IgnoreUuidsSystemDescriptionFilesLegacyDcf>
+            <IgnoreUuidsStandardConfigurationFiles>false</IgnoreUuidsStandardConfigurationFiles>
+            <GenerateUpdateReport>true</GenerateUpdateReport>
+            <GenerateXmlUpdateReport>false</GenerateXmlUpdateReport>
+        </Options>
+    </Input>
+    <References>
+        <OEMCommunicationExtract>Config\System\Communication.arxml</OEMCommunicationExtract>
+        <EcucFileReferences/>
+    </References>
+    <EcucSplitter>
+        <Configuration>Config\ECUC\DemoFbl.ecuc.arxml</Configuration>
+        <Splitter File=".\Config\ECUC\DemoFbl_MemMap_MemMap_ecuc.arxml">
+            <Module Name="MemMap"/>
+        </Splitter>
+        <Splitter File=".\Config\ECUC\DemoFbl_Csm_Csm_ecuc.arxml">
+            <Module Name="Csm"/>
+        </Splitter>
+        <Splitter File=".\Config\ECUC\DemoFbl_Can_Can_ecuc.arxml">
+            <Module Name="Can"/>
+        </Splitter>
+        <Splitter File=".\Config\ECUC\DemoFbl_vSecPrim_vSecPrim_ecuc.arxml">
+            <Module Name="vSecPrim"/>
+        </Splitter>
+        <Splitter File=".\Config\ECUC\DemoFbl_Crypto_Crypto_ecuc.arxml">
+            <Module Name="Crypto"/>
+        </Splitter>
+        <Splitter File=".\Config\ECUC\DemoFbl_FblBm_FblBm_ecuc.arxml">
+            <Module Name="FblBm"/>
+        </Splitter>
+        <Splitter File=".\Config\ECUC\DemoFbl_vBaseEnv_vBaseEnv_ecuc.arxml">
+            <Module Name="vBaseEnv"/>
+        </Splitter>
+        <Splitter File=".\Config\ECUC\DemoFbl_FblHal_FblHal_ecuc.arxml">
+            <Module Name="FblHal"/>
+        </Splitter>
+        <Splitter File=".\Config\ECUC\DemoFbl_FblMio_FblMio_ecuc.arxml">
+            <Module Name="FblMio"/>
+        </Splitter>
+        <Splitter File=".\Config\ECUC\DemoFbl_Det_Det_ecuc.arxml">
+            <Module Name="Det"/>
+        </Splitter>
+        <Splitter File=".\Config\ECUC\DemoFbl_EcuC_EcuC_ecuc.arxml">
+            <Module Name="EcuC"/>
+        </Splitter>
+        <Splitter File=".\Config\ECUC\DemoFbl_Fbl_Fbl_ecuc.arxml">
+            <Module Name="Fbl"/>
+        </Splitter>
+        <Splitter File=".\Config\ECUC\DemoFbl_FblBmHdr_FblBmHdr_ecuc.arxml">
+            <Module Name="FblBmHdr"/>
+        </Splitter>
+        <Splitter File=".\Config\ECUC\DemoFbl_Smh_Smh_ecuc.arxml">
+            <Module Name="Smh"/>
+        </Splitter>
+        <Splitter File=".\Config\ECUC\DemoFbl_Dcm_Dcm_ecuc.arxml">
+            <Module Name="Dcm"/>
+        </Splitter>
+        <Splitter File=".\Config\ECUC\DemoFbl_vBRS_vBRS_ecuc.arxml">
+            <Module Name="vBRS"/>
+        </Splitter>
+        <Splitter File=".\Config\ECUC\DemoFbl_vSet_vSet_ecuc.arxml">
+            <Module Name="vSet"/>
+        </Splitter>
+        <Splitter File=".\Config\ECUC\DemoFbl_PduR_PduR_ecuc.arxml">
+            <Module Name="PduR"/>
+        </Splitter>
+        <Splitter File=".\Config\ECUC\DemoFbl_WrapNv_WrapNv_ecuc.arxml">
+            <Module Name="WrapNv"/>
+        </Splitter>
+        <Splitter File=".\Config\ECUC\DemoFbl_CanIf_CanIf_ecuc.arxml">
+            <Module Name="CanIf"/>
+        </Splitter>
+        <Splitter File=".\Config\ECUC\DemoFbl_CanTp_CanTp_ecuc.arxml">
+            <Module Name="CanTp"/>
+        </Splitter>
+        <Splitter File=".\Config\ECUC\DemoFbl_CryIf_CryIf_ecuc.arxml">
+            <Module Name="CryIf"/>
+        </Splitter>
+        <Splitter File=".\Config\ECUC\DemoFbl_FblAsrStubs_FblAsrStubs_ecuc.arxml">
+            <Module Name="FblAsrStubs"/>
+        </Splitter>
+        <Splitter File=".\Config\ECUC\DemoFbl_Os_Os_ecuc.arxml">
+            <Module Name="Os"/>
+        </Splitter>
+        <Splitter File=".\Config\ECUC\DemoFbl_vLinkGen_vLinkGen_ecuc.arxml">
+            <Module Name="vLinkGen"/>
+        </Splitter>
+        <Splitter File=".\Config\ECUC\DemoFbl_Mcu_Mcu_ecuc.arxml">
+            <Module Name="Mcu"/>
+        </Splitter>
+        <OwnFolderForEachSplitter>false</OwnFolderForEachSplitter>
+        <OwnFileForEachInstance>true</OwnFileForEachInstance>
+    </EcucSplitter>
+    <Display LastVersion="5.31.24">
+        <FileSet Id="" CS="631b491b">
+            <File Order="0" EcuInstance="Demo_0_CAN11_FD11" Hash="44929e80b51f5bc64f16614e34329e53" FileCategory="legacy_communication_data">$(DpaProjectFolder)\Config\DemoFBL_Vector_SLP3.dbc</File>
+            <ComControllerMappings>
+                <ComControllerMapping ClusterPath="/Cluster/DemoFBL_Vector_SLP3" DefintionPath="/MICROSAR/Can_Rh850Rscanfd/Can"/>
+            </ComControllerMappings>
+        </FileSet>
+        <Merge>
+            <Path Id="ECU-INSTANCE" ARPath="/ECU/Demo_0_CAN11_FD11"/>
+            <Path Id="SYSTEM" ARPath="/VehicleProject/System"/>
+        </Merge>
+        <SelectiveUpdate Active="false" CS="ecd6502d"/>
+        <ModuleDefinitionMappings>
+            <ModuleDefinitionMapping ModuleConfigName="Adc" ModuleDefinitionRef="/AUTOSAR/EcucDefs/Adc"/>
+            <ModuleDefinitionMapping ModuleConfigName="Arti" ModuleDefinitionRef="/AUTOSAR/EcucDefs/Arti"/>
+            <ModuleDefinitionMapping ModuleConfigName="BswM" ModuleDefinitionRef="/AUTOSAR/EcucDefs/BswM"/>
+            <ModuleDefinitionMapping ModuleConfigName="Cal" ModuleDefinitionRef="/AUTOSAR/EcucDefs/Cal"/>
+            <ModuleDefinitionMapping ModuleConfigName="CanIf" ModuleDefinitionRef="/MICROSAR/CanIf"/>
+            <ModuleDefinitionMapping ModuleConfigName="CanNm" ModuleDefinitionRef="/AUTOSAR/EcucDefs/CanNm"/>
+            <ModuleDefinitionMapping ModuleConfigName="CanSM" ModuleDefinitionRef="/AUTOSAR/EcucDefs/CanSM"/>
+            <ModuleDefinitionMapping ModuleConfigName="CanTSyn" ModuleDefinitionRef="/AUTOSAR/EcucDefs/CanTSyn"/>
+            <ModuleDefinitionMapping ModuleConfigName="CanTp" ModuleDefinitionRef="/MICROSAR/CanTp"/>
+            <ModuleDefinitionMapping ModuleConfigName="Com" ModuleDefinitionRef="/AUTOSAR/EcucDefs/Com"/>
+            <ModuleDefinitionMapping ModuleConfigName="ComM" ModuleDefinitionRef="/AUTOSAR/EcucDefs/ComM"/>
+            <ModuleDefinitionMapping ModuleConfigName="CorTst" ModuleDefinitionRef="/AUTOSAR/EcucDefs/CorTst"/>
+            <ModuleDefinitionMapping ModuleConfigName="Crc" ModuleDefinitionRef="/AUTOSAR/EcucDefs/Crc"/>
+            <ModuleDefinitionMapping ModuleConfigName="CryIf" ModuleDefinitionRef="/MICROSAR/CryIf"/>
+            <ModuleDefinitionMapping ModuleConfigName="Csm" ModuleDefinitionRef="/MICROSAR/Csm"/>
+            <ModuleDefinitionMapping ModuleConfigName="Dbg" ModuleDefinitionRef="/AUTOSAR/EcucDefs/Dbg"/>
+            <ModuleDefinitionMapping ModuleConfigName="Dcm" ModuleDefinitionRef="/MICROSARFBL/Dcm"/>
+            <ModuleDefinitionMapping ModuleConfigName="Dem" ModuleDefinitionRef="/AUTOSAR/EcucDefs/Dem"/>
+            <ModuleDefinitionMapping ModuleConfigName="Det" ModuleDefinitionRef="/MICROSAR/Det"/>
+            <ModuleDefinitionMapping ModuleConfigName="Dio" ModuleDefinitionRef="/AUTOSAR/EcucDefs/Dio"/>
+            <ModuleDefinitionMapping ModuleConfigName="Dlt" ModuleDefinitionRef="/AUTOSAR/EcucDefs/Dlt"/>
+            <ModuleDefinitionMapping ModuleConfigName="DoIP" ModuleDefinitionRef="/AUTOSAR/EcucDefs/DoIP"/>
+            <ModuleDefinitionMapping ModuleConfigName="Ea" ModuleDefinitionRef="/AUTOSAR/EcucDefs/Ea"/>
+            <ModuleDefinitionMapping ModuleConfigName="EcuC" ModuleDefinitionRef="/MICROSAR/EcuC"/>
+            <ModuleDefinitionMapping ModuleConfigName="EcuM" ModuleDefinitionRef="/AUTOSAR/EcucDefs/EcuM"/>
+            <ModuleDefinitionMapping ModuleConfigName="EthIf" ModuleDefinitionRef="/AUTOSAR/EcucDefs/EthIf"/>
+            <ModuleDefinitionMapping ModuleConfigName="EthSM" ModuleDefinitionRef="/AUTOSAR/EcucDefs/EthSM"/>
+            <ModuleDefinitionMapping ModuleConfigName="EthTSyn" ModuleDefinitionRef="/AUTOSAR/EcucDefs/EthTSyn"/>
+            <ModuleDefinitionMapping ModuleConfigName="Fbl" ModuleDefinitionRef="/MICROSAR/Fbl"/>
+            <ModuleDefinitionMapping ModuleConfigName="FblAsrStubs" ModuleDefinitionRef="/MICROSAR/FblAsrStubs"/>
+            <ModuleDefinitionMapping ModuleConfigName="FblBm" ModuleDefinitionRef="/MICROSAR/FblBm"/>
+            <ModuleDefinitionMapping ModuleConfigName="FblBmHdr" ModuleDefinitionRef="/MICROSAR/FblBmHdr"/>
+            <ModuleDefinitionMapping ModuleConfigName="FblHal" ModuleDefinitionRef="/MICROSAR/FblHal"/>
+            <ModuleDefinitionMapping ModuleConfigName="FblMio" ModuleDefinitionRef="/MICROSAR/FblMio"/>
+            <ModuleDefinitionMapping ModuleConfigName="FblVirtual" ModuleDefinitionRef="/MICROSAR/FblVirtual"/>
+            <ModuleDefinitionMapping ModuleConfigName="Fee" ModuleDefinitionRef="/AUTOSAR/EcucDefs/Fee"/>
+            <ModuleDefinitionMapping ModuleConfigName="FiM" ModuleDefinitionRef="/AUTOSAR/EcucDefs/FiM"/>
+            <ModuleDefinitionMapping ModuleConfigName="FlsTst" ModuleDefinitionRef="/AUTOSAR/EcucDefs/FlsTst"/>
+            <ModuleDefinitionMapping ModuleConfigName="FrArTp" ModuleDefinitionRef="/AUTOSAR/EcucDefs/FrArTp"/>
+            <ModuleDefinitionMapping ModuleConfigName="FrIf" ModuleDefinitionRef="/AUTOSAR/EcucDefs/FrIf"/>
+            <ModuleDefinitionMapping ModuleConfigName="FrNm" ModuleDefinitionRef="/AUTOSAR/EcucDefs/FrNm"/>
+            <ModuleDefinitionMapping ModuleConfigName="FrSM" ModuleDefinitionRef="/AUTOSAR/EcucDefs/FrSM"/>
+            <ModuleDefinitionMapping ModuleConfigName="FrTSyn" ModuleDefinitionRef="/AUTOSAR/EcucDefs/FrTSyn"/>
+            <ModuleDefinitionMapping ModuleConfigName="FrTp" ModuleDefinitionRef="/AUTOSAR/EcucDefs/FrTp"/>
+            <ModuleDefinitionMapping ModuleConfigName="Gpt" ModuleDefinitionRef="/AUTOSAR/EcucDefs/Gpt"/>
+            <ModuleDefinitionMapping ModuleConfigName="I2c" ModuleDefinitionRef="/AUTOSAR/EcucDefs/I2c"/>
+            <ModuleDefinitionMapping ModuleConfigName="IdsM" ModuleDefinitionRef="/AUTOSAR/EcucDefs/IdsM"/>
+            <ModuleDefinitionMapping ModuleConfigName="IpduM" ModuleDefinitionRef="/AUTOSAR/EcucDefs/IpduM"/>
+            <ModuleDefinitionMapping ModuleConfigName="J1939Dcm" ModuleDefinitionRef="/AUTOSAR/EcucDefs/J1939Dcm"/>
+            <ModuleDefinitionMapping ModuleConfigName="J1939Nm" ModuleDefinitionRef="/AUTOSAR/EcucDefs/J1939Nm"/>
+            <ModuleDefinitionMapping ModuleConfigName="J1939Rm" ModuleDefinitionRef="/AUTOSAR/EcucDefs/J1939Rm"/>
+            <ModuleDefinitionMapping ModuleConfigName="J1939Tp" ModuleDefinitionRef="/AUTOSAR/EcucDefs/J1939Tp"/>
+            <ModuleDefinitionMapping ModuleConfigName="KeyM" ModuleDefinitionRef="/AUTOSAR/EcucDefs/KeyM"/>
+            <ModuleDefinitionMapping ModuleConfigName="LdCom" ModuleDefinitionRef="/AUTOSAR/EcucDefs/LdCom"/>
+            <ModuleDefinitionMapping ModuleConfigName="LinIf" ModuleDefinitionRef="/AUTOSAR/EcucDefs/LinIf"/>
+            <ModuleDefinitionMapping ModuleConfigName="LinNm" ModuleDefinitionRef="/AUTOSAR/EcucDefs/LinNm"/>
+            <ModuleDefinitionMapping ModuleConfigName="LinSM" ModuleDefinitionRef="/AUTOSAR/EcucDefs/LinSM"/>
+            <ModuleDefinitionMapping ModuleConfigName="LinTp" ModuleDefinitionRef="/AUTOSAR/EcucDefs/LinTp"/>
+            <ModuleDefinitionMapping ModuleConfigName="Mcu" ModuleDefinitionRef="/AUTOSAR/EcucDefs/Mcu"/>
+            <ModuleDefinitionMapping ModuleConfigName="MemAcc" ModuleDefinitionRef="/AUTOSAR/EcucDefs/MemAcc"/>
+            <ModuleDefinitionMapping ModuleConfigName="MemIf" ModuleDefinitionRef="/AUTOSAR/EcucDefs/MemIf"/>
+            <ModuleDefinitionMapping ModuleConfigName="MemMap" ModuleDefinitionRef="/MICROSAR/MemMap"/>
+            <ModuleDefinitionMapping ModuleConfigName="Mirror" ModuleDefinitionRef="/AUTOSAR/EcucDefs/Mirror"/>
+            <ModuleDefinitionMapping ModuleConfigName="Nm" ModuleDefinitionRef="/AUTOSAR/EcucDefs/Nm"/>
+            <ModuleDefinitionMapping ModuleConfigName="NvM" ModuleDefinitionRef="/AUTOSAR/EcucDefs/NvM"/>
+            <ModuleDefinitionMapping ModuleConfigName="Ocu" ModuleDefinitionRef="/AUTOSAR/EcucDefs/Ocu"/>
+            <ModuleDefinitionMapping ModuleConfigName="Os" ModuleDefinitionRef="/AUTOSAR/EcucDefs/Os"/>
+            <ModuleDefinitionMapping ModuleConfigName="PduR" ModuleDefinitionRef="/MICROSAR/PduR"/>
+            <ModuleDefinitionMapping ModuleConfigName="Port" ModuleDefinitionRef="/AUTOSAR/EcucDefs/Port"/>
+            <ModuleDefinitionMapping ModuleConfigName="RamTst" ModuleDefinitionRef="/AUTOSAR/EcucDefs/RamTst"/>
+            <ModuleDefinitionMapping ModuleConfigName="Rte" ModuleDefinitionRef="/AUTOSAR/EcucDefs/Rte"/>
+            <ModuleDefinitionMapping ModuleConfigName="Sd" ModuleDefinitionRef="/AUTOSAR/EcucDefs/Sd"/>
+            <ModuleDefinitionMapping ModuleConfigName="SecOC" ModuleDefinitionRef="/AUTOSAR/EcucDefs/SecOC"/>
+            <ModuleDefinitionMapping ModuleConfigName="Smh" ModuleDefinitionRef="/MICROSAR/Smh"/>
+            <ModuleDefinitionMapping ModuleConfigName="SoAd" ModuleDefinitionRef="/AUTOSAR/EcucDefs/SoAd"/>
+            <ModuleDefinitionMapping ModuleConfigName="SomeIpTp" ModuleDefinitionRef="/AUTOSAR/EcucDefs/SomeIpTp"/>
+            <ModuleDefinitionMapping ModuleConfigName="Spi" ModuleDefinitionRef="/AUTOSAR/EcucDefs/Spi"/>
+            <ModuleDefinitionMapping ModuleConfigName="StbM" ModuleDefinitionRef="/AUTOSAR/EcucDefs/StbM"/>
+            <ModuleDefinitionMapping ModuleConfigName="TcpIp" ModuleDefinitionRef="/AUTOSAR/EcucDefs/TcpIp"/>
+            <ModuleDefinitionMapping ModuleConfigName="UdpNm" ModuleDefinitionRef="/AUTOSAR/EcucDefs/UdpNm"/>
+            <ModuleDefinitionMapping ModuleConfigName="WdgIf" ModuleDefinitionRef="/AUTOSAR/EcucDefs/WdgIf"/>
+            <ModuleDefinitionMapping ModuleConfigName="WdgM" ModuleDefinitionRef="/AUTOSAR/EcucDefs/WdgM"/>
+            <ModuleDefinitionMapping ModuleConfigName="WrapNv" ModuleDefinitionRef="/MICROSAR/WrapNv"/>
+            <ModuleDefinitionMapping ModuleConfigName="Xcp" ModuleDefinitionRef="/AUTOSAR/EcucDefs/Xcp"/>
+            <ModuleDefinitionMapping ModuleConfigName="vBRS" ModuleDefinitionRef="/MICROSAR/vBRS"/>
+            <ModuleDefinitionMapping ModuleConfigName="vBaseEnv" ModuleDefinitionRef="/MICROSAR/vBaseEnv"/>
+            <ModuleDefinitionMapping ModuleConfigName="vLinkGen" ModuleDefinitionRef="/MICROSAR/vLinkGen"/>
+            <ModuleDefinitionMapping ModuleConfigName="vSecPrim" ModuleDefinitionRef="/MICROSAR/vSecPrim"/>
+            <ModuleDefinitionMapping ModuleConfigName="vSet" ModuleDefinitionRef="/MICROSAR/vSet"/>
+        </ModuleDefinitionMappings>
+    </Display>
+    <ECUC>
+        <Active RootPackageName="/ActiveEcuC/ActiveEcuC">Config\ECUC\DemoFbl.ecuc.arxml</Active>
+        <Derived RootPackageName="/InitialEcuC/InitialEcuC">Config\ECUC\DemoFbl.ecuc.Initial.arxml</Derived>
+    </ECUC>
+    <PostBuildLoadable RTEDataFreezeChecksum="" CurrentConfigurationPhase="PRE_COMPILE"/>
+    <DEVSettings>
+        <SelectiveImport>All</SelectiveImport>
+        <ObjectLocking>true</ObjectLocking>
+        <ImportModePreset>true</ImportModePreset>
+    </DEVSettings>
+    <ToolSettings>
+        <Misc>
+            <Settings Name="com.vector.cfg.gen.core.bswmdmigration.internal.service.BswImplVersionPersistor">
+                <Settings Name="|MICROSARFBL|Dcm">
+                    <Setting Value="8.4.0" Name="BswImplSwVersion"/>
+                </Settings>
+                <Settings Name="|MICROSAR|CanIf">
+                    <Setting Value="12.1.0" Name="BswImplSwVersion"/>
+                </Settings>
+                <Settings Name="|MICROSAR|CanTp">
+                    <Setting Value="7.1.0" Name="BswImplSwVersion"/>
+                </Settings>
+                <Settings Name="|MICROSAR|Can_Rh850Rscanfd|Can">
+                    <Setting Value="1.3.0" Name="BswImplSwVersion"/>
+                </Settings>
+                <Settings Name="|MICROSAR|CryIf">
+                    <Setting Value="9.0.2" Name="BswImplSwVersion"/>
+                </Settings>
+                <Settings Name="|MICROSAR|Crypto_30_CryWrapper|Crypto">
+                    <Setting Value="2.4.0" Name="BswImplSwVersion"/>
+                </Settings>
+                <Settings Name="|MICROSAR|Crypto_30_LibCv|Crypto">
+                    <Setting Value="14.8.1" Name="BswImplSwVersion"/>
+                </Settings>
+                <Settings Name="|MICROSAR|Csm">
+                    <Setting Value="9.1.1" Name="BswImplSwVersion"/>
+                </Settings>
+                <Settings Name="|MICROSAR|Det">
+                    <Setting Value="25.0.0" Name="BswImplSwVersion"/>
+                </Settings>
+                <Settings Name="|MICROSAR|EcuC">
+                    <Setting Value="8.0.0" Name="BswImplSwVersion"/>
+                </Settings>
+                <Settings Name="|MICROSAR|Fbl">
+                    <Setting Value="4.0.0" Name="BswImplSwVersion"/>
+                </Settings>
+                <Settings Name="|MICROSAR|FblAsrStubs">
+                    <Setting Value="1.0.0" Name="BswImplSwVersion"/>
+                </Settings>
+                <Settings Name="|MICROSAR|FblBm">
+                    <Setting Value="1.0.0" Name="BswImplSwVersion"/>
+                </Settings>
+                <Settings Name="|MICROSAR|FblBmHdr">
+                    <Setting Value="2.2.0" Name="BswImplSwVersion"/>
+                </Settings>
+                <Settings Name="|MICROSAR|FblHal">
+                    <Setting Value="1.0.0" Name="BswImplSwVersion"/>
+                </Settings>
+                <Settings Name="|MICROSAR|FblMio">
+                    <Setting Value="1.0.0" Name="BswImplSwVersion"/>
+                </Settings>
+                <Settings Name="|MICROSAR|FblVirtual">
+                    <Setting Value="1.0.0" Name="BswImplSwVersion"/>
+                </Settings>
+                <Settings Name="|MICROSAR|Fee_30_FlexNor|Fee">
+                    <Setting Value="4.1.0" Name="BswImplSwVersion"/>
+                </Settings>
+                <Settings Name="|MICROSAR|Fee_30_SmallSector|Fee">
+                    <Setting Value="4.0.1" Name="BswImplSwVersion"/>
+                </Settings>
+                <Settings Name="|MICROSAR|MemMap">
+                    <Setting Value="2.2.1" Name="BswImplSwVersion"/>
+                </Settings>
+                <Settings Name="|MICROSAR|Mem_30_FblHis|Mem">
+                    <Setting Value="1.1.0" Name="BswImplSwVersion"/>
+                </Settings>
+                <Settings Name="|MICROSAR|PduR">
+                    <Setting Value="24.5.0" Name="BswImplSwVersion"/>
+                </Settings>
+                <Settings Name="|MICROSAR|Smh">
+                    <Setting Value="2.9.0" Name="BswImplSwVersion"/>
+                </Settings>
+                <Settings Name="|MICROSAR|WrapNv">
+                    <Setting Value="2.4.0" Name="BswImplSwVersion"/>
+                </Settings>
+                <Settings Name="|MICROSAR|vBRS">
+                    <Setting Value="2.22.0" Name="BswImplSwVersion"/>
+                </Settings>
+                <Settings Name="|MICROSAR|vBaseEnv">
+                    <Setting Value="2.9.0" Name="BswImplSwVersion"/>
+                </Settings>
+                <Settings Name="|MICROSAR|vLinkGen">
+                    <Setting Value="2.13.0" Name="BswImplSwVersion"/>
+                </Settings>
+                <Settings Name="|MICROSAR|vSecPrim">
+                    <Setting Value="11.6.0" Name="BswImplSwVersion"/>
+                </Settings>
+            </Settings>
+            <Settings Name="com.vector.cfg.gen.core.bswmdmigration.internal.service.BswmdSchemaVersionPersistor">
+                <Settings Name="|AUTOSAR|EcucDefs|CanSM">
+                    <Setting Value="4.0.3" Name="BswmdVersion"/>
+                </Settings>
+                <Settings Name="|AUTOSAR|EcucDefs|ComM">
+                    <Setting Value="4.0.3" Name="BswmdVersion"/>
+                </Settings>
+                <Settings Name="|AUTOSAR|EcucDefs|EcuM">
+                    <Setting Value="4.0.3" Name="BswmdVersion"/>
+                </Settings>
+                <Settings Name="|AUTOSAR|EcucDefs|Mcu">
+                    <Setting Value="4.0.3" Name="BswmdVersion"/>
+                </Settings>
+                <Settings Name="|AUTOSAR|EcucDefs|Os">
+                    <Setting Value="4.2.1" Name="BswmdVersion"/>
+                </Settings>
+                <Settings Name="|MICROSARFBL|Dcm">
+                    <Setting Value="4.0.3" Name="BswmdVersion"/>
+                </Settings>
+                <Settings Name="|MICROSAR|CanIf">
+                    <Setting Value="4.0.3" Name="BswmdVersion"/>
+                </Settings>
+                <Settings Name="|MICROSAR|CanTp">
+                    <Setting Value="4.0.3" Name="BswmdVersion"/>
+                </Settings>
+                <Settings Name="|MICROSAR|Can_Rh850Rscanfd|Can">
+                    <Setting Value="4.0.3" Name="BswmdVersion"/>
+                </Settings>
+                <Settings Name="|MICROSAR|CryIf">
+                    <Setting Value="4.3.0" Name="BswmdVersion"/>
+                </Settings>
+                <Settings Name="|MICROSAR|Crypto_30_LibCv|Crypto">
+                    <Setting Value="4.0.3" Name="BswmdVersion"/>
+                </Settings>
+                <Settings Name="|MICROSAR|Csm">
+                    <Setting Value="4.3.0" Name="BswmdVersion"/>
+                </Settings>
+                <Settings Name="|MICROSAR|Det">
+                    <Setting Value="4.5.0.48" Name="BswmdVersion"/>
+                </Settings>
+                <Settings Name="|MICROSAR|EcuC">
+                    <Setting Value="4.9.0.52" Name="BswmdVersion"/>
+                </Settings>
+                <Settings Name="|MICROSAR|Fbl">
+                    <Setting Value="4.0.3" Name="BswmdVersion"/>
+                </Settings>
+                <Settings Name="|MICROSAR|FblAsrStubs">
+                    <Setting Value="4.0.3" Name="BswmdVersion"/>
+                </Settings>
+                <Settings Name="|MICROSAR|FblBm">
+                    <Setting Value="4.3.0" Name="BswmdVersion"/>
+                </Settings>
+                <Settings Name="|MICROSAR|FblBmHdr">
+                    <Setting Value="4.3.0" Name="BswmdVersion"/>
+                </Settings>
+                <Settings Name="|MICROSAR|FblHal">
+                    <Setting Value="4.0.3" Name="BswmdVersion"/>
+                </Settings>
+                <Settings Name="|MICROSAR|FblMio">
+                    <Setting Value="4.0.3" Name="BswmdVersion"/>
+                </Settings>
+                <Settings Name="|MICROSAR|MemMap">
+                    <Setting Value="4.8.0.51" Name="BswmdVersion"/>
+                </Settings>
+                <Settings Name="|MICROSAR|PduR">
+                    <Setting Value="4.0.3" Name="BswmdVersion"/>
+                </Settings>
+                <Settings Name="|MICROSAR|Smh">
+                    <Setting Value="4.0.3" Name="BswmdVersion"/>
+                </Settings>
+                <Settings Name="|MICROSAR|WrapNv">
+                    <Setting Value="4.0.3" Name="BswmdVersion"/>
+                </Settings>
+                <Settings Name="|MICROSAR|vBRS">
+                    <Setting Value="4.0.3" Name="BswmdVersion"/>
+                </Settings>
+                <Settings Name="|MICROSAR|vBaseEnv">
+                    <Setting Value="4.0.3" Name="BswmdVersion"/>
+                </Settings>
+                <Settings Name="|MICROSAR|vLinkGen">
+                    <Setting Value="4.2.1" Name="BswmdVersion"/>
+                </Settings>
+                <Settings Name="|MICROSAR|vSecPrim">
+                    <Setting Value="4.0.3" Name="BswmdVersion"/>
+                </Settings>
+                <Settings Name="|MICROSAR|vSet">
+                    <Setting Value="4.3.0" Name="BswmdVersion"/>
+                </Settings>
+            </Settings>
+            <Settings Name="com.vector.cfg.persistency.internal.folder">
+                <Settings Name="TargetFolderManager"/>
+            </Settings>
+            <Settings Name="com.vector.cfg.workflow.ecuprojectsync.impl.core.EcuProjectSyncStatePersistency">
+                <Settings Name="publishedSubscribed"/>
+            </Settings>
+        </Misc>
+    </ToolSettings>
+    <TopDownServiceConfiguration>
+        <NvM>true</NvM>
+    </TopDownServiceConfiguration>
+    <Miscellaneous>
+        <AmdGenerateDebugData>false</AmdGenerateDebugData>
+        <AutomaticSyncSystemDescription>false</AutomaticSyncSystemDescription>
+    </Miscellaneous>
+    <SwctGeneration/>
+    <ExternalFileSupervision/>
+</ProjectAssistant>

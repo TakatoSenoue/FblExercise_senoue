@@ -1,0 +1,247 @@
+{
+  "fileVersion": "1.0.0",
+  "generationProcessResult": "SUCCESSFUL",
+  "ignoreErrors": false,
+  "modules": [
+    {
+      "identifier": "/MICROSAR/CanIf",
+      "result": "SUCCESSFUL",
+      "generatedFiles": [
+        "../Appl/GenData/CanIf_Can.h",
+        "../Appl/GenData/CanIf_CanTrcv.h",
+        "../Appl/GenData/CanIf_Cfg.h",
+        "../Appl/GenData/CanIf_Lcfg.c",
+        "../Appl/GenData/CanIf_PBcfg.c"
+      ]
+    },
+    {
+      "identifier": "/MICROSAR/CanTp",
+      "result": "SUCCESSFUL",
+      "generatedFiles": [
+        "../Appl/GenData/CanTp_Cfg.h",
+        "../Appl/GenData/CanTp_Lcfg.c",
+        "../Appl/GenData/CanTp_Lcfg.h",
+        "../Appl/GenData/CanTp_PBcfg.c",
+        "../Appl/GenData/CanTp_PBcfg.h",
+        "../Appl/GenData/Make/CanTp_rules_generated.mak"
+      ]
+    },
+    {
+      "identifier": "/MICROSAR/Can_Rh850Rscanfd/Can",
+      "result": "SUCCESSFUL",
+      "generatedFiles": [
+        "../Appl/GenData/Can_Cfg.h",
+        "../Appl/GenData/Can_DrvGeneralTypes.h",
+        "../Appl/GenData/Can_Lcfg.c",
+        "../Appl/GenData/Can_PBcfg.c"
+      ]
+    },
+    {
+      "identifier": "/MICROSAR/CryIf",
+      "result": "SUCCESSFUL",
+      "generatedFiles": [
+        "../Appl/GenData/CryIf_Cfg.c",
+        "../Appl/GenData/CryIf_Cfg.h"
+      ]
+    },
+    {
+      "identifier": "/MICROSAR/Crypto_30_LibCv/Crypto",
+      "result": "SUCCESSFUL",
+      "generatedFiles": [
+        "../Appl/GenData/Crypto_30_LibCv_Cfg.c",
+        "../Appl/GenData/Crypto_30_LibCv_Cfg.h",
+        "../Appl/GenData/Crypto_30_LibCv_Custom_Generated.h"
+      ]
+    },
+    {
+      "identifier": "/MICROSAR/Csm",
+      "result": "SUCCESSFUL",
+      "generatedFiles": [
+        "../Appl/GenData/Csm_Cfg.c",
+        "../Appl/GenData/Csm_Cfg.h",
+        "../Appl/GenData/Csm_Generated_Types.h"
+      ]
+    },
+    {
+      "identifier": "/MICROSAR/Det",
+      "result": "SUCCESSFUL",
+      "generatedFiles": [
+        "../Appl/GenData/Det_Cfg.c",
+        "../Appl/GenData/Det_Cfg.h",
+        "../Appl/GenData/Det_Private_Cfg.h"
+      ]
+    },
+    {
+      "identifier": "/MICROSAR/EcuC",
+      "result": "SUCCESSFUL",
+      "generatedFiles": [
+        "../Appl/GenData/ComStack_Cfg.h"
+      ]
+    },
+    {
+      "identifier": "/MICROSAR/Fbl",
+      "result": "SUCCESSFUL",
+      "generatedFiles": [
+        "../Appl/GenData/Fbl_Cfg.h",
+        "../Appl/GenData/Fbl_Fbt.c",
+        "../Appl/GenData/Fbl_Fbt.h",
+        "../Appl/GenData/Fbl_Lbt.c",
+        "../Appl/GenData/Fbl_Lbt.h"
+      ]
+    },
+    {
+      "identifier": "/MICROSAR/FblAsrStubs",
+      "result": "SUCCESSFUL",
+      "generatedFiles": [
+        "../Appl/GenData/FblAsrStubs_Cfg.h"
+      ]
+    },
+    {
+      "identifier": "/MICROSAR/FblBm",
+      "result": "SUCCESSFUL",
+      "generatedFiles": [
+        "../Appl/GenData/FblBm_Cfg.h",
+        "../Appl/GenData/FblBm_Lcfg.c",
+        "../Appl/GenData/FblBm_Lcfg.h"
+      ]
+    },
+    {
+      "identifier": "/MICROSAR/FblBmHdr",
+      "result": "SUCCESSFUL",
+      "generatedFiles": [
+        "../Appl/GenData/FblBmHdr_Cfg.h",
+        "../Appl/GenData/FblBmHdr_Lcfg.c"
+      ]
+    },
+    {
+      "identifier": "/MICROSAR/FblHal",
+      "result": "SUCCESSFUL",
+      "generatedFiles": [
+        "../Appl/GenData/FblHal_Cfg.h"
+      ]
+    },
+    {
+      "identifier": "/MICROSAR/FblMio",
+      "result": "SUCCESSFUL",
+      "generatedFiles": [
+        "../Appl/GenData/FblMio_Cfg.c",
+        "../Appl/GenData/FblMio_Cfg.h"
+      ]
+    },
+    {
+      "identifier": "/MICROSAR/MemMap",
+      "result": "SUCCESSFUL",
+      "generatedFiles": [
+        "../Appl/GenData/CanIf_MemMap.h",
+        "../Appl/GenData/CanTp_MemMap.h",
+        "../Appl/GenData/CryIf_MemMap.h",
+        "../Appl/GenData/Crypto_30_LibCv_MemMap.h",
+        "../Appl/GenData/Det_MemMap.h",
+        "../Appl/GenData/MemMap_Common.h",
+        "../Appl/GenData/MemMap_Compatibility.h",
+        "../Appl/GenData/PduR_MemMap.h",
+        "../Appl/GenData/vSecPrim_MemMap.h"
+      ]
+    },
+    {
+      "identifier": "/MICROSAR/PduR",
+      "result": "SUCCESSFUL",
+      "generatedFiles": [
+        "../Appl/GenData/Make/PduR_rules_generated.mak",
+        "../Appl/GenData/PduR_CanTp.h",
+        "../Appl/GenData/PduR_Cfg.h",
+        "../Appl/GenData/PduR_Dcm.h",
+        "../Appl/GenData/PduR_Lcfg.c",
+        "../Appl/GenData/PduR_Lcfg.h",
+        "../Appl/GenData/PduR_PBcfg.c",
+        "../Appl/GenData/PduR_PBcfg.h",
+        "../Appl/GenData/PduR_Types.h",
+        "PduR_XMI21.xml"
+      ]
+    },
+    {
+      "identifier": "/MICROSAR/Smh",
+      "result": "SUCCESSFUL",
+      "generatedFiles": [
+        "../Appl/GenData/SecMPar.c",
+        "../Appl/GenData/SecMPar.h",
+        "../Appl/GenData/SecM_cfg.h",
+        "../Appl/Source/SecM_Callout_Stubs.c"
+      ]
+    },
+    {
+      "identifier": "/MICROSAR/WrapNv",
+      "result": "SUCCESSFUL",
+      "generatedFiles": [
+        "../Appl/GenData/WrapNv_Cfg.c",
+        "../Appl/GenData/WrapNv_Cfg.h",
+        "../Appl/Source/WrapNv_Callout_Stubs.c"
+      ]
+    },
+    {
+      "identifier": "/MICROSAR/vBRS",
+      "result": "SUCCESSFUL",
+      "generatedFiles": [
+        "../Appl/GenData/./vBrsCfg.h",
+        "../Appl/GenData/./vBrs_Lcfg.c",
+        "../Appl/GenData/./vBrs_Lcfg.h",
+        "../Appl/Source/../Include/EcuM.h",
+        "../Appl/Source/../Include/EcuM_Cbk.h",
+        "../Appl/Source/../Include/EcuM_Error.h",
+        "../Appl/Source/../Include/EcuM_Generated_Types.h",
+        "../Appl/Source/../Include/SchM_Can.h",
+        "../Appl/Source/../Include/SchM_CanIf.h",
+        "../Appl/Source/../Include/SchM_CanTp.h",
+        "../Appl/Source/../Include/SchM_Crypto_30_LibCv.h",
+        "../Appl/Source/../Include/SchM_Csm.h",
+        "../Appl/Source/../Include/SchM_Det.h",
+        "../Appl/Source/../Include/SchM_PduR.h",
+        "../Appl/Source/../Include/SchM_WrapNv.h",
+        "../Appl/Source/../Makefile.config.generated",
+        "../Appl/Source/./EcuM.c"
+      ]
+    },
+    {
+      "identifier": "/MICROSAR/vLinkGen",
+      "result": "SUCCESSFUL",
+      "generatedFiles": [
+        "../Appl/GenData/vLinkGen_Cfg.h",
+        "../Appl/GenData/vLinkGen_Lcfg.c",
+        "../Appl/GenData/vLinkGen_Lcfg.h",
+        "../Appl/Source/vLinkGen_Template_DemoBm.ld",
+        "../Appl/Source/vLinkGen_Template_vLinkGenVariant_DemoAppl.ld",
+        "../Appl/Source/vLinkGen_Template_vLinkGenVariant_DemoFbl.ld",
+        "../Appl/Source/vLinkGen_Template_vLinkGenVariant_DemoUpd.ld",
+        "../Appl/Source/vLinkGen_Template_vLinkGenVariant_FirstExecInst.ld",
+        "../Appl/Source/vLinkGen_Template_vLinkGenVariant_FlashDrv.ld"
+      ]
+    },
+    {
+      "identifier": "/MICROSAR/vSecPrim",
+      "result": "SUCCESSFUL",
+      "generatedFiles": [
+        "../Appl/GenData/vSecPrim_Cfg.h"
+      ]
+    },
+    {
+      "identifier": "/MICROSAR/vSet",
+      "result": "SUCCESSFUL",
+      "generatedFiles": []
+    },
+    {
+      "identifier": "/MICROSARFBL/Dcm",
+      "result": "SUCCESSFUL",
+      "generatedFiles": [
+        "../Appl/GenData/Dcm_Cbk.h",
+        "../Appl/GenData/FblCw_Cfg.c",
+        "../Appl/GenData/FblCw_Cfg.h",
+        "../Appl/GenData/FblCw_Inc.h",
+        "../Appl/GenData/FblCw_Lcfg.c",
+        "../Appl/GenData/FblCw_Lcfg.h",
+        "../Appl/GenData/FblCw_PBcfg.c",
+        "../Appl/GenData/FblCw_PBcfg.h",
+        "FblCw_XMI21.xml"
+      ]
+    }
+  ]
+}
