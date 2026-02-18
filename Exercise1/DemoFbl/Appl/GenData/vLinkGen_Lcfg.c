@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: vLinkGen_Lcfg.c
- *   Generation Time: 2026-02-16 19:31:47
+ *   Generation Time: 2026-02-18 12:00:46
  *           Project: DemoFbl - Version 1.0
  *          Delivery: CBD1900263_D01
  *      Tool Version: DaVinci Configurator Classic (beta) 5.31.24
@@ -233,12 +233,6 @@ const vLinkGen_MemArea vLinkGen_ZeroInit_Three_Groups[VLINKGEN_CFG_NUM_ZERO_INIT
 /* Section groups to be initialized with zeros in stage HardReset of variant: vLinkGenVariant_DemoFbl */
 const vLinkGen_MemArea vLinkGen_ZeroInit_HardReset_Groups[VLINKGEN_CFG_NUM_ZERO_INIT_HARD_RESET_GROUPS] =
 {
-  { /*  MagicFlagSection  */ 
-     /*  .Start  */ (uint32)_MagicFlagSection_START, 
-     /*  .End  */ (uint32)_MagicFlagSection_LIMIT, 
-     /*  .Core  */ 0u, 
-     /*  .Alignment  */ 4u
-  }, 
   {
     0u, 
     0u, 

@@ -131,11 +131,12 @@ void BrsMain_MemoryInit_StageHardReset_Hook(uint32 coreId)
   #error "To use the feature of preferred PLL and Watchdog initialization, add your DrvWd initialization here manually."
 # endif
 
-# if defined (BRS_ENABLE_PLLCLOCKS)
-    BrsHwPllInitPowerOn();
-# else
-  #error "To use the feature of preferred PLL and Watchdog initialization, add your DrvMcu initialization here manually."
-# endif
+// # if defined (BRS_ENABLE_PLLCLOCKS)
+    // BrsHwPllInitPowerOn();
+// # else
+  // #error "To use the feature of preferred PLL and Watchdog initialization, add your DrvMcu initialization here manually."
+// # endif
+//    BrsHwPllInitPowerOn();
   }
 #endif /*BRS_ENABLE_PREFER_PLL_WATCHDOG_INIT*/
 }

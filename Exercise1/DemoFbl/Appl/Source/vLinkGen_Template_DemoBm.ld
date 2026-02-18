@@ -45,21 +45,6 @@ MEMORY
 
 SECTIONS
 {
-  .BmHeaderSectionGroup ALIGN(4) :
-  {
-    *(.BmHeaderSection)
-  } > BmHeader
-  _BmHeaderSectionGroup_START = ADDR(.BmHeaderSectionGroup);
-  __BmHeaderSectionGroup_START = ADDR(.BmHeaderSectionGroup);
-  _BmHeaderSectionGroup_END = ENDADDR(.BmHeaderSectionGroup) - 1;
-  __BmHeaderSectionGroup_END = ENDADDR(.BmHeaderSectionGroup) - 1;
-  _BmHeaderSectionGroup_LIMIT = ENDADDR(.BmHeaderSectionGroup);
-  __BmHeaderSectionGroup_LIMIT = ENDADDR(.BmHeaderSectionGroup);
-
-  _Bm_BmHeader_ALL_START = _BmHeaderSectionGroup_START;
-  _Bm_BmHeader_ALL_END = _BmHeaderSectionGroup_END;
-  _Bm_BmHeader_ALL_LIMIT = _BmHeaderSectionGroup_LIMIT;
-
   .EepDummySection ALIGN(4) :
   {
     *(.EepDummySection)
@@ -75,21 +60,6 @@ SECTIONS
   _Fbl_EepDummy_Shared_ALL_START = _EepDummySection_START;
   _Fbl_EepDummy_Shared_ALL_END = _EepDummySection_END;
   _Fbl_EepDummy_Shared_ALL_LIMIT = _EepDummySection_LIMIT;
-
-  .FblHeaderSectionGroup ALIGN(4) :
-  {
-    *(.FblHeaderSection)
-  } > FblHeader
-  _FblHeaderSectionGroup_START = ADDR(.FblHeaderSectionGroup);
-  __FblHeaderSectionGroup_START = ADDR(.FblHeaderSectionGroup);
-  _FblHeaderSectionGroup_END = ENDADDR(.FblHeaderSectionGroup) - 1;
-  __FblHeaderSectionGroup_END = ENDADDR(.FblHeaderSectionGroup) - 1;
-  _FblHeaderSectionGroup_LIMIT = ENDADDR(.FblHeaderSectionGroup);
-  __FblHeaderSectionGroup_LIMIT = ENDADDR(.FblHeaderSectionGroup);
-
-  _Fbl_FblHeader_ALL_START = _FblHeaderSectionGroup_START;
-  _Fbl_FblHeader_ALL_END = _FblHeaderSectionGroup_END;
-  _Fbl_FblHeader_ALL_LIMIT = _FblHeaderSectionGroup_LIMIT;
 
   .MagicFlagSection ALIGN(4) :
   {

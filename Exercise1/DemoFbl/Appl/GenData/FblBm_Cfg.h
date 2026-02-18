@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: FblBm_Cfg.h
- *   Generation Time: 2026-02-13 14:11:17
+ *   Generation Time: 2026-02-17 18:28:03
  *           Project: DemoFbl - Version 1.0
  *          Delivery: CBD1900263_D01
  *      Tool Version: DaVinci Configurator Classic (beta) 5.31.24
@@ -54,7 +54,7 @@
 /* Configuration minor version identification */ 
 # define FBLBM_CFG_MINOR_VERSION 5u 
 /* Defines how a corrupted bootloader is handled */ 
-# define FBLBM_ENABLE_UPDATER_FAILSAFE 
+# define FBLBM_DISABLE_UPDATER_FAILSAFE 
 # define FBLBM_DISABLE_UPDATER_FAILSAFE_USER 
 /* Defines how missing keys are handled */ 
 # define FBLBM_DISABLE_SECBOOT_FBL_INIT_KEY 
@@ -65,7 +65,7 @@
 /* Defines whether stand-alone mode is enabled or disabled */ 
 # define FBLBM_ENABLE_STANDALONE_MODE 
 /* Defines the start address of the header */ 
-# define FBLBM_HEADER_ADDRESS 0x0000FEF0u 
+# define FBLBM_HEADER_ADDRESS 0x0000FFE0u 
 /* Defines size of the boottarget list */ 
 # define FBLBM_BOOTTARGETLIST_SIZE 1u 
 /* Defines build context */ 

@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: vLinkGen_Cfg.h
- *   Generation Time: 2026-02-16 19:31:47
+ *   Generation Time: 2026-02-18 12:00:46
  *           Project: DemoFbl - Version 1.0
  *          Delivery: CBD1900263_D01
  *      Tool Version: DaVinci Configurator Classic (beta) 5.31.24
@@ -146,7 +146,7 @@
 # define VLINKGEN_CFG_NUM_ZERO_INIT_ONE_GROUPS        6u 
 # define VLINKGEN_CFG_NUM_ZERO_INIT_TWO_GROUPS        1u 
 # define VLINKGEN_CFG_NUM_ZERO_INIT_THREE_GROUPS      1u 
-# define VLINKGEN_CFG_NUM_ZERO_INIT_HARD_RESET_GROUPS 2u 
+# define VLINKGEN_CFG_NUM_ZERO_INIT_HARD_RESET_GROUPS 1u 
 # define VLINKGEN_CFG_NUM_ZERO_INIT_POWER_ON_GROUPS   3u 
 # define VLINKGEN_CFG_NUM_INIT_ZERO_GROUPS            1u 
 # define VLINKGEN_CFG_NUM_INIT_ONE_GROUPS             9u 

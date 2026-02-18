@@ -116,7 +116,7 @@ BRS_FBL_EXCEPTIONTABLE_IN_RAM = 1
 #------------------------------------------------------------------------------
 # First Execution Instance
 #------------------------------------------------------------------------------
-BRS_FIRST_EXECUTION_INSTANCE = 1
+BRS_FIRST_EXECUTION_INSTANCE = 0
 
 #------------------------------------------------------------------------------
 # Hypervisor Guest Execution Instance

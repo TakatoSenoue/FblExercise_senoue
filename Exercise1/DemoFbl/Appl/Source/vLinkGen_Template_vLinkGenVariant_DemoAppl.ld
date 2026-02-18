@@ -62,6 +62,7 @@ SECTIONS
 
   .MagicFlagSectionNoinit ALIGN(4) :
   {
+    *(.MagicFlagSection)
   } > MagicFlag
   _MagicFlagSectionNoinit_START = ADDR(.MagicFlagSectionNoinit);
   __MagicFlagSectionNoinit_START = ADDR(.MagicFlagSectionNoinit);

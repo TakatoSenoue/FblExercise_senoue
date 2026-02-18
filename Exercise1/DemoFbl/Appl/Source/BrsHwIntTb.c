@@ -303,13 +303,15 @@ BRS_ISR_KEYWORD void BrsHw_CoreExceptionHandler_Ram(void)
  *                 Core Exception Table in RAM                                              *
  *                                                                                          *
  ********************************************************************************************/
-#  if defined (BRS_FIRST_EXECUTION_INSTANCE)
+/* The RAM exception table is only needed for FBL UseCases, if the additional ExceptionTable in RAM support is enabled (vBRSGeneral/vBRSFblSupportExceptionTableInRam) */
+// #  if defined (BRS_FIRST_EXECUTION_INSTANCE)
+//  ___asm(.extern brsStartupEntry)
+// #  else
+//   #error "If this executable is not first execution instance, reset vector must be manually set in RAM exception table to entry address!"
+// /* Replace brsStartupEntry in the RAM exception table with, e.g., 0x20, as this linker symbol will not exist in this case. Then, comment out the error message above.
+//    Adapt the entry point in the Makefile and the STARTUP_LABELs in DaVinci as well. */
+// #  endif
  ___asm(.extern brsStartupEntry)
-#  else
-  #error "If this executable is not first execution instance, reset vector must be manually set in RAM exception table to entry address!"
-/* Replace brsStartupEntry in the RAM exception table with, e.g., 0x20, as this linker symbol will not exist in this case. Then, comment out the error message above.
-   Adapt the entry point in the Makefile and the STARTUP_LABELs in DaVinci as well. */
-#  endif
 
 #define BRS_START_SEC_EXCVECTRAM_CODE
 #define BRS_MEMMAP_INLINE_ASSEMBLER_USED

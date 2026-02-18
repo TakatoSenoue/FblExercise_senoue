@@ -1454,29 +1454,22 @@ tFblResult ApplFblDeinitStreamOutput( V_MEMRAM1 tFblMemStreamProcessing V_MEMRAM
  *  \details     This function is called every millisecond if the Bootloader is in idle state. It is not called during
  *               flash operations.
  **********************************************************************************************************************/
-#include "Can.h"
-
 void ApplFblTask( void )
 {
    static V_MEMRAM1 vuint16 V_MEMRAM2 flashlight;
    static Can_PduType testMessagePdu;
-   // static uint8 myMsg[8] = { 0x11u, 0x22u, 0x33u, 0x44u, 0x55u, 0x66u, 0x77u, 0x88u };
-   static uint8 myMsg[8] = { 0u };
+   static uint8 myMsg[8] = { 0x11u, 0x22u, 0x33u, 0x44u, 0x55u, 0x66u, 0x77u, 0x88u };
 
    flashlight++;
    if (flashlight >= 500u)
    {
       flashlight = 0u;
-
-      for (uint8 i = 1u; i <= sizeof(myMsg); i++)
-      {
-         myMsg[i] = i + i  * 0x10u;
-      }
       /* Set CAN Message */
       testMessagePdu.id = 0x123u;
       testMessagePdu.length = sizeof(myMsg);
-      testMessagePdu.sdu = &myMsg[0u];
+      testMessagePdu.sdu = (uint8*) myMsg;
       testMessagePdu.swPduHandle = 0u;
+
       Can_Write(0u, &testMessagePdu);
    }
 }

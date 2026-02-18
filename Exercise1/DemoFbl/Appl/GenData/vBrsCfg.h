@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: .\vBrsCfg.h
- *   Generation Time: 2026-02-12 11:44:12
+ *   Generation Time: 2026-02-17 18:20:13
  *           Project: DemoFbl - Version 1.0
  *          Delivery: CBD1900263_D01
  *      Tool Version: DaVinci Configurator Classic (beta) 5.31.24
@@ -86,19 +86,8 @@
 /* Use the vLinkGenVariant reference for current executable. */
 #define vLinkGenVariant_DemoFbl
 
-/*******************************************************************************
- First execution instance of BRS
- *******************************************************************************/
-/* Configure, if this executable is the first instance of the system.
-   Set this parameter to enabled, if this instance should contain the
-   brsStartupEntry and initialize the core.
-   Only one single executable of a system with several executables should be the
-   first instance. All other executables are starting with Brs_ApplicationEntry().
-   E.g. in a FBL UseCase with standalone BM, the BM is the first executable and
-   the FBL, Updater, MSR-Application are not.
-   If there is only a single executable in the system, of course this application
-   is also the first one. */
-#define BRS_FIRST_EXECUTION_INSTANCE
+/* Not the first execution instance of BRS within the system.
+   (#define BRS_FIRST_EXECUTION_INSTANCE) */
 
 /* Not a hypervisor guest execution instance of BRS within the system.
    (#define BRS_HYPERVISOR_GUEST_EXECUTION_INSTANCE) */
@@ -176,6 +165,12 @@
 #define BRS_ENABLE_PORT
 /* Enable the handling of Watchdog configuration inside BrsHw. */
 #define BRS_ENABLE_WATCHDOG
+/* Prefer the initialization of PLL and Watchdog, previous to memory
+   initialization.
+   This will cause the depending init calls, previous to init stage One,
+   inside the callout BrsMain_MemoryInit_StageOne_Hook() of
+   BrsMain_Callout_Stubs.c. */
+#define BRS_ENABLE_PREFER_PLL_WATCHDOG_INIT
 
 /*******************************************************************************
  BRS communication interface configuration

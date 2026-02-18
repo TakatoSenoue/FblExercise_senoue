@@ -45,6 +45,21 @@ MEMORY
 
 SECTIONS
 {
+  .BmHeaderSectionGroup ALIGN(4) :
+  {
+    *(.BmHeaderSection)
+  } > BmHeader
+  _BmHeaderSectionGroup_START = ADDR(.BmHeaderSectionGroup);
+  __BmHeaderSectionGroup_START = ADDR(.BmHeaderSectionGroup);
+  _BmHeaderSectionGroup_END = ENDADDR(.BmHeaderSectionGroup) - 1;
+  __BmHeaderSectionGroup_END = ENDADDR(.BmHeaderSectionGroup) - 1;
+  _BmHeaderSectionGroup_LIMIT = ENDADDR(.BmHeaderSectionGroup);
+  __BmHeaderSectionGroup_LIMIT = ENDADDR(.BmHeaderSectionGroup);
+
+  _Bm_BmHeader_ALL_START = _BmHeaderSectionGroup_START;
+  _Bm_BmHeader_ALL_END = _BmHeaderSectionGroup_END;
+  _Bm_BmHeader_ALL_LIMIT = _BmHeaderSectionGroup_LIMIT;
+
   .EepDummySectionNoinit ALIGN(4) :
   {
     *(.EepDummySection)
@@ -75,21 +90,20 @@ SECTIONS
   _Fbl_FblHeader_ALL_END = _FblHeaderSectionGroup_END;
   _Fbl_FblHeader_ALL_LIMIT = _FblHeaderSectionGroup_LIMIT;
 
-  .MagicFlagSection ALIGN(4) :
+  .MagicFlagSectionNoinit ALIGN(4) :
   {
     *(.MagicFlagSection)
-    . = ALIGN(4);
   } > MagicFlag
-  _MagicFlagSection_START = ADDR(.MagicFlagSection);
-  __MagicFlagSection_START = ADDR(.MagicFlagSection);
-  _MagicFlagSection_END = ENDADDR(.MagicFlagSection) - 1;
-  __MagicFlagSection_END = ENDADDR(.MagicFlagSection) - 1;
-  _MagicFlagSection_LIMIT = ENDADDR(.MagicFlagSection);
-  __MagicFlagSection_LIMIT = ENDADDR(.MagicFlagSection);
+  _MagicFlagSectionNoinit_START = ADDR(.MagicFlagSectionNoinit);
+  __MagicFlagSectionNoinit_START = ADDR(.MagicFlagSectionNoinit);
+  _MagicFlagSectionNoinit_END = ENDADDR(.MagicFlagSectionNoinit) - 1;
+  __MagicFlagSectionNoinit_END = ENDADDR(.MagicFlagSectionNoinit) - 1;
+  _MagicFlagSectionNoinit_LIMIT = ENDADDR(.MagicFlagSectionNoinit);
+  __MagicFlagSectionNoinit_LIMIT = ENDADDR(.MagicFlagSectionNoinit);
 
-  _Fbl_MagicFlag_Shared_ALL_START = _MagicFlagSection_START;
-  _Fbl_MagicFlag_Shared_ALL_END = _MagicFlagSection_END;
-  _Fbl_MagicFlag_Shared_ALL_LIMIT = _MagicFlagSection_LIMIT;
+  _Fbl_MagicFlag_SharedNoinit_ALL_START = _MagicFlagSectionNoinit_START;
+  _Fbl_MagicFlag_SharedNoinit_ALL_END = _MagicFlagSectionNoinit_END;
+  _Fbl_MagicFlag_SharedNoinit_ALL_LIMIT = _MagicFlagSectionNoinit_LIMIT;
 
   .Fbl_PP ALIGN(4) :
   {

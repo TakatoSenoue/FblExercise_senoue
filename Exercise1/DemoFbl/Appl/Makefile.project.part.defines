@@ -140,7 +140,7 @@ DRVFLS_RH850F1XREN01HISSUB_USED                                  = 0
 DRVMEM_MEM_30_FBLHIS_USED                                        = 0
 FBLASRSTUBS_USED                                                 = 1
 FBLBM_HDR_USED                                                   = 1
-FBLBM_MAIN_USED                                                  = 1
+FBLBM_MAIN_USED                                                  = 0
 FBLDIAG_14229_CORE_USED                                          = 1
 FBLDIAG_14229_UDS2_USED                                          = 1
 FBLDRVCAN_RH850RSCANCRX_USED                                     = 1
@@ -206,7 +206,7 @@ FBLBM_HDR_SOURCES                                                += Components\F
 FBLBM_HDR_DATA                                                   += $(GENDATA_DIR)\FblBmHdr_Lcfg.c
 
 # FblBm_Main@Implementation
-# FBLBM_MAIN_SOURCES                                               += Components\FblBm\Implementation\bm_main.c
+FBLBM_MAIN_SOURCES                                               += Components\FblBm\Implementation\bm_main.c
 FBLBM_MAIN_SOURCES                                               += Components\FblBm\Implementation\bm_shared.c
 FBLBM_MAIN_DATA                                                  += $(GENDATA_DIR)\FblBm_Lcfg.c
 
@@ -416,7 +416,9 @@ ADDITIONAL_INCLUDES                                              += $(addprefix 
 # Additional BSW include directories
 ADDITIONAL_INCLUDES                                              += $(ROOT)\Components\_Common\Implementation
 ADDITIONAL_INCLUDES                                              += $(ROOT)\Components\Flash\Implementation
+ADDITIONAL_INCLUDES                                              += $(ROOT)\Components\Fbl\Implementation
 ADDITIONAL_INCLUDES                                              += $(ROOT)\Components\FblBm\Implementation
+ADDITIONAL_INCLUDES                                              += $(ROOT)\Components\FblCw\Implementation
 
 
 ###############################################################################
@@ -446,7 +448,7 @@ ADDITIONAL_INCLUDES += Include
 APP_SOURCE_LST += Source\BrsHw.c
 APP_SOURCE_LST += Source\BrsHwIntTb.c
 APP_SOURCE_LST += Source\BrsHwStartup.c
-APP_SOURCE_LST += Source\bm_ap.c
+# APP_SOURCE_LST += Source\bm_ap.c
 APP_SOURCE_LST += Source\Sec_SeedKeyVendor.c
 APP_SOURCE_LST += Source\BrsMain.c
 APP_SOURCE_LST += Source\BrsMainStartup.c
@@ -466,7 +468,7 @@ APP_SOURCE_LST += $(GENDATA_DIR)\FblBmHdr_Lcfg.c
 
 APP_SOURCE_LST += $(GENDATA_DIR)\FblBm_Lcfg.c
 
-# APP_SOURCE_LST += $(ROOT)\Components\FblBm\Implementation\bm_shared.c
+APP_SOURCE_LST += $(ROOT)\Components\FblBm\Implementation\bm_shared.c
 
 ADDITIONAL_INCLUDES += $(ROOT)\Components\FblBmHdr\Implementation\
 
@@ -477,6 +479,7 @@ ADDITIONAL_INCLUDES += ..\..\DemoFlashDrv
 APP_SOURCE_LST += $(GENDATA_DIR)\Fbl_Lbt.c
 APP_SOURCE_LST += $(GENDATA_DIR)\Fbl_Fbt.c
 APP_SOURCE_LST += $(GENDATA_DIR)\CanTp_Lcfg.c
+APP_SOURCE_LST += $(GENDATA_DIR)\PduR_Lcfg.c
 APP_SOURCE_LST += $(GENDATA_DIR)\PduR_Lcfg.c
 
 ##################################################
