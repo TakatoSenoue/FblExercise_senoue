@@ -21,7 +21,7 @@
 # #  FILE DESCRIPTION
 # #  -------------------------------------------------------------------------------------------------------------------
 # #              File: PduR_rules_generated.mak
-# #   Generation Time: 2026-02-18 12:00:46
+# #   Generation Time: 2026-02-19 16:50:59
 # #           Project: DemoFbl - Version 1.0
 # #          Delivery: CBD1900263_D01
 # #      Tool Version: DaVinci Configurator Classic (beta) 5.31.24

@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: FblHal_Cfg.h
- *   Generation Time: 2026-02-17 14:09:27
+ *   Generation Time: 2026-02-19 16:50:59
  *           Project: DemoFbl - Version 1.0
  *          Delivery: CBD1900263_D01
  *      Tool Version: DaVinci Configurator Classic (beta) 5.31.24
@@ -49,7 +49,7 @@
 #define FBL_FLASH_ENABLE_ECC_SAFE_READ 
 #define FLASH_SIZE                     12288 
 #define FBL_TIMER_RELOAD_VALUE         39999 
-#define FBL_TIMER_PRESCALER_VALUE      0 
+#define FBL_TIMER_PRESCALER_VALUE      1 
 
 /* Derivative Specific Defines */
 #define V_COMP_GHS

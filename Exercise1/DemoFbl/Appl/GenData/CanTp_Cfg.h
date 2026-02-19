@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: CanTp_Cfg.h
- *   Generation Time: 2026-02-17 14:09:26
+ *   Generation Time: 2026-02-19 16:50:59
  *           Project: DemoFbl - Version 1.0
  *          Delivery: CBD1900263_D01
  *      Tool Version: DaVinci Configurator Classic (beta) 5.31.24
@@ -120,7 +120,7 @@
 #define CANTP_NUM_TX_CHANNELS                                                  CanTp_GetSizeOfTxState() 
 #define CANTP_NUM_TX_SDUS                                                      2 
 #define CANTP_PDU_METADATA_LENGTH                                              4u 
-#define CANTP_SIZEOF_PDULENGTHTYPE                                             2 
+#define CANTP_SIZEOF_PDULENGTHTYPE                                             4 
 #define CanTpSinglePartitionMemory                                             0u                          /* Symbolic name value of CanTp memory for 'single partition' use case. */ 
 
  /*  Communication Type  */ 
