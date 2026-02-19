@@ -1257,7 +1257,7 @@
                 </ECUC-TEXTUAL-PARAM-VALUE>
                 <ECUC-TEXTUAL-PARAM-VALUE>
                   <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/EcuC/EcucPduCollection/PduLengthTypeEnum</DEFINITION-REF>
-                  <VALUE>UINT16</VALUE>
+                  <VALUE>UINT32</VALUE>
                 </ECUC-TEXTUAL-PARAM-VALUE>
               </PARAMETER-VALUES>
               <SUB-CONTAINERS>

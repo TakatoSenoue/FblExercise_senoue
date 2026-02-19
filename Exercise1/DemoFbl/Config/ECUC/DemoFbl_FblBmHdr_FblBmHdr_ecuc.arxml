@@ -51,7 +51,7 @@
                       <PARAMETER-VALUES>
                         <ECUC-TEXTUAL-PARAM-VALUE>
                           <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/MICROSAR/FblBmHdr/FblBmHdrHeader/FblBmHdrVariant/FblBmHdrAuthenticationHeader/FblBmHdrAuthenticationHeaderAddress</DEFINITION-REF>
-                          <VALUE>0x4F400</VALUE>
+                          <VALUE>0x0004F400</VALUE>
                         </ECUC-TEXTUAL-PARAM-VALUE>
                       </PARAMETER-VALUES>
                     </ECUC-CONTAINER-VALUE>

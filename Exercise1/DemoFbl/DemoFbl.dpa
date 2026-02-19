@@ -106,9 +106,6 @@
         <Splitter File=".\Config\ECUC\DemoFbl_Smh_Smh_ecuc.arxml">
             <Module Name="Smh"/>
         </Splitter>
-        <Splitter File=".\Config\ECUC\DemoFbl_Dcm_Dcm_ecuc.arxml">
-            <Module Name="Dcm"/>
-        </Splitter>
         <Splitter File=".\Config\ECUC\DemoFbl_vBRS_vBRS_ecuc.arxml">
             <Module Name="vBRS"/>
         </Splitter>
@@ -141,6 +138,9 @@
         </Splitter>
         <Splitter File=".\Config\ECUC\DemoFbl_Mcu_Mcu_ecuc.arxml">
             <Module Name="Mcu"/>
+        </Splitter>
+        <Splitter File=".\Config\ECUC\DemoFbl_Dcm_Dcm_ecuc.arxml">
+            <Module Name="Dcm"/>
         </Splitter>
         <OwnFolderForEachSplitter>false</OwnFolderForEachSplitter>
         <OwnFileForEachInstance>true</OwnFileForEachInstance>
