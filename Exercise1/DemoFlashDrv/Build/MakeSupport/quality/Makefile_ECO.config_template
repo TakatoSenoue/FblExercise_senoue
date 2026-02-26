@@ -1,0 +1,63 @@
+#   Template for compiler specific preprocessing options
+
+# Specify the necessary compiler settings.
+#
+# 1.) General compiler settings:
+#
+# The mandatory "ECO_COMPILER_DEFINE_PREPROCESSING_SYMBOL_FLAG" variable
+# specifies the compiler flag that is needed to define a preprocessing symbol
+# for a source code file (catchword: counterpart to the "#define" directive).
+#
+# 2.) Compiler settings that are needed to preprocess a source file:
+#
+# The following variables are provided to handle the various preprocessing
+# modes of different compilers:
+#
+# The mandatory "ECO_COMPILER_PREPROCESS_FILE_FLAGS" variable specifies the
+# compiler flags/switches that are needed to preprocess a source file (instead
+# of compiling it). These flags/switches must be specified in a way so that
+# a preprocessed file contains "line directives".
+# Some compilers provide a flag/switch to preserve "comments" during
+# preprocessing -> do not specify such a flag/switch here.
+#
+# The optional "ECO_COMPILER_PREPROCESS_FILE_OUTPUT_FILE_FLAG" variable
+# specifies the compiler flag/switch that specifies an explicit output file
+# for a preprocessed file. If the compiler does not provide such a flag/switch
+# then do not use this variable but use the
+# "ECO_COMPILER_PREPROCESSED_FILE_FIXED_OUTPUT_PATH" variable instead.
+#
+# The optional "ECO_COMPILER_PREPROCESSED_FILE_FIXED_OUTPUT_PATH" variable
+# specifies the output path for a preprocessed file if the compiler uses a
+# fixed output path (e.g.: ".\"). If the compiler provides a flag/switch that
+# allows to specify an explicit output file then do not use this variable but
+# use the "ECO_COMPILER_PREPROCESS_FILE_OUTPUT_FILE_FLAG" variable instead.
+#
+# The optional "ECO_COMPILER_PREPROCESSED_FILE_EXTENSION" variable specifies the
+# fixed extension of a preprocessed file (e.g.: "i"). The usage of this variable
+# is only necessary if the "ECO_COMPILER_PREPROCESS_FILE_OUTPUT_FILE_FLAG"
+# variable cannot be used.
+#
+# The optional "ECO_CPP_SUPPORTS_DEPEND" variable specified whether
+# compiler supports depend files generation
+#
+# The optional "ECO_COMPILER_PREPROCESS_STDOUT" variable specified whether
+# the output should be taken from stdout redirection.
+# If set ECO_COMPILER_PREPROCESSED_FILE_FIXED_OUTPUT_PATH and
+# ECO_COMPILER_PREPROCESSED_FILE_EXTENSION must be set
+#
+#
+# Example (in case of an existing "Microsoft_Visual_2005" compiler):
+#   ECO_COMPILER_DEFINE_PREPROCESSING_SYMBOL_FLAG    = /D
+#   ECO_COMPILER_PREPROCESS_FILE_FLAGS               = /P
+#   ECO_COMPILER_PREPROCESSED_FILE_FIXED_OUTPUT_PATH = .
+#   ECO_COMPILER_PREPROCESSED_FILE_EXTENSION         = i
+#   ECO_CPP_SUPPORTS_DEPEND                          = 0
+#   ECO_COMPILER_PREPROCESS_STDOUT                   = 0
+#
+ECO_COMPILER_DEFINE_PREPROCESSING_SYMBOL_FLAG    =
+ECO_COMPILER_PREPROCESS_FILE_FLAGS               =
+ECO_COMPILER_PREPROCESS_FILE_OUTPUT_FILE_FLAG    =
+ECO_COMPILER_PREPROCESSED_FILE_FIXED_OUTPUT_PATH =
+ECO_COMPILER_PREPROCESSED_FILE_EXTENSION         =
+ECO_CPP_SUPPORTS_DEPEND                          = 1
+ECO_COMPILER_PREPROCESS_STDOUT                   = 1

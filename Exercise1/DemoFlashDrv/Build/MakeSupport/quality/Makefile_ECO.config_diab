@@ -1,0 +1,14 @@
+#
+#   WindRiver Diab compiler
+#
+#  for detailed documentation please have a look at
+#  Makefile_ECO.config_template
+#
+#  Please test options
+#
+ECO_COMPILER_DEFINE_PREPROCESSING_SYMBOL_FLAG    = -D
+ECO_COMPILER_PREPROCESS_FILE_FLAGS               = -P
+ECO_COMPILER_PREPROCESSED_FILE_FIXED_OUTPUT_PATH = .
+ECO_COMPILER_PREPROCESSED_FILE_EXTENSION         = i
+ECO_CPP_SUPPORTS_DEPEND                          = 1
+ECO_COMPILER_PREPROCESS_STDOUT                   = 1

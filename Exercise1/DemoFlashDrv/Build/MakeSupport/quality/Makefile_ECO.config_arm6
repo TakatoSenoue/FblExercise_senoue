@@ -1,0 +1,18 @@
+#
+#   ARM6 compiler
+#
+#  for detailed documentation please have a look at
+#  Makefile_ECO.config_template
+#
+#  Please test options
+#
+ECO_COMPILER_DEFINE_PREPROCESSING_SYMBOL_FLAG    = -D
+ECO_COMPILER_PREPROCESS_FILE_FLAGS               = -E
+#For AArch32 targets
+#ECO_COMPILER_PREPROCESS_FILE_FLAGS               += --target=arm-arm-none-eabi
+#For AArch64 targets
+#ECO_COMPILER_PREPROCESS_FILE_FLAGS               += --target=aarch64-arm-none-eabi
+ECO_COMPILER_PREPROCESSED_FILE_FIXED_OUTPUT_PATH = .
+ECO_COMPILER_PREPROCESSED_FILE_EXTENSION         = i
+ECO_CPP_SUPPORTS_DEPEND                          = 1
+ECO_COMPILER_PREPROCESS_STDOUT                   = 1

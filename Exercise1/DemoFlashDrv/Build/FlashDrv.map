@@ -1,0 +1,1068 @@
+Host OS:	Windows
+ELXR: Copyright (C) 1983-2015 Green Hills Software.  All Rights Reserved.
+Release: Compiler v2015.1.7
+Build Directory: [Directory] BTOWORKER6:c:/build_2015_1_bto/2015-10-21.2100-2015_1_bto/win64-comp
+Revision: [VCInfo] http://toolsvc/branches/release-branch-70-bto/src@544153 (built by build)
+Revision Date: Thu Oct 22 16:05:22 2015
+
+Release Date: Thu Oct 22 16:32:31 2015
+
+
+
+
+Load Map Thu Feb 19 11:00:47 2026
+Image Summary
+
+  Section              Base      Size(hex)    Size(dec)  SecOffs
+  .FlashDrvHeaderSectionGroup febfc000  00000014           20   0000160
+  .Startup_Code_Core1  00000720  00000000            0   0000000
+  .R_FCL_DATA          febfc014  000000ac          172   0000000
+  .bss                 febfc0c0  00000000            0   0000000
+  .data                febfc0c0  00000000            0   0000000
+  .sbss                febfc0c0  00000010           16   0000000
+  .sdabase             febfc0d0  00000000            0   0000000
+  .sdata               febfc0d0  00000000            0   0000000
+  .stack               febfc0d0  00000000            0   0000000
+  .zbss                febfc0d0  00000000            0   0000000
+  .zdata               febfc0d0  00000000            0   0000000
+  .R_FCL_CODE_RAM      febfc0d0  000010f0         4336   0000174
+  .R_FCL_CODE_RAM_EX_PROT febfd1c0  00000050           80   0001264
+  .R_FCL_CODE_ROM      febfd210  000002ac          684   00012b4
+  .R_FCL_CODE_ROMRAM   febfd4bc  00000840         2112   0001560
+  .R_FCL_CODE_USR      febfdcfc  00000000            0   0000000
+  .R_FCL_CODE_USRINT   febfdcfc  00000000            0   0000000
+  .R_FCL_CONST         febfdcfc  00000014           20   0001da0
+  .FlashDrv_RamCodeSection febfdd10  00000000            0   0000000
+  .FlashDrv_RamConstSection febfdd10  00000000            0   0000000
+  .rodata              febfdd10  00000000            0   0000000
+  .rosdata             febfdd10  00000000            0   0000000
+  .rozdata             febfdd10  00000000            0   0000000
+  .sdata2              febfdd10  00000000            0   0000000
+  .secinfo             febfdd10  00000000            0   0000000
+  .tdata               febfdd10  00000000            0   0000000
+  .text                febfdd10  000003b4          948   0001db4
+  .FlashDrvFooterSectionGroup febfe0c4  00000000            0   0000000
+  .note.renesas        00000000  00000050           80   0002168
+  .debug_info          00000000  00004d5d        19805   00021b8
+  .debug_abbrev        00000000  000004c5         1221   0006f15
+  .debug_line          00000000  000027ab        10155   00073da
+  .debug_macinfo       00000000  00002ebc        11964   0009b85
+  .debug_frame         00000000  00000930         2352   000ca41
+  .linfix              00000000  00000000            0   0000000
+  .gstackfix           00000000  00000000            0   0000000
+
+Load Map Thu Feb 19 11:00:47 2026
+Module Summary
+
+  Origin+Size    Section          Module
+00000000+000050  .note.renesas    <RENESAS ABI INFO>
+febfd1c0+000050  .R_FCL_CODE_RAM_EX_PROT r_fcl_hw_access_asm.o
+febfd210+00009c  .R_FCL_CODE_ROM  r_fcl_hw_access_asm.o
+febfc0d0+000098  .R_FCL_CODE_RAM  r_fcl_hw_access_asm.o
+febfdd10+0003b4  .text            flashdrv.o
+febfc000+000014  .FlashDrvHeaderSection -> .FlashDrvHeaderSectionGroup flashdrv.o
+febfc0c0+000010  .sbss            flashdrv.o
+00000000+001108  .debug_info      flashdrv.o
+00000000+0001a1  .debug_abbrev    flashdrv.o
+00000000+000611  .debug_line      flashdrv.o
+00000000+000d95  .debug_macinfo   flashdrv.o
+00000000+0001a4  .debug_frame     flashdrv.o
+febfc168+000ea4  .R_FCL_CODE_RAM  r_fcl_hw_access.o
+febfd4bc+000638  .R_FCL_CODE_ROMRAM r_fcl_hw_access.o
+00001108+00225b  .debug_info      r_fcl_hw_access.o
+000001a1+000192  .debug_abbrev    r_fcl_hw_access.o
+00000611+00179b  .debug_line      r_fcl_hw_access.o
+00000d95+001ccb  .debug_macinfo   r_fcl_hw_access.o
+000001a4+0005cc  .debug_frame     r_fcl_hw_access.o
+febfd2ac+000210  .R_FCL_CODE_ROM  r_fcl_user_if.o
+febfdcfc+000014  .R_FCL_CONST     r_fcl_user_if.o
+febfd00c+0001b4  .R_FCL_CODE_RAM  r_fcl_user_if.o
+febfdaf4+000208  .R_FCL_CODE_ROMRAM r_fcl_user_if.o
+febfc014+0000ac  .R_FCL_DATA      r_fcl_user_if.o
+00003363+0019fa  .debug_info      r_fcl_user_if.o
+00000333+000192  .debug_abbrev    r_fcl_user_if.o
+00001dac+0009ff  .debug_line      r_fcl_user_if.o
+00002a60+00045c  .debug_macinfo   r_fcl_user_if.o
+00000770+0001c0  .debug_frame     r_fcl_user_if.o
+
+Load Map Thu Feb 19 11:00:47 2026
+Global Symbols (sorted numerically)
+
+                  00000000+000000 _RESET_CORE0
+                  00000000+000000 _RESET_CORE1
+                  00000000+000000 __ghs_v800_sda_model
+                  00000000+000000 brsStartupEntry
+                  00000002+000000 ___ghs_log_fee_level
+                  0000071f+000000 _Startup_Code_Core1_ALL_END
+                  0000071f+000000 _Startup_Code_Core1_END
+                  0000071f+000000 __Startup_Code_Core1_END
+                  00000720+000000 _Startup_Code_Core1_ALL_LIMIT
+                  00000720+000000 _Startup_Code_Core1_ALL_START
+                  00000720+000000 _Startup_Code_Core1_LIMIT
+                  00000720+000000 _Startup_Code_Core1_START
+                  00000720+000000 __Startup_Code_Core1_LIMIT
+                  00000720+000000 __Startup_Code_Core1_START
+                  febfc000+000000 _FlashDrvHeaderSectionGroup_START
+                  febfc000+000000 _FlashDrv_Header_ALL_START
+                  febfc000+000000 __FlashDrvHeaderSectionGroup_START
+ .FlashDrvHeaderSectionGroup febfc000+000014 _flashHeader
+                  febfc013+000000 _FlashDrvHeaderSectionGroup_END
+                  febfc013+000000 _FlashDrv_Header_ALL_END
+                  febfc013+000000 __FlashDrvHeaderSectionGroup_END
+                  febfc014+000000 _FlashDrvHeaderSectionGroup_LIMIT
+                  febfc014+000000 _FlashDrv_Data_ALL_START
+                  febfc014+000000 _FlashDrv_Header_ALL_LIMIT
+                  febfc014+000000 _R_FCL_DATA_START
+                  febfc014+000000 __FlashDrvHeaderSectionGroup_LIMIT
+                  febfc014+000000 __R_FCL_DATA_START
+ .R_FCL_DATA      febfc014+0000ac _g_fcl_data_str
+                  febfc0bf+000000 _R_FCL_DATA_END
+                  febfc0bf+000000 __R_FCL_DATA_END
+                  febfc0bf+000000 __bss_END
+                  febfc0bf+000000 __data_END
+                  febfc0bf+000000 _bss_END
+                  febfc0bf+000000 _data_END
+                  febfc0c0+000000 _R_FCL_DATA_LIMIT
+                  febfc0c0+000000 __R_FCL_DATA_LIMIT
+                  febfc0c0+000000 __bss_LIMIT
+                  febfc0c0+000000 __bss_START
+                  febfc0c0+000000 __data_LIMIT
+                  febfc0c0+000000 __data_START
+                  febfc0c0+000000 __sbss_START
+                  febfc0c0+000000 _bss_LIMIT
+                  febfc0c0+000000 _bss_START
+                  febfc0c0+000000 _data_LIMIT
+                  febfc0c0+000000 _data_START
+ .sbss            febfc0c0+000004 _pflashParam
+                  febfc0c0+000000 _sbss_START
+ .sbss            febfc0c4+000004 _currentFblGP
+ .sbss            febfc0c8+000004 _currentFblTP
+ .sbss            febfc0cc+000004 _currentFblEP
+                  febfc0cf+000000 _FlashDrv_Data_ALL_END
+                  febfc0cf+000000 __sbss_END
+                  febfc0cf+000000 __sdabase_END
+                  febfc0cf+000000 __sdata_END
+                  febfc0cf+000000 __stack_END
+                  febfc0cf+000000 __zbss_END
+                  febfc0cf+000000 __zdata_END
+                  febfc0cf+000000 _sbss_END
+                  febfc0cf+000000 _sdabase_END
+                  febfc0cf+000000 _sdata_END
+                  febfc0cf+000000 _stack_END
+                  febfc0cf+000000 _zbss_END
+                  febfc0cf+000000 _zdata_END
+                  febfc0d0+000000 _FlashDrv_CodeConst_ALL_START
+                  febfc0d0+000000 _FlashDrv_Data_ALL_LIMIT
+                  febfc0d0+000000 _R_FCL_CODE_RAM_START
+ .R_FCL_CODE_RAM  febfc0d0+000000 _R_FCL_FCUFct_Switch_BFlash
+                  febfc0d0+000000 __R_FCL_CODE_RAM_START
+ .R_FCL_CODE_RAM  febfc0d0+000000 ___ghsbegin_R_FCL_CODE_RAM
+ .sdabase         febfc0d0+000000 ___ghsbegin_sdabase
+                  febfc0d0+000000 __sbss_LIMIT
+                  febfc0d0+000000 __sdabase_LIMIT
+                  febfc0d0+000000 __sdabase_START
+                  febfc0d0+000000 __sdata_LIMIT
+                  febfc0d0+000000 __sdata_START
+                  febfc0d0+000000 __stack_LIMIT
+                  febfc0d0+000000 __stack_START
+                  febfc0d0+000000 __zbss_LIMIT
+                  febfc0d0+000000 __zbss_START
+                  febfc0d0+000000 __zdata_LIMIT
+                  febfc0d0+000000 __zdata_START
+                  febfc0d0+000000 _sbss_LIMIT
+                  febfc0d0+000000 _sdabase_LIMIT
+                  febfc0d0+000000 _sdabase_START
+                  febfc0d0+000000 _sdata_LIMIT
+                  febfc0d0+000000 _sdata_START
+                  febfc0d0+000000 _stack_LIMIT
+                  febfc0d0+000000 _stack_START
+                  febfc0d0+000000 _zbss_LIMIT
+                  febfc0d0+000000 _zbss_START
+                  febfc0d0+000000 _zdata_LIMIT
+                  febfc0d0+000000 _zdata_START
+ .R_FCL_CODE_RAM  febfc0e6+000000 _R_FCL_FCUFct_ChkReg
+ .R_FCL_CODE_RAM  febfc0fc+000000 _R_FCL_FCUFct_Clear_Cache_Asm
+ .R_FCL_CODE_RAM  febfc14a+000000 _R_FCL_Fct_Copy_Code
+ .R_FCL_CODE_RAM  febfc162+000000 _R_FCL_Fct_Get_PID_Asm
+ .R_FCL_CODE_RAM  febfc168+000006 _R_FCL_I_read_memory_u32..C.3A.5CUsers.5Ctsenoue.5CProjects.5CFBL_Exercise.5CVJPES_FblExercise.5CExercise_1.5CDemo.5CDemoFlashDrv.5CBuild.5Cobj.5Cexternal.5CThirdParty.5CFlashLib.5CDrvFls_Rh850F1xRen01HisSub.5Cr_fcl_hw_access.
+ .R_FCL_CODE_RAM  febfc16e+000006 _R_FCL_I_read_memory_u16..C.3A.5CUsers.5Ctsenoue.5CProjects.5CFBL_Exercise.5CVJPES_FblExercise.5CExercise_1.5CDemo.5CDemoFlashDrv.5CBuild.5Cobj.5Cexternal.5CThirdParty.5CFlashLib.5CDrvFls_Rh850F1xRen01HisSub.5Cr_fcl_hw_access.
+ .R_FCL_CODE_RAM  febfc174+000006 _R_FCL_I_read_memory_u08..C.3A.5CUsers.5Ctsenoue.5CProjects.5CFBL_Exercise.5CVJPES_FblExercise.5CExercise_1.5CDemo.5CDemoFlashDrv.5CBuild.5Cobj.5Cexternal.5CThirdParty.5CFlashLib.5CDrvFls_Rh850F1xRen01HisSub.5Cr_fcl_hw_access.
+ .R_FCL_CODE_RAM  febfc17a+000006 _R_FCL_I_write_memory_u08
+ .R_FCL_CODE_RAM  febfc180+000046 _R_FCL_I_write_unaligned_memory_u32..C.3A.5CUsers.5Ctsenoue.5CProjects.5CFBL_Exercise.5CVJPES_FblExercise.5CExercise_1.5CDemo.5CDemoFlashDrv.5CBuild.5Cobj.5Cexternal.5CThirdParty.5CFlashLib.5CDrvFls_Rh850F1xRen01HisSub.5Cr_fcl_hw_access.
+ .R_FCL_CODE_RAM  febfc180+000000 ___ghs_eofn_R_FCL_I_write_memory_u08
+ .R_FCL_CODE_RAM  febfc1c6+000006 _R_FCL_I_write_memory_u32..C.3A.5CUsers.5Ctsenoue.5CProjects.5CFBL_Exercise.5CVJPES_FblExercise.5CExercise_1.5CDemo.5CDemoFlashDrv.5CBuild.5Cobj.5Cexternal.5CThirdParty.5CFlashLib.5CDrvFls_Rh850F1xRen01HisSub.5Cr_fcl_hw_access.
+ .R_FCL_CODE_RAM  febfc1cc+000006 _R_FCL_I_write_memory_u16..C.3A.5CUsers.5Ctsenoue.5CProjects.5CFBL_Exercise.5CVJPES_FblExercise.5CExercise_1.5CDemo.5CDemoFlashDrv.5CBuild.5Cobj.5Cexternal.5CThirdParty.5CFlashLib.5CDrvFls_Rh850F1xRen01HisSub.5Cr_fcl_hw_access.
+ .R_FCL_CODE_RAM  febfc1d2+000016 _R_FCL_I_GetCPUCorePid..C.3A.5CUsers.5Ctsenoue.5CProjects.5CFBL_Exercise.5CVJPES_FblExercise.5CExercise_1.5CDemo.5CDemoFlashDrv.5CBuild.5Cobj.5Cexternal.5CThirdParty.5CFlashLib.5CDrvFls_Rh850F1xRen01HisSub.5Cr_fcl_hw_access.
+ .R_FCL_CODE_RAM  febfc1e8+00005a _R_FCL_FCUFct_Clear_Cache..C.3A.5CUsers.5Ctsenoue.5CProjects.5CFBL_Exercise.5CVJPES_FblExercise.5CExercise_1.5CDemo.5CDemoFlashDrv.5CBuild.5Cobj.5Cexternal.5CThirdParty.5CFlashLib.5CDrvFls_Rh850F1xRen01HisSub.5Cr_fcl_hw_access.
+ .R_FCL_CODE_RAM  febfc242+0000b8 _R_FCL_FCUFct_GetConfigArea
+ .R_FCL_CODE_RAM  febfc2fa+00005e _R_FCL_FCUFct_VerifyID..C.3A.5CUsers.5Ctsenoue.5CProjects.5CFBL_Exercise.5CVJPES_FblExercise.5CExercise_1.5CDemo.5CDemoFlashDrv.5CBuild.5Cobj.5Cexternal.5CThirdParty.5CFlashLib.5CDrvFls_Rh850F1xRen01HisSub.5Cr_fcl_hw_access.
+ .R_FCL_CODE_RAM  febfc2fa+000000 ___ghs_eofn_R_FCL_FCUFct_GetConfigArea
+ .R_FCL_CODE_RAM  febfc358+00004c _R_FCL_FCUFct_Chk_DBFull..C.3A.5CUsers.5Ctsenoue.5CProjects.5CFBL_Exercise.5CVJPES_FblExercise.5CExercise_1.5CDemo.5CDemoFlashDrv.5CBuild.5Cobj.5Cexternal.5CThirdParty.5CFlashLib.5CDrvFls_Rh850F1xRen01HisSub.5Cr_fcl_hw_access.
+ .R_FCL_CODE_RAM  febfc3a4+00007a _R_FCL_FCUFct_SetFrequency..C.3A.5CUsers.5Ctsenoue.5CProjects.5CFBL_Exercise.5CVJPES_FblExercise.5CExercise_1.5CDemo.5CDemoFlashDrv.5CBuild.5Cobj.5Cexternal.5CThirdParty.5CFlashLib.5CDrvFls_Rh850F1xRen01HisSub.5Cr_fcl_hw_access.
+ .R_FCL_CODE_RAM  febfc41e+00004a _R_FCL_FCUFct_ClearStatus..C.3A.5CUsers.5Ctsenoue.5CProjects.5CFBL_Exercise.5CVJPES_FblExercise.5CExercise_1.5CDemo.5CDemoFlashDrv.5CBuild.5Cobj.5Cexternal.5CThirdParty.5CFlashLib.5CDrvFls_Rh850F1xRen01HisSub.5Cr_fcl_hw_access.
+ .R_FCL_CODE_RAM  febfc468+000088 _R_FCL_FCUFct_SwitchMode_Start
+ .R_FCL_CODE_RAM  febfc4f0+00002a _R_FCL_FCUFct_SwitchMode_Check
+ .R_FCL_CODE_RAM  febfc4f0+000000 ___ghs_eofn_R_FCL_FCUFct_SwitchMode_Start
+ .R_FCL_CODE_RAM  febfc51a+000058 _R_FCL_FCUFct_ForcedStop..C.3A.5CUsers.5Ctsenoue.5CProjects.5CFBL_Exercise.5CVJPES_FblExercise.5CExercise_1.5CDemo.5CDemoFlashDrv.5CBuild.5Cobj.5Cexternal.5CThirdParty.5CFlashLib.5CDrvFls_Rh850F1xRen01HisSub.5Cr_fcl_hw_access.
+ .R_FCL_CODE_RAM  febfc51a+000000 ___ghs_eofn_R_FCL_FCUFct_SwitchMode_Check
+ .R_FCL_CODE_RAM  febfc572+00002e _R_FCL_FCUFct_ChkSuspended..C.3A.5CUsers.5Ctsenoue.5CProjects.5CFBL_Exercise.5CVJPES_FblExercise.5CExercise_1.5CDemo.5CDemoFlashDrv.5CBuild.5Cobj.5Cexternal.5CThirdParty.5CFlashLib.5CDrvFls_Rh850F1xRen01HisSub.5Cr_fcl_hw_access.
+ .R_FCL_CODE_RAM  febfc5a0+000014 _R_FCL_FCUFct_RestoreLastState..C.3A.5CUsers.5Ctsenoue.5CProjects.5CFBL_Exercise.5CVJPES_FblExercise.5CExercise_1.5CDemo.5CDemoFlashDrv.5CBuild.5Cobj.5Cexternal.5CThirdParty.5CFlashLib.5CDrvFls_Rh850F1xRen01HisSub.5Cr_fcl_hw_access.
+ .R_FCL_CODE_RAM  febfc5b4+0000a0 _R_FCL_FCUFct_GetResult..C.3A.5CUsers.5Ctsenoue.5CProjects.5CFBL_Exercise.5CVJPES_FblExercise.5CExercise_1.5CDemo.5CDemoFlashDrv.5CBuild.5Cobj.5Cexternal.5CThirdParty.5CFlashLib.5CDrvFls_Rh850F1xRen01HisSub.5Cr_fcl_hw_access.
+ .R_FCL_CODE_RAM  febfc654+00002a _R_FCL_FCUFct_PrepareEnvironment_IntErr..C.3A.5CUsers.5Ctsenoue.5CProjects.5CFBL_Exercise.5CVJPES_FblExercise.5CExercise_1.5CDemo.5CDemoFlashDrv.5CBuild.5Cobj.5Cexternal.5CThirdParty.5CFlashLib.5CDrvFls_Rh850F1xRen01HisSub.5Cr_fcl_hw_access.
+ .R_FCL_CODE_RAM  febfc67e+0001cc _R_FCL_FCUFct_GetDeviceInfo..C.3A.5CUsers.5Ctsenoue.5CProjects.5CFBL_Exercise.5CVJPES_FblExercise.5CExercise_1.5CDemo.5CDemoFlashDrv.5CBuild.5Cobj.5Cexternal.5CThirdParty.5CFlashLib.5CDrvFls_Rh850F1xRen01HisSub.5Cr_fcl_hw_access.
+ .R_FCL_CODE_RAM  febfc84a+000192 _R_FCL_FCUFct_PrepareEnvironment
+ .R_FCL_CODE_RAM  febfc9dc+000036 _R_FCL_FCUFct_HandleMultiOperation_IntErr..C.3A.5CUsers.5Ctsenoue.5CProjects.5CFBL_Exercise.5CVJPES_FblExercise.5CExercise_1.5CDemo.5CDemoFlashDrv.5CBuild.5Cobj.5Cexternal.5CThirdParty.5CFlashLib.5CDrvFls_Rh850F1xRen01HisSub.5Cr_fcl_hw_access.
+ .R_FCL_CODE_RAM  febfc9dc+000000 ___ghs_eofn_R_FCL_FCUFct_PrepareEnvironment
+ .R_FCL_CODE_RAM  febfca12+0005fa _R_FCL_FCUFct_HandleMultiOperation
+ .R_FCL_CODE_RAM  febfd00c+000090 _R_FCL_Handler
+ .R_FCL_CODE_RAM  febfd00c+000000 ___ghs_eofn_R_FCL_FCUFct_HandleMultiOperation
+ .R_FCL_CODE_RAM  febfd09c+00003c _R_FCL_SuspendRequest
+ .R_FCL_CODE_RAM  febfd09c+000000 ___ghs_eofn_R_FCL_Handler
+ .R_FCL_CODE_RAM  febfd0d8+00005a _R_FCL_ResumeRequest
+ .R_FCL_CODE_RAM  febfd0d8+000000 ___ghs_eofn_R_FCL_SuspendRequest
+ .R_FCL_CODE_RAM  febfd132+00008e _R_FCL_CancelRequest
+ .R_FCL_CODE_RAM  febfd132+000000 ___ghs_eofn_R_FCL_ResumeRequest
+                  febfd1bf+000000 _R_FCL_CODE_RAM_END
+                  febfd1bf+000000 __R_FCL_CODE_RAM_END
+                  febfd1c0+000000 _R_FCL_CODE_RAM_EX_PROT_START
+                  febfd1c0+000000 _R_FCL_CODE_RAM_LIMIT
+                  febfd1c0+000000 __R_FCL_CODE_RAM_EX_PROT_START
+                  febfd1c0+000000 __R_FCL_CODE_RAM_LIMIT
+ .R_FCL_CODE_RAM  febfd1c0+000000 ___ghs_eofn_R_FCL_CancelRequest
+ .R_FCL_CODE_RAM_EX_PROT febfd1c0+000000 ___ghsbegin_R_FCL_CODE_RAM_EX_PROT
+ .R_FCL_CODE_RAM  febfd1c0+000000 ___ghsend_R_FCL_CODE_RAM
+                  febfd20f+000000 _R_FCL_CODE_RAM_EX_PROT_END
+                  febfd20f+000000 __R_FCL_CODE_RAM_EX_PROT_END
+                  febfd210+000000 _R_FCL_CODE_RAM_EX_PROT_LIMIT
+                  febfd210+000000 _R_FCL_CODE_ROM_START
+ .R_FCL_CODE_ROM  febfd210+000000 _R_FCL_Fct_CodeRomRam_CalcRange
+                  febfd210+000000 __R_FCL_CODE_RAM_EX_PROT_LIMIT
+                  febfd210+000000 __R_FCL_CODE_ROM_START
+ .R_FCL_CODE_RAM_EX_PROT febfd210+000000 ___ghsend_R_FCL_CODE_RAM_EX_PROT
+ .R_FCL_CODE_ROM  febfd22c+000000 _R_FCL_Fct_CodeRam_CalcRange
+ .R_FCL_CODE_ROM  febfd248+000000 _R_FCL_Fct_CodeUsr_CalcRange
+ .R_FCL_CODE_ROM  febfd264+000000 _R_FCL_Fct_CodeUsrInt_CalcRange
+ .R_FCL_CODE_ROM  febfd280+000000 _R_FCL_Fct_CodeExProt_CalcRange
+ .R_FCL_CODE_ROM  febfd29c+000000 _R_FCL_Fct_PrgOffset
+ .R_FCL_CODE_ROM  febfd2ac+0000e8 _R_FCL_CopySections
+ .R_FCL_CODE_ROM  febfd394+0000c8 _R_FCL_CalcFctAddr
+ .R_FCL_CODE_ROM  febfd394+000000 ___ghs_eofn_R_FCL_CopySections
+ .R_FCL_CODE_ROM  febfd45c+000008 _R_FCL_GetVersionString
+ .R_FCL_CODE_ROM  febfd45c+000000 ___ghs_eofn_R_FCL_CalcFctAddr
+ .R_FCL_CODE_ROM  febfd464+000058 _R_FCL_Init
+ .R_FCL_CODE_ROM  febfd464+000000 ___ghs_eofn_R_FCL_GetVersionString
+                  febfd4bb+000000 _R_FCL_CODE_ROM_END
+                  febfd4bb+000000 __R_FCL_CODE_ROM_END
+                  febfd4bc+000000 _R_FCL_CODE_ROMRAM_START
+                  febfd4bc+000000 _R_FCL_CODE_ROM_LIMIT
+ .R_FCL_CODE_ROMRAM febfd4bc+000028 _R_FCL_Fct_CallFromRAM
+                  febfd4bc+000000 __R_FCL_CODE_ROMRAM_START
+                  febfd4bc+000000 __R_FCL_CODE_ROM_LIMIT
+ .R_FCL_CODE_ROM  febfd4bc+000000 ___ghs_eofn_R_FCL_Init
+ .R_FCL_CODE_ROMRAM febfd4bc+000000 ___ghsbegin_R_FCL_CODE_ROMRAM
+ .R_FCL_CODE_ROMRAM febfd4e4+0000e4 _R_FCL_FCUFct_HandleResume
+ .R_FCL_CODE_ROMRAM febfd4e4+000000 ___ghs_eofn_R_FCL_Fct_CallFromRAM
+ .R_FCL_CODE_ROMRAM febfd5c8+00001c _R_FCL_FCUFct_CheckMode
+ .R_FCL_CODE_ROMRAM febfd5c8+000000 ___ghs_eofn_R_FCL_FCUFct_HandleResume
+ .R_FCL_CODE_ROMRAM febfd5e4+000112 _R_FCL_FCUFct_SetConfigArea
+ .R_FCL_CODE_ROMRAM febfd5e4+000000 ___ghs_eofn_R_FCL_FCUFct_CheckMode
+ .R_FCL_CODE_ROMRAM febfd6f6+000076 _R_FCL_FCUFct_GetSecurityFlag
+ .R_FCL_CODE_ROMRAM febfd6f6+000000 ___ghs_eofn_R_FCL_FCUFct_SetConfigArea
+ .R_FCL_CODE_ROMRAM febfd76c+00002c _R_FCL_FCUFct_GetBlockCnt
+ .R_FCL_CODE_ROMRAM febfd76c+000000 ___ghs_eofn_R_FCL_FCUFct_GetSecurityFlag
+ .R_FCL_CODE_ROMRAM febfd798+000048 _R_FCL_FCUFct_GetDeviceName
+ .R_FCL_CODE_ROMRAM febfd798+000000 ___ghs_eofn_R_FCL_FCUFct_GetBlockCnt
+ .R_FCL_CODE_ROMRAM febfd7e0+0000b6 _R_FCL_FCUFct_GetBlockEndAddr
+ .R_FCL_CODE_ROMRAM febfd7e0+000000 ___ghs_eofn_R_FCL_FCUFct_GetDeviceName
+ .R_FCL_CODE_ROMRAM febfd896+0000d4 _R_FCL_FCUFct_Erase
+ .R_FCL_CODE_ROMRAM febfd896+000000 ___ghs_eofn_R_FCL_FCUFct_GetBlockEndAddr
+ .R_FCL_CODE_ROMRAM febfd96a+0000c2 _R_FCL_FCUFct_Write
+ .R_FCL_CODE_ROMRAM febfd96a+000000 ___ghs_eofn_R_FCL_FCUFct_Erase
+ .R_FCL_CODE_ROMRAM febfda2c+0000b2 _R_FCL_FCUFct_HandleLockBit
+ .R_FCL_CODE_ROMRAM febfda2c+000000 ___ghs_eofn_R_FCL_FCUFct_Write
+ .R_FCL_CODE_ROMRAM febfdade+000016 _R_FCL_FCUFct_LockBitMode
+ .R_FCL_CODE_ROMRAM febfdade+000000 ___ghs_eofn_R_FCL_FCUFct_HandleLockBit
+ .R_FCL_CODE_ROMRAM febfdaf4+000208 _R_FCL_Execute
+ .R_FCL_CODE_ROMRAM febfdaf4+000000 ___ghs_eofn_R_FCL_FCUFct_LockBitMode
+                  febfdcfb+000000 _R_FCL_CODE_ROMRAM_END
+                  febfdcfb+000000 _R_FCL_CODE_USRINT_END
+                  febfdcfb+000000 _R_FCL_CODE_USR_END
+                  febfdcfb+000000 __R_FCL_CODE_ROMRAM_END
+                  febfdcfb+000000 __R_FCL_CODE_USRINT_END
+                  febfdcfb+000000 __R_FCL_CODE_USR_END
+                  febfdcfc+000000 _R_FCL_CODE_ROMRAM_LIMIT
+                  febfdcfc+000000 _R_FCL_CODE_USRINT_LIMIT
+                  febfdcfc+000000 _R_FCL_CODE_USRINT_START
+                  febfdcfc+000000 _R_FCL_CODE_USR_LIMIT
+                  febfdcfc+000000 _R_FCL_CODE_USR_START
+                  febfdcfc+000000 _R_FCL_CONST_START
+                  febfdcfc+000000 __R_FCL_CODE_ROMRAM_LIMIT
+                  febfdcfc+000000 __R_FCL_CODE_USRINT_LIMIT
+                  febfdcfc+000000 __R_FCL_CODE_USRINT_START
+                  febfdcfc+000000 __R_FCL_CODE_USR_LIMIT
+                  febfdcfc+000000 __R_FCL_CODE_USR_START
+                  febfdcfc+000000 __R_FCL_CONST_START
+ .R_FCL_CODE_ROMRAM febfdcfc+000000 ___ghs_eofn_R_FCL_Execute
+ .R_FCL_CODE_USR  febfdcfc+000000 ___ghsbegin_R_FCL_CODE_USR
+ .R_FCL_CODE_USRINT febfdcfc+000000 ___ghsbegin_R_FCL_CODE_USRINT
+ .R_FCL_CODE_ROMRAM febfdcfc+000000 ___ghsend_R_FCL_CODE_ROMRAM
+ .R_FCL_CODE_USR  febfdcfc+000000 ___ghsend_R_FCL_CODE_USR
+ .R_FCL_CODE_USRINT febfdcfc+000000 ___ghsend_R_FCL_CODE_USRINT
+ .R_FCL_CONST     febfdcfc+000014 _fcl_ver_str.R_FCL_GetVersionString.C.3A.5CUsers.5Ctsenoue.5CProjects.5CFBL_Exercise.5CVJPES_FblExercise.5CExercise_1.5CDemo.5CDemoFlashDrv.5CBuild.5Cobj.5Cexternal.5CThirdParty.5CFlashLib.5CDrvFls_Rh850F1xRen01HisSub.5Cr_fcl_user_if..0
+                  febfdd0f+000000 _FlashDrv_RamCodeSection_END
+                  febfdd0f+000000 _FlashDrv_RamConstSection_END
+                  febfdd0f+000000 _R_FCL_CONST_END
+                  febfdd0f+000000 __FlashDrv_RamCodeSection_END
+                  febfdd0f+000000 __FlashDrv_RamConstSection_END
+                  febfdd0f+000000 __R_FCL_CONST_END
+                  febfdd0f+000000 __rodata_END
+                  febfdd0f+000000 __rosdata_END
+                  febfdd0f+000000 __rozdata_END
+                  febfdd0f+000000 __sdata2_END
+                  febfdd0f+000000 __secinfo_END
+                  febfdd0f+000000 __tdata_END
+                  febfdd0f+000000 _rodata_END
+                  febfdd0f+000000 _rosdata_END
+                  febfdd0f+000000 _rozdata_END
+                  febfdd0f+000000 _sdata2_END
+                  febfdd0f+000000 _secinfo_END
+                  febfdd0f+000000 _tdata_END
+ .text            febfdd10+00009e _AsmDummy
+                  febfdd10+000000 _FlashDrv_RamCodeSection_LIMIT
+                  febfdd10+000000 _FlashDrv_RamCodeSection_START
+                  febfdd10+000000 _FlashDrv_RamConstSection_LIMIT
+                  febfdd10+000000 _FlashDrv_RamConstSection_START
+                  febfdd10+000000 _R_FCL_CONST_LIMIT
+                  febfdd10+000000 __FlashDrv_RamCodeSection_LIMIT
+                  febfdd10+000000 __FlashDrv_RamCodeSection_START
+                  febfdd10+000000 __FlashDrv_RamConstSection_LIMIT
+                  febfdd10+000000 __FlashDrv_RamConstSection_START
+                  febfdd10+000000 __R_FCL_CONST_LIMIT
+ .rosdata         febfdd10+000000 ___ghsbegin_rosdata
+ .tdata           febfdd10+000000 ___ghsbegin_tdata
+ .secinfo         febfdd10+000000 ___ghsbinfo_bcopy
+ .secinfo         febfdd10+000000 ___ghseinfo_bcopy
+ .tdata           febfdd10+000000 __ep
+                  febfdd10+000000 __rodata_LIMIT
+                  febfdd10+000000 __rodata_START
+                  febfdd10+000000 __rosdata_LIMIT
+                  febfdd10+000000 __rosdata_START
+                  febfdd10+000000 __rozdata_LIMIT
+                  febfdd10+000000 __rozdata_START
+                  febfdd10+000000 __sdata2_LIMIT
+                  febfdd10+000000 __sdata2_START
+                  febfdd10+000000 __secinfo_LIMIT
+                  febfdd10+000000 __secinfo_START
+                  febfdd10+000000 __tdata_LIMIT
+                  febfdd10+000000 __tdata_START
+                  febfdd10+000000 __text_START
+                  febfdd10+000000 _rodata_LIMIT
+                  febfdd10+000000 _rodata_START
+                  febfdd10+000000 _rosdata_LIMIT
+                  febfdd10+000000 _rosdata_START
+                  febfdd10+000000 _rozdata_LIMIT
+                  febfdd10+000000 _rozdata_START
+                  febfdd10+000000 _sdata2_LIMIT
+                  febfdd10+000000 _sdata2_START
+                  febfdd10+000000 _secinfo_LIMIT
+                  febfdd10+000000 _secinfo_START
+                  febfdd10+000000 _tdata_LIMIT
+                  febfdd10+000000 _tdata_START
+                  febfdd10+000000 _text_START
+ .text            febfddae+000026 _FblDrvFlashHandleWD..C.3A.5CUsers.5Ctsenoue.5CProjects.5CFBL_Exercise.5CVJPES_FblExercise.5CExercise_1.5CDemo.5CDemoFlashDrv.5CBuild.5Cobj.5Cexternal.5CComponents.5CFlash.5CImplementation.5Cflashdrv.
+ .text            febfddae+000000 ___ghs_eofn_AsmDummy
+ .text            febfddd4+00003e _FblDrvFlashExecuteCmd..C.3A.5CUsers.5Ctsenoue.5CProjects.5CFBL_Exercise.5CVJPES_FblExercise.5CExercise_1.5CDemo.5CDemoFlashDrv.5CBuild.5Cobj.5Cexternal.5CComponents.5CFlash.5CImplementation.5Cflashdrv.
+ .text            febfde12+0000a6 _FblDrvFlashGetBlockByAddr..C.3A.5CUsers.5Ctsenoue.5CProjects.5CFBL_Exercise.5CVJPES_FblExercise.5CExercise_1.5CDemo.5CDemoFlashDrv.5CBuild.5Cobj.5Cexternal.5CComponents.5CFlash.5CImplementation.5Cflashdrv.
+ .text            febfdeb8+0000ac _ExpFlashInit
+ .text            febfdf64+00004c _ExpFlashDeinit
+ .text            febfdf64+000000 ___ghs_eofn_ExpFlashInit
+ .text            febfdfb0+0000a8 _ExpFlashErase
+ .text            febfdfb0+000000 ___ghs_eofn_ExpFlashDeinit
+ .text            febfe058+00006c _ExpFlashWrite
+ .text            febfe058+000000 ___ghs_eofn_ExpFlashErase
+                  febfe0c3+000000 _FlashDrvFooterSectionGroup_END
+                  febfe0c3+000000 _FlashDrv_CodeConst_ALL_END
+                  febfe0c3+000000 _FlashDrv_Footer_ALL_END
+                  febfe0c3+000000 __FlashDrvFooterSectionGroup_END
+                  febfe0c3+000000 __text_END
+                  febfe0c3+000000 _text_END
+                  febfe0c4+000000 _FlashDrvFooterSectionGroup_LIMIT
+                  febfe0c4+000000 _FlashDrvFooterSectionGroup_START
+                  febfe0c4+000000 _FlashDrv_CodeConst_ALL_LIMIT
+                  febfe0c4+000000 _FlashDrv_Footer_ALL_LIMIT
+                  febfe0c4+000000 _FlashDrv_Footer_ALL_START
+                  febfe0c4+000000 __FlashDrvFooterSectionGroup_LIMIT
+                  febfe0c4+000000 __FlashDrvFooterSectionGroup_START
+ .text            febfe0c4+000000 ___ghs_eofn_ExpFlashWrite
+                  febfe0c4+000000 __text_LIMIT
+                  febfe0c4+000000 _text_LIMIT
+ .sdabase         fec040d0+000000 __gp
+ .rosdata         fec05d10+000000 __tp
+
+Load Map Thu Feb 19 11:00:47 2026
+Global Symbols (sorted alphabetically)
+
+ .text            febfdd10+00009e _AsmDummy
+ .text            febfdf64+00004c _ExpFlashDeinit
+ .text            febfdfb0+0000a8 _ExpFlashErase
+ .text            febfdeb8+0000ac _ExpFlashInit
+ .text            febfe058+00006c _ExpFlashWrite
+ .text            febfddd4+00003e _FblDrvFlashExecuteCmd..C.3A.5CUsers.5Ctsenoue.5CProjects.5CFBL_Exercise.5CVJPES_FblExercise.5CExercise_1.5CDemo.5CDemoFlashDrv.5CBuild.5Cobj.5Cexternal.5CComponents.5CFlash.5CImplementation.5Cflashdrv.
+ .text            febfde12+0000a6 _FblDrvFlashGetBlockByAddr..C.3A.5CUsers.5Ctsenoue.5CProjects.5CFBL_Exercise.5CVJPES_FblExercise.5CExercise_1.5CDemo.5CDemoFlashDrv.5CBuild.5Cobj.5Cexternal.5CComponents.5CFlash.5CImplementation.5Cflashdrv.
+ .text            febfddae+000026 _FblDrvFlashHandleWD..C.3A.5CUsers.5Ctsenoue.5CProjects.5CFBL_Exercise.5CVJPES_FblExercise.5CExercise_1.5CDemo.5CDemoFlashDrv.5CBuild.5Cobj.5Cexternal.5CComponents.5CFlash.5CImplementation.5Cflashdrv.
+                  febfe0c3+000000 _FlashDrvFooterSectionGroup_END
+                  febfe0c4+000000 _FlashDrvFooterSectionGroup_LIMIT
+                  febfe0c4+000000 _FlashDrvFooterSectionGroup_START
+                  febfc013+000000 _FlashDrvHeaderSectionGroup_END
+                  febfc014+000000 _FlashDrvHeaderSectionGroup_LIMIT
+                  febfc000+000000 _FlashDrvHeaderSectionGroup_START
+                  febfe0c3+000000 _FlashDrv_CodeConst_ALL_END
+                  febfe0c4+000000 _FlashDrv_CodeConst_ALL_LIMIT
+                  febfc0d0+000000 _FlashDrv_CodeConst_ALL_START
+                  febfc0cf+000000 _FlashDrv_Data_ALL_END
+                  febfc0d0+000000 _FlashDrv_Data_ALL_LIMIT
+                  febfc014+000000 _FlashDrv_Data_ALL_START
+                  febfe0c3+000000 _FlashDrv_Footer_ALL_END
+                  febfe0c4+000000 _FlashDrv_Footer_ALL_LIMIT
+                  febfe0c4+000000 _FlashDrv_Footer_ALL_START
+                  febfc013+000000 _FlashDrv_Header_ALL_END
+                  febfc014+000000 _FlashDrv_Header_ALL_LIMIT
+                  febfc000+000000 _FlashDrv_Header_ALL_START
+                  febfdd0f+000000 _FlashDrv_RamCodeSection_END
+                  febfdd10+000000 _FlashDrv_RamCodeSection_LIMIT
+                  febfdd10+000000 _FlashDrv_RamCodeSection_START
+                  febfdd0f+000000 _FlashDrv_RamConstSection_END
+                  febfdd10+000000 _FlashDrv_RamConstSection_LIMIT
+                  febfdd10+000000 _FlashDrv_RamConstSection_START
+                  00000000+000000 _RESET_CORE0
+                  00000000+000000 _RESET_CORE1
+                  febfd1bf+000000 _R_FCL_CODE_RAM_END
+                  febfd20f+000000 _R_FCL_CODE_RAM_EX_PROT_END
+                  febfd210+000000 _R_FCL_CODE_RAM_EX_PROT_LIMIT
+                  febfd1c0+000000 _R_FCL_CODE_RAM_EX_PROT_START
+                  febfd1c0+000000 _R_FCL_CODE_RAM_LIMIT
+                  febfc0d0+000000 _R_FCL_CODE_RAM_START
+                  febfdcfb+000000 _R_FCL_CODE_ROMRAM_END
+                  febfdcfc+000000 _R_FCL_CODE_ROMRAM_LIMIT
+                  febfd4bc+000000 _R_FCL_CODE_ROMRAM_START
+                  febfd4bb+000000 _R_FCL_CODE_ROM_END
+                  febfd4bc+000000 _R_FCL_CODE_ROM_LIMIT
+                  febfd210+000000 _R_FCL_CODE_ROM_START
+                  febfdcfb+000000 _R_FCL_CODE_USRINT_END
+                  febfdcfc+000000 _R_FCL_CODE_USRINT_LIMIT
+                  febfdcfc+000000 _R_FCL_CODE_USRINT_START
+                  febfdcfb+000000 _R_FCL_CODE_USR_END
+                  febfdcfc+000000 _R_FCL_CODE_USR_LIMIT
+                  febfdcfc+000000 _R_FCL_CODE_USR_START
+                  febfdd0f+000000 _R_FCL_CONST_END
+                  febfdd10+000000 _R_FCL_CONST_LIMIT
+                  febfdcfc+000000 _R_FCL_CONST_START
+ .R_FCL_CODE_ROM  febfd394+0000c8 _R_FCL_CalcFctAddr
+ .R_FCL_CODE_RAM  febfd132+00008e _R_FCL_CancelRequest
+ .R_FCL_CODE_ROM  febfd2ac+0000e8 _R_FCL_CopySections
+                  febfc0bf+000000 _R_FCL_DATA_END
+                  febfc0c0+000000 _R_FCL_DATA_LIMIT
+                  febfc014+000000 _R_FCL_DATA_START
+ .R_FCL_CODE_ROMRAM febfdaf4+000208 _R_FCL_Execute
+ .R_FCL_CODE_ROMRAM febfd5c8+00001c _R_FCL_FCUFct_CheckMode
+ .R_FCL_CODE_RAM  febfc0e6+000000 _R_FCL_FCUFct_ChkReg
+ .R_FCL_CODE_RAM  febfc572+00002e _R_FCL_FCUFct_ChkSuspended..C.3A.5CUsers.5Ctsenoue.5CProjects.5CFBL_Exercise.5CVJPES_FblExercise.5CExercise_1.5CDemo.5CDemoFlashDrv.5CBuild.5Cobj.5Cexternal.5CThirdParty.5CFlashLib.5CDrvFls_Rh850F1xRen01HisSub.5Cr_fcl_hw_access.
+ .R_FCL_CODE_RAM  febfc358+00004c _R_FCL_FCUFct_Chk_DBFull..C.3A.5CUsers.5Ctsenoue.5CProjects.5CFBL_Exercise.5CVJPES_FblExercise.5CExercise_1.5CDemo.5CDemoFlashDrv.5CBuild.5Cobj.5Cexternal.5CThirdParty.5CFlashLib.5CDrvFls_Rh850F1xRen01HisSub.5Cr_fcl_hw_access.
+ .R_FCL_CODE_RAM  febfc41e+00004a _R_FCL_FCUFct_ClearStatus..C.3A.5CUsers.5Ctsenoue.5CProjects.5CFBL_Exercise.5CVJPES_FblExercise.5CExercise_1.5CDemo.5CDemoFlashDrv.5CBuild.5Cobj.5Cexternal.5CThirdParty.5CFlashLib.5CDrvFls_Rh850F1xRen01HisSub.5Cr_fcl_hw_access.
+ .R_FCL_CODE_RAM  febfc1e8+00005a _R_FCL_FCUFct_Clear_Cache..C.3A.5CUsers.5Ctsenoue.5CProjects.5CFBL_Exercise.5CVJPES_FblExercise.5CExercise_1.5CDemo.5CDemoFlashDrv.5CBuild.5Cobj.5Cexternal.5CThirdParty.5CFlashLib.5CDrvFls_Rh850F1xRen01HisSub.5Cr_fcl_hw_access.
+ .R_FCL_CODE_RAM  febfc0fc+000000 _R_FCL_FCUFct_Clear_Cache_Asm
+ .R_FCL_CODE_ROMRAM febfd896+0000d4 _R_FCL_FCUFct_Erase
+ .R_FCL_CODE_RAM  febfc51a+000058 _R_FCL_FCUFct_ForcedStop..C.3A.5CUsers.5Ctsenoue.5CProjects.5CFBL_Exercise.5CVJPES_FblExercise.5CExercise_1.5CDemo.5CDemoFlashDrv.5CBuild.5Cobj.5Cexternal.5CThirdParty.5CFlashLib.5CDrvFls_Rh850F1xRen01HisSub.5Cr_fcl_hw_access.
+ .R_FCL_CODE_ROMRAM febfd76c+00002c _R_FCL_FCUFct_GetBlockCnt
+ .R_FCL_CODE_ROMRAM febfd7e0+0000b6 _R_FCL_FCUFct_GetBlockEndAddr
+ .R_FCL_CODE_RAM  febfc242+0000b8 _R_FCL_FCUFct_GetConfigArea
+ .R_FCL_CODE_RAM  febfc67e+0001cc _R_FCL_FCUFct_GetDeviceInfo..C.3A.5CUsers.5Ctsenoue.5CProjects.5CFBL_Exercise.5CVJPES_FblExercise.5CExercise_1.5CDemo.5CDemoFlashDrv.5CBuild.5Cobj.5Cexternal.5CThirdParty.5CFlashLib.5CDrvFls_Rh850F1xRen01HisSub.5Cr_fcl_hw_access.
+ .R_FCL_CODE_ROMRAM febfd798+000048 _R_FCL_FCUFct_GetDeviceName
+ .R_FCL_CODE_RAM  febfc5b4+0000a0 _R_FCL_FCUFct_GetResult..C.3A.5CUsers.5Ctsenoue.5CProjects.5CFBL_Exercise.5CVJPES_FblExercise.5CExercise_1.5CDemo.5CDemoFlashDrv.5CBuild.5Cobj.5Cexternal.5CThirdParty.5CFlashLib.5CDrvFls_Rh850F1xRen01HisSub.5Cr_fcl_hw_access.
+ .R_FCL_CODE_ROMRAM febfd6f6+000076 _R_FCL_FCUFct_GetSecurityFlag
+ .R_FCL_CODE_ROMRAM febfda2c+0000b2 _R_FCL_FCUFct_HandleLockBit
+ .R_FCL_CODE_RAM  febfca12+0005fa _R_FCL_FCUFct_HandleMultiOperation
+ .R_FCL_CODE_RAM  febfc9dc+000036 _R_FCL_FCUFct_HandleMultiOperation_IntErr..C.3A.5CUsers.5Ctsenoue.5CProjects.5CFBL_Exercise.5CVJPES_FblExercise.5CExercise_1.5CDemo.5CDemoFlashDrv.5CBuild.5Cobj.5Cexternal.5CThirdParty.5CFlashLib.5CDrvFls_Rh850F1xRen01HisSub.5Cr_fcl_hw_access.
+ .R_FCL_CODE_ROMRAM febfd4e4+0000e4 _R_FCL_FCUFct_HandleResume
+ .R_FCL_CODE_ROMRAM febfdade+000016 _R_FCL_FCUFct_LockBitMode
+ .R_FCL_CODE_RAM  febfc84a+000192 _R_FCL_FCUFct_PrepareEnvironment
+ .R_FCL_CODE_RAM  febfc654+00002a _R_FCL_FCUFct_PrepareEnvironment_IntErr..C.3A.5CUsers.5Ctsenoue.5CProjects.5CFBL_Exercise.5CVJPES_FblExercise.5CExercise_1.5CDemo.5CDemoFlashDrv.5CBuild.5Cobj.5Cexternal.5CThirdParty.5CFlashLib.5CDrvFls_Rh850F1xRen01HisSub.5Cr_fcl_hw_access.
+ .R_FCL_CODE_RAM  febfc5a0+000014 _R_FCL_FCUFct_RestoreLastState..C.3A.5CUsers.5Ctsenoue.5CProjects.5CFBL_Exercise.5CVJPES_FblExercise.5CExercise_1.5CDemo.5CDemoFlashDrv.5CBuild.5Cobj.5Cexternal.5CThirdParty.5CFlashLib.5CDrvFls_Rh850F1xRen01HisSub.5Cr_fcl_hw_access.
+ .R_FCL_CODE_ROMRAM febfd5e4+000112 _R_FCL_FCUFct_SetConfigArea
+ .R_FCL_CODE_RAM  febfc3a4+00007a _R_FCL_FCUFct_SetFrequency..C.3A.5CUsers.5Ctsenoue.5CProjects.5CFBL_Exercise.5CVJPES_FblExercise.5CExercise_1.5CDemo.5CDemoFlashDrv.5CBuild.5Cobj.5Cexternal.5CThirdParty.5CFlashLib.5CDrvFls_Rh850F1xRen01HisSub.5Cr_fcl_hw_access.
+ .R_FCL_CODE_RAM  febfc4f0+00002a _R_FCL_FCUFct_SwitchMode_Check
+ .R_FCL_CODE_RAM  febfc468+000088 _R_FCL_FCUFct_SwitchMode_Start
+ .R_FCL_CODE_RAM  febfc0d0+000000 _R_FCL_FCUFct_Switch_BFlash
+ .R_FCL_CODE_RAM  febfc2fa+00005e _R_FCL_FCUFct_VerifyID..C.3A.5CUsers.5Ctsenoue.5CProjects.5CFBL_Exercise.5CVJPES_FblExercise.5CExercise_1.5CDemo.5CDemoFlashDrv.5CBuild.5Cobj.5Cexternal.5CThirdParty.5CFlashLib.5CDrvFls_Rh850F1xRen01HisSub.5Cr_fcl_hw_access.
+ .R_FCL_CODE_ROMRAM febfd96a+0000c2 _R_FCL_FCUFct_Write
+ .R_FCL_CODE_ROMRAM febfd4bc+000028 _R_FCL_Fct_CallFromRAM
+ .R_FCL_CODE_ROM  febfd280+000000 _R_FCL_Fct_CodeExProt_CalcRange
+ .R_FCL_CODE_ROM  febfd22c+000000 _R_FCL_Fct_CodeRam_CalcRange
+ .R_FCL_CODE_ROM  febfd210+000000 _R_FCL_Fct_CodeRomRam_CalcRange
+ .R_FCL_CODE_ROM  febfd264+000000 _R_FCL_Fct_CodeUsrInt_CalcRange
+ .R_FCL_CODE_ROM  febfd248+000000 _R_FCL_Fct_CodeUsr_CalcRange
+ .R_FCL_CODE_RAM  febfc14a+000000 _R_FCL_Fct_Copy_Code
+ .R_FCL_CODE_RAM  febfc162+000000 _R_FCL_Fct_Get_PID_Asm
+ .R_FCL_CODE_ROM  febfd29c+000000 _R_FCL_Fct_PrgOffset
+ .R_FCL_CODE_ROM  febfd45c+000008 _R_FCL_GetVersionString
+ .R_FCL_CODE_RAM  febfd00c+000090 _R_FCL_Handler
+ .R_FCL_CODE_RAM  febfc1d2+000016 _R_FCL_I_GetCPUCorePid..C.3A.5CUsers.5Ctsenoue.5CProjects.5CFBL_Exercise.5CVJPES_FblExercise.5CExercise_1.5CDemo.5CDemoFlashDrv.5CBuild.5Cobj.5Cexternal.5CThirdParty.5CFlashLib.5CDrvFls_Rh850F1xRen01HisSub.5Cr_fcl_hw_access.
+ .R_FCL_CODE_RAM  febfc174+000006 _R_FCL_I_read_memory_u08..C.3A.5CUsers.5Ctsenoue.5CProjects.5CFBL_Exercise.5CVJPES_FblExercise.5CExercise_1.5CDemo.5CDemoFlashDrv.5CBuild.5Cobj.5Cexternal.5CThirdParty.5CFlashLib.5CDrvFls_Rh850F1xRen01HisSub.5Cr_fcl_hw_access.
+ .R_FCL_CODE_RAM  febfc16e+000006 _R_FCL_I_read_memory_u16..C.3A.5CUsers.5Ctsenoue.5CProjects.5CFBL_Exercise.5CVJPES_FblExercise.5CExercise_1.5CDemo.5CDemoFlashDrv.5CBuild.5Cobj.5Cexternal.5CThirdParty.5CFlashLib.5CDrvFls_Rh850F1xRen01HisSub.5Cr_fcl_hw_access.
+ .R_FCL_CODE_RAM  febfc168+000006 _R_FCL_I_read_memory_u32..C.3A.5CUsers.5Ctsenoue.5CProjects.5CFBL_Exercise.5CVJPES_FblExercise.5CExercise_1.5CDemo.5CDemoFlashDrv.5CBuild.5Cobj.5Cexternal.5CThirdParty.5CFlashLib.5CDrvFls_Rh850F1xRen01HisSub.5Cr_fcl_hw_access.
+ .R_FCL_CODE_RAM  febfc17a+000006 _R_FCL_I_write_memory_u08
+ .R_FCL_CODE_RAM  febfc1cc+000006 _R_FCL_I_write_memory_u16..C.3A.5CUsers.5Ctsenoue.5CProjects.5CFBL_Exercise.5CVJPES_FblExercise.5CExercise_1.5CDemo.5CDemoFlashDrv.5CBuild.5Cobj.5Cexternal.5CThirdParty.5CFlashLib.5CDrvFls_Rh850F1xRen01HisSub.5Cr_fcl_hw_access.
+ .R_FCL_CODE_RAM  febfc1c6+000006 _R_FCL_I_write_memory_u32..C.3A.5CUsers.5Ctsenoue.5CProjects.5CFBL_Exercise.5CVJPES_FblExercise.5CExercise_1.5CDemo.5CDemoFlashDrv.5CBuild.5Cobj.5Cexternal.5CThirdParty.5CFlashLib.5CDrvFls_Rh850F1xRen01HisSub.5Cr_fcl_hw_access.
+ .R_FCL_CODE_RAM  febfc180+000046 _R_FCL_I_write_unaligned_memory_u32..C.3A.5CUsers.5Ctsenoue.5CProjects.5CFBL_Exercise.5CVJPES_FblExercise.5CExercise_1.5CDemo.5CDemoFlashDrv.5CBuild.5Cobj.5Cexternal.5CThirdParty.5CFlashLib.5CDrvFls_Rh850F1xRen01HisSub.5Cr_fcl_hw_access.
+ .R_FCL_CODE_ROM  febfd464+000058 _R_FCL_Init
+ .R_FCL_CODE_RAM  febfd0d8+00005a _R_FCL_ResumeRequest
+ .R_FCL_CODE_RAM  febfd09c+00003c _R_FCL_SuspendRequest
+                  0000071f+000000 _Startup_Code_Core1_ALL_END
+                  00000720+000000 _Startup_Code_Core1_ALL_LIMIT
+                  00000720+000000 _Startup_Code_Core1_ALL_START
+                  0000071f+000000 _Startup_Code_Core1_END
+                  00000720+000000 _Startup_Code_Core1_LIMIT
+                  00000720+000000 _Startup_Code_Core1_START
+                  febfe0c3+000000 __FlashDrvFooterSectionGroup_END
+                  febfe0c4+000000 __FlashDrvFooterSectionGroup_LIMIT
+                  febfe0c4+000000 __FlashDrvFooterSectionGroup_START
+                  febfc013+000000 __FlashDrvHeaderSectionGroup_END
+                  febfc014+000000 __FlashDrvHeaderSectionGroup_LIMIT
+                  febfc000+000000 __FlashDrvHeaderSectionGroup_START
+                  febfdd0f+000000 __FlashDrv_RamCodeSection_END
+                  febfdd10+000000 __FlashDrv_RamCodeSection_LIMIT
+                  febfdd10+000000 __FlashDrv_RamCodeSection_START
+                  febfdd0f+000000 __FlashDrv_RamConstSection_END
+                  febfdd10+000000 __FlashDrv_RamConstSection_LIMIT
+                  febfdd10+000000 __FlashDrv_RamConstSection_START
+                  febfd1bf+000000 __R_FCL_CODE_RAM_END
+                  febfd20f+000000 __R_FCL_CODE_RAM_EX_PROT_END
+                  febfd210+000000 __R_FCL_CODE_RAM_EX_PROT_LIMIT
+                  febfd1c0+000000 __R_FCL_CODE_RAM_EX_PROT_START
+                  febfd1c0+000000 __R_FCL_CODE_RAM_LIMIT
+                  febfc0d0+000000 __R_FCL_CODE_RAM_START
+                  febfdcfb+000000 __R_FCL_CODE_ROMRAM_END
+                  febfdcfc+000000 __R_FCL_CODE_ROMRAM_LIMIT
+                  febfd4bc+000000 __R_FCL_CODE_ROMRAM_START
+                  febfd4bb+000000 __R_FCL_CODE_ROM_END
+                  febfd4bc+000000 __R_FCL_CODE_ROM_LIMIT
+                  febfd210+000000 __R_FCL_CODE_ROM_START
+                  febfdcfb+000000 __R_FCL_CODE_USRINT_END
+                  febfdcfc+000000 __R_FCL_CODE_USRINT_LIMIT
+                  febfdcfc+000000 __R_FCL_CODE_USRINT_START
+                  febfdcfb+000000 __R_FCL_CODE_USR_END
+                  febfdcfc+000000 __R_FCL_CODE_USR_LIMIT
+                  febfdcfc+000000 __R_FCL_CODE_USR_START
+                  febfdd0f+000000 __R_FCL_CONST_END
+                  febfdd10+000000 __R_FCL_CONST_LIMIT
+                  febfdcfc+000000 __R_FCL_CONST_START
+                  febfc0bf+000000 __R_FCL_DATA_END
+                  febfc0c0+000000 __R_FCL_DATA_LIMIT
+                  febfc014+000000 __R_FCL_DATA_START
+                  0000071f+000000 __Startup_Code_Core1_END
+                  00000720+000000 __Startup_Code_Core1_LIMIT
+                  00000720+000000 __Startup_Code_Core1_START
+ .text            febfddae+000000 ___ghs_eofn_AsmDummy
+ .text            febfdfb0+000000 ___ghs_eofn_ExpFlashDeinit
+ .text            febfe058+000000 ___ghs_eofn_ExpFlashErase
+ .text            febfdf64+000000 ___ghs_eofn_ExpFlashInit
+ .text            febfe0c4+000000 ___ghs_eofn_ExpFlashWrite
+ .R_FCL_CODE_ROM  febfd45c+000000 ___ghs_eofn_R_FCL_CalcFctAddr
+ .R_FCL_CODE_RAM  febfd1c0+000000 ___ghs_eofn_R_FCL_CancelRequest
+ .R_FCL_CODE_ROM  febfd394+000000 ___ghs_eofn_R_FCL_CopySections
+ .R_FCL_CODE_ROMRAM febfdcfc+000000 ___ghs_eofn_R_FCL_Execute
+ .R_FCL_CODE_ROMRAM febfd5e4+000000 ___ghs_eofn_R_FCL_FCUFct_CheckMode
+ .R_FCL_CODE_ROMRAM febfd96a+000000 ___ghs_eofn_R_FCL_FCUFct_Erase
+ .R_FCL_CODE_ROMRAM febfd798+000000 ___ghs_eofn_R_FCL_FCUFct_GetBlockCnt
+ .R_FCL_CODE_ROMRAM febfd896+000000 ___ghs_eofn_R_FCL_FCUFct_GetBlockEndAddr
+ .R_FCL_CODE_RAM  febfc2fa+000000 ___ghs_eofn_R_FCL_FCUFct_GetConfigArea
+ .R_FCL_CODE_ROMRAM febfd7e0+000000 ___ghs_eofn_R_FCL_FCUFct_GetDeviceName
+ .R_FCL_CODE_ROMRAM febfd76c+000000 ___ghs_eofn_R_FCL_FCUFct_GetSecurityFlag
+ .R_FCL_CODE_ROMRAM febfdade+000000 ___ghs_eofn_R_FCL_FCUFct_HandleLockBit
+ .R_FCL_CODE_RAM  febfd00c+000000 ___ghs_eofn_R_FCL_FCUFct_HandleMultiOperation
+ .R_FCL_CODE_ROMRAM febfd5c8+000000 ___ghs_eofn_R_FCL_FCUFct_HandleResume
+ .R_FCL_CODE_ROMRAM febfdaf4+000000 ___ghs_eofn_R_FCL_FCUFct_LockBitMode
+ .R_FCL_CODE_RAM  febfc9dc+000000 ___ghs_eofn_R_FCL_FCUFct_PrepareEnvironment
+ .R_FCL_CODE_ROMRAM febfd6f6+000000 ___ghs_eofn_R_FCL_FCUFct_SetConfigArea
+ .R_FCL_CODE_RAM  febfc51a+000000 ___ghs_eofn_R_FCL_FCUFct_SwitchMode_Check
+ .R_FCL_CODE_RAM  febfc4f0+000000 ___ghs_eofn_R_FCL_FCUFct_SwitchMode_Start
+ .R_FCL_CODE_ROMRAM febfda2c+000000 ___ghs_eofn_R_FCL_FCUFct_Write
+ .R_FCL_CODE_ROMRAM febfd4e4+000000 ___ghs_eofn_R_FCL_Fct_CallFromRAM
+ .R_FCL_CODE_ROM  febfd464+000000 ___ghs_eofn_R_FCL_GetVersionString
+ .R_FCL_CODE_RAM  febfd09c+000000 ___ghs_eofn_R_FCL_Handler
+ .R_FCL_CODE_RAM  febfc180+000000 ___ghs_eofn_R_FCL_I_write_memory_u08
+ .R_FCL_CODE_ROM  febfd4bc+000000 ___ghs_eofn_R_FCL_Init
+ .R_FCL_CODE_RAM  febfd132+000000 ___ghs_eofn_R_FCL_ResumeRequest
+ .R_FCL_CODE_RAM  febfd0d8+000000 ___ghs_eofn_R_FCL_SuspendRequest
+                  00000002+000000 ___ghs_log_fee_level
+ .R_FCL_CODE_RAM  febfc0d0+000000 ___ghsbegin_R_FCL_CODE_RAM
+ .R_FCL_CODE_RAM_EX_PROT febfd1c0+000000 ___ghsbegin_R_FCL_CODE_RAM_EX_PROT
+ .R_FCL_CODE_ROMRAM febfd4bc+000000 ___ghsbegin_R_FCL_CODE_ROMRAM
+ .R_FCL_CODE_USR  febfdcfc+000000 ___ghsbegin_R_FCL_CODE_USR
+ .R_FCL_CODE_USRINT febfdcfc+000000 ___ghsbegin_R_FCL_CODE_USRINT
+ .rosdata         febfdd10+000000 ___ghsbegin_rosdata
+ .sdabase         febfc0d0+000000 ___ghsbegin_sdabase
+ .tdata           febfdd10+000000 ___ghsbegin_tdata
+ .secinfo         febfdd10+000000 ___ghsbinfo_bcopy
+ .secinfo         febfdd10+000000 ___ghseinfo_bcopy
+ .R_FCL_CODE_RAM  febfd1c0+000000 ___ghsend_R_FCL_CODE_RAM
+ .R_FCL_CODE_RAM_EX_PROT febfd210+000000 ___ghsend_R_FCL_CODE_RAM_EX_PROT
+ .R_FCL_CODE_ROMRAM febfdcfc+000000 ___ghsend_R_FCL_CODE_ROMRAM
+ .R_FCL_CODE_USR  febfdcfc+000000 ___ghsend_R_FCL_CODE_USR
+ .R_FCL_CODE_USRINT febfdcfc+000000 ___ghsend_R_FCL_CODE_USRINT
+                  febfc0bf+000000 __bss_END
+                  febfc0c0+000000 __bss_LIMIT
+                  febfc0c0+000000 __bss_START
+                  febfc0bf+000000 __data_END
+                  febfc0c0+000000 __data_LIMIT
+                  febfc0c0+000000 __data_START
+ .tdata           febfdd10+000000 __ep
+                  00000000+000000 __ghs_v800_sda_model
+ .sdabase         fec040d0+000000 __gp
+                  febfdd0f+000000 __rodata_END
+                  febfdd10+000000 __rodata_LIMIT
+                  febfdd10+000000 __rodata_START
+                  febfdd0f+000000 __rosdata_END
+                  febfdd10+000000 __rosdata_LIMIT
+                  febfdd10+000000 __rosdata_START
+                  febfdd0f+000000 __rozdata_END
+                  febfdd10+000000 __rozdata_LIMIT
+                  febfdd10+000000 __rozdata_START
+                  febfc0cf+000000 __sbss_END
+                  febfc0d0+000000 __sbss_LIMIT
+                  febfc0c0+000000 __sbss_START
+                  febfc0cf+000000 __sdabase_END
+                  febfc0d0+000000 __sdabase_LIMIT
+                  febfc0d0+000000 __sdabase_START
+                  febfdd0f+000000 __sdata2_END
+                  febfdd10+000000 __sdata2_LIMIT
+                  febfdd10+000000 __sdata2_START
+                  febfc0cf+000000 __sdata_END
+                  febfc0d0+000000 __sdata_LIMIT
+                  febfc0d0+000000 __sdata_START
+                  febfdd0f+000000 __secinfo_END
+                  febfdd10+000000 __secinfo_LIMIT
+                  febfdd10+000000 __secinfo_START
+                  febfc0cf+000000 __stack_END
+                  febfc0d0+000000 __stack_LIMIT
+                  febfc0d0+000000 __stack_START
+                  febfdd0f+000000 __tdata_END
+                  febfdd10+000000 __tdata_LIMIT
+                  febfdd10+000000 __tdata_START
+                  febfe0c3+000000 __text_END
+                  febfe0c4+000000 __text_LIMIT
+                  febfdd10+000000 __text_START
+ .rosdata         fec05d10+000000 __tp
+                  febfc0cf+000000 __zbss_END
+                  febfc0d0+000000 __zbss_LIMIT
+                  febfc0d0+000000 __zbss_START
+                  febfc0cf+000000 __zdata_END
+                  febfc0d0+000000 __zdata_LIMIT
+                  febfc0d0+000000 __zdata_START
+                  febfc0bf+000000 _bss_END
+                  febfc0c0+000000 _bss_LIMIT
+                  febfc0c0+000000 _bss_START
+ .sbss            febfc0cc+000004 _currentFblEP
+ .sbss            febfc0c4+000004 _currentFblGP
+ .sbss            febfc0c8+000004 _currentFblTP
+                  febfc0bf+000000 _data_END
+                  febfc0c0+000000 _data_LIMIT
+                  febfc0c0+000000 _data_START
+ .R_FCL_CONST     febfdcfc+000014 _fcl_ver_str.R_FCL_GetVersionString.C.3A.5CUsers.5Ctsenoue.5CProjects.5CFBL_Exercise.5CVJPES_FblExercise.5CExercise_1.5CDemo.5CDemoFlashDrv.5CBuild.5Cobj.5Cexternal.5CThirdParty.5CFlashLib.5CDrvFls_Rh850F1xRen01HisSub.5Cr_fcl_user_if..0
+ .FlashDrvHeaderSectionGroup febfc000+000014 _flashHeader
+ .R_FCL_DATA      febfc014+0000ac _g_fcl_data_str
+ .sbss            febfc0c0+000004 _pflashParam
+                  febfdd0f+000000 _rodata_END
+                  febfdd10+000000 _rodata_LIMIT
+                  febfdd10+000000 _rodata_START
+                  febfdd0f+000000 _rosdata_END
+                  febfdd10+000000 _rosdata_LIMIT
+                  febfdd10+000000 _rosdata_START
+                  febfdd0f+000000 _rozdata_END
+                  febfdd10+000000 _rozdata_LIMIT
+                  febfdd10+000000 _rozdata_START
+                  febfc0cf+000000 _sbss_END
+                  febfc0d0+000000 _sbss_LIMIT
+                  febfc0c0+000000 _sbss_START
+                  febfc0cf+000000 _sdabase_END
+                  febfc0d0+000000 _sdabase_LIMIT
+                  febfc0d0+000000 _sdabase_START
+                  febfdd0f+000000 _sdata2_END
+                  febfdd10+000000 _sdata2_LIMIT
+                  febfdd10+000000 _sdata2_START
+                  febfc0cf+000000 _sdata_END
+                  febfc0d0+000000 _sdata_LIMIT
+                  febfc0d0+000000 _sdata_START
+                  febfdd0f+000000 _secinfo_END
+                  febfdd10+000000 _secinfo_LIMIT
+                  febfdd10+000000 _secinfo_START
+                  febfc0cf+000000 _stack_END
+                  febfc0d0+000000 _stack_LIMIT
+                  febfc0d0+000000 _stack_START
+                  febfdd0f+000000 _tdata_END
+                  febfdd10+000000 _tdata_LIMIT
+                  febfdd10+000000 _tdata_START
+                  febfe0c3+000000 _text_END
+                  febfe0c4+000000 _text_LIMIT
+                  febfdd10+000000 _text_START
+                  febfc0cf+000000 _zbss_END
+                  febfc0d0+000000 _zbss_LIMIT
+                  febfc0d0+000000 _zbss_START
+                  febfc0cf+000000 _zdata_END
+                  febfc0d0+000000 _zdata_LIMIT
+                  febfc0d0+000000 _zdata_START
+                  00000000+000000 brsStartupEntry
+
+Load Map Thu Feb 19 11:00:47 2026
+Global Cross Reference
+
+_AsmDummy           flashdrv.o             
+_ExpFlashDeinit     flashdrv.o              febfc008
+_ExpFlashErase      flashdrv.o              febfc00c
+_ExpFlashInit       flashdrv.o              febfc004
+_ExpFlashWrite      flashdrv.o              febfc010
+_FblDrvFlashExecuteCmd..C.3A.5CUsers.5Ctsenoue.5CProjects.5CFBL_Exercise.5CVJPES_FblExercise.5CExercise_1.5CDemo.5CDemoFlashDrv.5CBuild.5Cobj.5Cexternal.5CComponents.5CFlash.5CImplementation.5Cflashdrv. flashdrv.o             
+_FblDrvFlashGetBlockByAddr..C.3A.5CUsers.5Ctsenoue.5CProjects.5CFBL_Exercise.5CVJPES_FblExercise.5CExercise_1.5CDemo.5CDemoFlashDrv.5CBuild.5Cobj.5Cexternal.5CComponents.5CFlash.5CImplementation.5Cflashdrv. flashdrv.o             
+_FblDrvFlashHandleWD..C.3A.5CUsers.5Ctsenoue.5CProjects.5CFBL_Exercise.5CVJPES_FblExercise.5CExercise_1.5CDemo.5CDemoFlashDrv.5CBuild.5Cobj.5Cexternal.5CComponents.5CFlash.5CImplementation.5Cflashdrv. flashdrv.o             
+_FlashDrvFooterSectionGroup_END
+_FlashDrvFooterSectionGroup_LIMIT
+_FlashDrvFooterSectionGroup_START
+_FlashDrvHeaderSectionGroup_END
+_FlashDrvHeaderSectionGroup_LIMIT
+_FlashDrvHeaderSectionGroup_START
+_FlashDrv_CodeConst_ALL_END
+_FlashDrv_CodeConst_ALL_LIMIT
+_FlashDrv_CodeConst_ALL_START
+_FlashDrv_Data_ALL_END
+_FlashDrv_Data_ALL_LIMIT
+_FlashDrv_Data_ALL_START
+_FlashDrv_Footer_ALL_END
+_FlashDrv_Footer_ALL_LIMIT
+_FlashDrv_Footer_ALL_START
+_FlashDrv_Header_ALL_END
+_FlashDrv_Header_ALL_LIMIT
+_FlashDrv_Header_ALL_START
+_FlashDrv_RamCodeSection_END
+_FlashDrv_RamCodeSection_LIMIT
+_FlashDrv_RamCodeSection_START
+_FlashDrv_RamConstSection_END
+_FlashDrv_RamConstSection_LIMIT
+_FlashDrv_RamConstSection_START
+_RESET_CORE0       
+_RESET_CORE1       
+_R_FCL_CODE_RAM_END
+_R_FCL_CODE_RAM_EX_PROT_END
+_R_FCL_CODE_RAM_EX_PROT_LIMIT
+_R_FCL_CODE_RAM_EX_PROT_START
+_R_FCL_CODE_RAM_LIMIT
+_R_FCL_CODE_RAM_START
+_R_FCL_CODE_ROMRAM_END
+_R_FCL_CODE_ROMRAM_LIMIT
+_R_FCL_CODE_ROMRAM_START
+_R_FCL_CODE_ROM_END
+_R_FCL_CODE_ROM_LIMIT
+_R_FCL_CODE_ROM_START
+_R_FCL_CODE_USRINT_END
+_R_FCL_CODE_USRINT_LIMIT
+_R_FCL_CODE_USRINT_START
+_R_FCL_CODE_USR_END
+_R_FCL_CODE_USR_LIMIT
+_R_FCL_CODE_USR_START
+_R_FCL_CONST_END   
+_R_FCL_CONST_LIMIT 
+_R_FCL_CONST_START 
+_R_FCL_CalcFctAddr  r_fcl_user_if.o        
+_R_FCL_CancelRequest r_fcl_user_if.o        
+_R_FCL_CopySections r_fcl_user_if.o        
+_R_FCL_DATA_END    
+_R_FCL_DATA_LIMIT  
+_R_FCL_DATA_START  
+_R_FCL_Execute      r_fcl_user_if.o        
+                    flashdrv.o              febfdde5
+_R_FCL_FCUFct_CheckMode r_fcl_hw_access.o       febfd5f3
+                                            febfd8a5 febfd979 febfda3b
+                    r_fcl_user_if.o         febfdb1d
+_R_FCL_FCUFct_ChkReg r_fcl_hw_access.o       febfc393 febfc561
+_R_FCL_FCUFct_ChkSuspended..C.3A.5CUsers.5Ctsenoue.5CProjects.5CFBL_Exercise.5CVJPES_FblExercise.5CExercise_1.5CDemo.5CDemoFlashDrv.5CBuild.5Cobj.5Cexternal.5CThirdParty.5CFlashLib.5CDrvFls_Rh850F1xRen01HisSub.5Cr_fcl_hw_access. r_fcl_hw_access.o      
+_R_FCL_FCUFct_Chk_DBFull..C.3A.5CUsers.5Ctsenoue.5CProjects.5CFBL_Exercise.5CVJPES_FblExercise.5CExercise_1.5CDemo.5CDemoFlashDrv.5CBuild.5Cobj.5Cexternal.5CThirdParty.5CFlashLib.5CDrvFls_Rh850F1xRen01HisSub.5Cr_fcl_hw_access. r_fcl_hw_access.o      
+_R_FCL_FCUFct_ClearStatus..C.3A.5CUsers.5Ctsenoue.5CProjects.5CFBL_Exercise.5CVJPES_FblExercise.5CExercise_1.5CDemo.5CDemoFlashDrv.5CBuild.5Cobj.5Cexternal.5CThirdParty.5CFlashLib.5CDrvFls_Rh850F1xRen01HisSub.5Cr_fcl_hw_access. r_fcl_hw_access.o      
+_R_FCL_FCUFct_Clear_Cache..C.3A.5CUsers.5Ctsenoue.5CProjects.5CFBL_Exercise.5CVJPES_FblExercise.5CExercise_1.5CDemo.5CDemoFlashDrv.5CBuild.5Cobj.5Cexternal.5CThirdParty.5CFlashLib.5CDrvFls_Rh850F1xRen01HisSub.5Cr_fcl_hw_access. r_fcl_hw_access.o      
+_R_FCL_FCUFct_Clear_Cache_Asm r_fcl_hw_access.o       febfc231
+_R_FCL_FCUFct_Erase r_fcl_hw_access.o      
+                    r_fcl_user_if.o         febfdb59
+_R_FCL_FCUFct_ForcedStop..C.3A.5CUsers.5Ctsenoue.5CProjects.5CFBL_Exercise.5CVJPES_FblExercise.5CExercise_1.5CDemo.5CDemoFlashDrv.5CBuild.5Cobj.5Cexternal.5CThirdParty.5CFlashLib.5CDrvFls_Rh850F1xRen01HisSub.5Cr_fcl_hw_access. r_fcl_hw_access.o      
+_R_FCL_FCUFct_GetBlockCnt r_fcl_hw_access.o      
+                    r_fcl_user_if.o         febfdc6b
+_R_FCL_FCUFct_GetBlockEndAddr r_fcl_hw_access.o      
+                    r_fcl_user_if.o         febfdc83
+_R_FCL_FCUFct_GetConfigArea r_fcl_hw_access.o       febfd4d7
+_R_FCL_FCUFct_GetDeviceInfo..C.3A.5CUsers.5Ctsenoue.5CProjects.5CFBL_Exercise.5CVJPES_FblExercise.5CExercise_1.5CDemo.5CDemoFlashDrv.5CBuild.5Cobj.5Cexternal.5CThirdParty.5CFlashLib.5CDrvFls_Rh850F1xRen01HisSub.5Cr_fcl_hw_access. r_fcl_hw_access.o      
+_R_FCL_FCUFct_GetDeviceName r_fcl_hw_access.o      
+                    r_fcl_user_if.o         febfdc53
+_R_FCL_FCUFct_GetResult..C.3A.5CUsers.5Ctsenoue.5CProjects.5CFBL_Exercise.5CVJPES_FblExercise.5CExercise_1.5CDemo.5CDemoFlashDrv.5CBuild.5Cobj.5Cexternal.5CThirdParty.5CFlashLib.5CDrvFls_Rh850F1xRen01HisSub.5Cr_fcl_hw_access. r_fcl_hw_access.o      
+_R_FCL_FCUFct_GetSecurityFlag r_fcl_hw_access.o      
+                    r_fcl_user_if.o         febfdcc9
+_R_FCL_FCUFct_HandleLockBit r_fcl_hw_access.o      
+                    r_fcl_user_if.o         febfdb95
+_R_FCL_FCUFct_HandleMultiOperation r_fcl_hw_access.o      
+                    r_fcl_user_if.o         febfd08f
+_R_FCL_FCUFct_HandleMultiOperation_IntErr..C.3A.5CUsers.5Ctsenoue.5CProjects.5CFBL_Exercise.5CVJPES_FblExercise.5CExercise_1.5CDemo.5CDemoFlashDrv.5CBuild.5Cobj.5Cexternal.5CThirdParty.5CFlashLib.5CDrvFls_Rh850F1xRen01HisSub.5Cr_fcl_hw_access. r_fcl_hw_access.o      
+_R_FCL_FCUFct_HandleResume r_fcl_hw_access.o      
+                    r_fcl_user_if.o         febfd033
+_R_FCL_FCUFct_LockBitMode r_fcl_hw_access.o      
+                    r_fcl_user_if.o         febfdba7 febfdbb9
+_R_FCL_FCUFct_PrepareEnvironment r_fcl_hw_access.o      
+                    r_fcl_user_if.o         febfd089
+_R_FCL_FCUFct_PrepareEnvironment_IntErr..C.3A.5CUsers.5Ctsenoue.5CProjects.5CFBL_Exercise.5CVJPES_FblExercise.5CExercise_1.5CDemo.5CDemoFlashDrv.5CBuild.5Cobj.5Cexternal.5CThirdParty.5CFlashLib.5CDrvFls_Rh850F1xRen01HisSub.5Cr_fcl_hw_access. r_fcl_hw_access.o      
+_R_FCL_FCUFct_RestoreLastState..C.3A.5CUsers.5Ctsenoue.5CProjects.5CFBL_Exercise.5CVJPES_FblExercise.5CExercise_1.5CDemo.5CDemoFlashDrv.5CBuild.5Cobj.5Cexternal.5CThirdParty.5CFlashLib.5CDrvFls_Rh850F1xRen01HisSub.5Cr_fcl_hw_access. r_fcl_hw_access.o      
+_R_FCL_FCUFct_SetConfigArea r_fcl_hw_access.o      
+                    r_fcl_user_if.o         febfdc3b
+_R_FCL_FCUFct_SetFrequency..C.3A.5CUsers.5Ctsenoue.5CProjects.5CFBL_Exercise.5CVJPES_FblExercise.5CExercise_1.5CDemo.5CDemoFlashDrv.5CBuild.5Cobj.5Cexternal.5CThirdParty.5CFlashLib.5CDrvFls_Rh850F1xRen01HisSub.5Cr_fcl_hw_access. r_fcl_hw_access.o      
+_R_FCL_FCUFct_SwitchMode_Check r_fcl_hw_access.o       febfc949
+                                            febfc981 febfca99 febfcef9 febfd503
+                    r_fcl_user_if.o         febfd063
+_R_FCL_FCUFct_SwitchMode_Start r_fcl_hw_access.o       febfc913
+                                            febfc967 febfca63 febfcee7 febfcfb7
+                    r_fcl_user_if.o         febfd053 febfd10d febfd17f
+_R_FCL_FCUFct_Switch_BFlash r_fcl_hw_access.o       febfc259 febfc2c9 febfc895 febfc8a3 febfc8ef
+_R_FCL_FCUFct_VerifyID..C.3A.5CUsers.5Ctsenoue.5CProjects.5CFBL_Exercise.5CVJPES_FblExercise.5CExercise_1.5CDemo.5CDemoFlashDrv.5CBuild.5Cobj.5Cexternal.5CThirdParty.5CFlashLib.5CDrvFls_Rh850F1xRen01HisSub.5Cr_fcl_hw_access. r_fcl_hw_access.o      
+_R_FCL_FCUFct_Write r_fcl_hw_access.o      
+                    r_fcl_user_if.o         febfdb71
+_R_FCL_Fct_CallFromRAM r_fcl_hw_access.o      
+                    r_fcl_user_if.o         febfdbf3
+_R_FCL_Fct_CodeExProt_CalcRange r_fcl_user_if.o         febfd353 febfd36f
+_R_FCL_Fct_CodeRam_CalcRange r_fcl_user_if.o         febfd30b febfd3f7
+_R_FCL_Fct_CodeRomRam_CalcRange r_fcl_user_if.o         febfd32f febfd41d
+_R_FCL_Fct_CodeUsrInt_CalcRange r_fcl_user_if.o         febfd2db febfd3a9
+_R_FCL_Fct_CodeUsr_CalcRange r_fcl_user_if.o         febfd2e7 febfd3d1
+_R_FCL_Fct_Copy_Code r_fcl_hw_access.o       febfc93f
+                    r_fcl_user_if.o         febfd2f7 febfd31b febfd33f febfd363 febfd37b
+_R_FCL_Fct_Get_PID_Asm r_fcl_hw_access.o       febfc1d9
+_R_FCL_Fct_PrgOffset r_fcl_user_if.o         febfd455
+_R_FCL_GetVersionString r_fcl_user_if.o        
+_R_FCL_Handler      r_fcl_user_if.o        
+                    flashdrv.o              febfddf7
+_R_FCL_I_GetCPUCorePid..C.3A.5CUsers.5Ctsenoue.5CProjects.5CFBL_Exercise.5CVJPES_FblExercise.5CExercise_1.5CDemo.5CDemoFlashDrv.5CBuild.5Cobj.5Cexternal.5CThirdParty.5CFlashLib.5CDrvFls_Rh850F1xRen01HisSub.5Cr_fcl_hw_access. r_fcl_hw_access.o      
+_R_FCL_I_read_memory_u08..C.3A.5CUsers.5Ctsenoue.5CProjects.5CFBL_Exercise.5CVJPES_FblExercise.5CExercise_1.5CDemo.5CDemoFlashDrv.5CBuild.5Cobj.5Cexternal.5CThirdParty.5CFlashLib.5CDrvFls_Rh850F1xRen01HisSub.5Cr_fcl_hw_access. r_fcl_hw_access.o      
+_R_FCL_I_read_memory_u16..C.3A.5CUsers.5Ctsenoue.5CProjects.5CFBL_Exercise.5CVJPES_FblExercise.5CExercise_1.5CDemo.5CDemoFlashDrv.5CBuild.5Cobj.5Cexternal.5CThirdParty.5CFlashLib.5CDrvFls_Rh850F1xRen01HisSub.5Cr_fcl_hw_access. r_fcl_hw_access.o      
+_R_FCL_I_read_memory_u32..C.3A.5CUsers.5Ctsenoue.5CProjects.5CFBL_Exercise.5CVJPES_FblExercise.5CExercise_1.5CDemo.5CDemoFlashDrv.5CBuild.5Cobj.5Cexternal.5CThirdParty.5CFlashLib.5CDrvFls_Rh850F1xRen01HisSub.5Cr_fcl_hw_access. r_fcl_hw_access.o      
+_R_FCL_I_write_memory_u08 r_fcl_hw_access.o       febfc191
+                                            febfc19d febfc1ab febfc1b7 febfc2b3 febfc44f
+                                            febfc45b febfc529 febfc669 febfc87f febfc929
+                                            febfc977 febfcb4b febfcb53 febfcb75 febfcb7d
+                                            febfcbdd febfcbe5 febfcbff febfcc07 febfcc23
+                                            febfcc29 febfcc61 febfccf3 febfcd37 febfd55b
+                                            febfd7bd
+                    r_fcl_user_if.o         febfd487
+_R_FCL_I_write_memory_u16..C.3A.5CUsers.5Ctsenoue.5CProjects.5CFBL_Exercise.5CVJPES_FblExercise.5CExercise_1.5CDemo.5CDemoFlashDrv.5CBuild.5Cobj.5Cexternal.5CThirdParty.5CFlashLib.5CDrvFls_Rh850F1xRen01HisSub.5Cr_fcl_hw_access. r_fcl_hw_access.o      
+_R_FCL_I_write_memory_u32..C.3A.5CUsers.5Ctsenoue.5CProjects.5CFBL_Exercise.5CVJPES_FblExercise.5CExercise_1.5CDemo.5CDemoFlashDrv.5CBuild.5Cobj.5Cexternal.5CThirdParty.5CFlashLib.5CDrvFls_Rh850F1xRen01HisSub.5Cr_fcl_hw_access. r_fcl_hw_access.o      
+_R_FCL_I_write_unaligned_memory_u32..C.3A.5CUsers.5Ctsenoue.5CProjects.5CFBL_Exercise.5CVJPES_FblExercise.5CExercise_1.5CDemo.5CDemoFlashDrv.5CBuild.5Cobj.5Cexternal.5CThirdParty.5CFlashLib.5CDrvFls_Rh850F1xRen01HisSub.5Cr_fcl_hw_access. r_fcl_hw_access.o      
+_R_FCL_Init         r_fcl_user_if.o        
+                    flashdrv.o              febfdf07
+_R_FCL_ResumeRequest r_fcl_user_if.o        
+_R_FCL_SuspendRequest r_fcl_user_if.o        
+_Startup_Code_Core1_ALL_END
+_Startup_Code_Core1_ALL_LIMIT
+_Startup_Code_Core1_ALL_START
+_Startup_Code_Core1_END
+_Startup_Code_Core1_LIMIT
+_Startup_Code_Core1_START
+__FlashDrvFooterSectionGroup_END
+__FlashDrvFooterSectionGroup_LIMIT
+__FlashDrvFooterSectionGroup_START
+__FlashDrvHeaderSectionGroup_END
+__FlashDrvHeaderSectionGroup_LIMIT
+__FlashDrvHeaderSectionGroup_START
+__FlashDrv_RamCodeSection_END
+__FlashDrv_RamCodeSection_LIMIT
+__FlashDrv_RamCodeSection_START
+__FlashDrv_RamConstSection_END
+__FlashDrv_RamConstSection_LIMIT
+__FlashDrv_RamConstSection_START
+__R_FCL_CODE_RAM_END
+__R_FCL_CODE_RAM_EX_PROT_END
+__R_FCL_CODE_RAM_EX_PROT_LIMIT
+__R_FCL_CODE_RAM_EX_PROT_START
+__R_FCL_CODE_RAM_LIMIT
+__R_FCL_CODE_RAM_START
+__R_FCL_CODE_ROMRAM_END
+__R_FCL_CODE_ROMRAM_LIMIT
+__R_FCL_CODE_ROMRAM_START
+__R_FCL_CODE_ROM_END
+__R_FCL_CODE_ROM_LIMIT
+__R_FCL_CODE_ROM_START
+__R_FCL_CODE_USRINT_END
+__R_FCL_CODE_USRINT_LIMIT
+__R_FCL_CODE_USRINT_START
+__R_FCL_CODE_USR_END
+__R_FCL_CODE_USR_LIMIT
+__R_FCL_CODE_USR_START
+__R_FCL_CONST_END  
+__R_FCL_CONST_LIMIT
+__R_FCL_CONST_START
+__R_FCL_DATA_END   
+__R_FCL_DATA_LIMIT 
+__R_FCL_DATA_START 
+__Startup_Code_Core1_END
+__Startup_Code_Core1_LIMIT
+__Startup_Code_Core1_START
+___ghs_eofn_AsmDummy flashdrv.o             
+___ghs_eofn_ExpFlashDeinit flashdrv.o             
+___ghs_eofn_ExpFlashErase flashdrv.o             
+___ghs_eofn_ExpFlashInit flashdrv.o             
+___ghs_eofn_ExpFlashWrite flashdrv.o             
+___ghs_eofn_R_FCL_CalcFctAddr r_fcl_user_if.o        
+___ghs_eofn_R_FCL_CancelRequest r_fcl_user_if.o        
+___ghs_eofn_R_FCL_CopySections r_fcl_user_if.o        
+___ghs_eofn_R_FCL_Execute r_fcl_user_if.o        
+___ghs_eofn_R_FCL_FCUFct_CheckMode r_fcl_hw_access.o      
+___ghs_eofn_R_FCL_FCUFct_Erase r_fcl_hw_access.o      
+___ghs_eofn_R_FCL_FCUFct_GetBlockCnt r_fcl_hw_access.o      
+___ghs_eofn_R_FCL_FCUFct_GetBlockEndAddr r_fcl_hw_access.o      
+___ghs_eofn_R_FCL_FCUFct_GetConfigArea r_fcl_hw_access.o      
+___ghs_eofn_R_FCL_FCUFct_GetDeviceName r_fcl_hw_access.o      
+___ghs_eofn_R_FCL_FCUFct_GetSecurityFlag r_fcl_hw_access.o      
+___ghs_eofn_R_FCL_FCUFct_HandleLockBit r_fcl_hw_access.o      
+___ghs_eofn_R_FCL_FCUFct_HandleMultiOperation r_fcl_hw_access.o      
+___ghs_eofn_R_FCL_FCUFct_HandleResume r_fcl_hw_access.o      
+___ghs_eofn_R_FCL_FCUFct_LockBitMode r_fcl_hw_access.o      
+___ghs_eofn_R_FCL_FCUFct_PrepareEnvironment r_fcl_hw_access.o      
+___ghs_eofn_R_FCL_FCUFct_SetConfigArea r_fcl_hw_access.o      
+___ghs_eofn_R_FCL_FCUFct_SwitchMode_Check r_fcl_hw_access.o      
+___ghs_eofn_R_FCL_FCUFct_SwitchMode_Start r_fcl_hw_access.o      
+___ghs_eofn_R_FCL_FCUFct_Write r_fcl_hw_access.o      
+___ghs_eofn_R_FCL_Fct_CallFromRAM r_fcl_hw_access.o      
+___ghs_eofn_R_FCL_GetVersionString r_fcl_user_if.o        
+___ghs_eofn_R_FCL_Handler r_fcl_user_if.o        
+___ghs_eofn_R_FCL_I_write_memory_u08 r_fcl_hw_access.o      
+___ghs_eofn_R_FCL_Init r_fcl_user_if.o        
+___ghs_eofn_R_FCL_ResumeRequest r_fcl_user_if.o        
+___ghs_eofn_R_FCL_SuspendRequest r_fcl_user_if.o        
+___ghs_log_fee_level
+___ghsbegin_R_FCL_CODE_RAM r_fcl_hw_access_asm.o   febfd22e febfd232
+___ghsbegin_R_FCL_CODE_RAM_EX_PROT r_fcl_hw_access_asm.o   febfd282 febfd286
+___ghsbegin_R_FCL_CODE_ROMRAM r_fcl_hw_access_asm.o   febfd212 febfd216
+___ghsbegin_R_FCL_CODE_USR r_fcl_hw_access_asm.o   febfd24a febfd24e
+___ghsbegin_R_FCL_CODE_USRINT r_fcl_hw_access_asm.o   febfd266 febfd26a
+___ghsbegin_rosdata flashdrv.o              febfdd50 febfdd54
+___ghsbegin_sdabase flashdrv.o              febfdd48 febfdd4c
+___ghsbegin_tdata   flashdrv.o              febfdd58 febfdd5c
+___ghsbinfo_bcopy  
+___ghseinfo_bcopy  
+___ghsend_R_FCL_CODE_RAM r_fcl_hw_access_asm.o   febfd236 febfd23a
+___ghsend_R_FCL_CODE_RAM_EX_PROT r_fcl_hw_access_asm.o   febfd28a febfd28e
+___ghsend_R_FCL_CODE_ROMRAM r_fcl_hw_access_asm.o   febfd21a febfd21e
+___ghsend_R_FCL_CODE_USR r_fcl_hw_access_asm.o   febfd252 febfd256
+___ghsend_R_FCL_CODE_USRINT r_fcl_hw_access_asm.o   febfd26e febfd272
+__bss_END          
+__bss_LIMIT        
+__bss_START        
+__data_END         
+__data_LIMIT       
+__data_START       
+__ep               
+__ghs_v800_sda_model
+__gp               
+__rodata_END       
+__rodata_LIMIT     
+__rodata_START     
+__rosdata_END      
+__rosdata_LIMIT    
+__rosdata_START    
+__rozdata_END      
+__rozdata_LIMIT    
+__rozdata_START    
+__sbss_END         
+__sbss_LIMIT       
+__sbss_START       
+__sdabase_END      
+__sdabase_LIMIT    
+__sdabase_START    
+__sdata2_END       
+__sdata2_LIMIT     
+__sdata2_START     
+__sdata_END        
+__sdata_LIMIT      
+__sdata_START      
+__secinfo_END      
+__secinfo_LIMIT    
+__secinfo_START    
+__stack_END        
+__stack_LIMIT      
+__stack_START      
+__tdata_END        
+__tdata_LIMIT      
+__tdata_START      
+__text_END         
+__text_LIMIT       
+__text_START       
+__tp               
+__zbss_END         
+__zbss_LIMIT       
+__zbss_START       
+__zdata_END        
+__zdata_LIMIT      
+__zdata_START      
+_bss_END           
+_bss_LIMIT         
+_bss_START         
+_currentFblEP       flashdrv.o              febfdd1a febfdd1e febfdd6a febfdd6e
+_currentFblGP       flashdrv.o              febfdd26 febfdd2a febfdd82 febfdd86
+_currentFblTP       flashdrv.o              febfdd32 febfdd36 febfdd76 febfdd7a
+_data_END          
+_data_LIMIT        
+_data_START        
+_fcl_ver_str.R_FCL_GetVersionString.C.3A.5CUsers.5Ctsenoue.5CProjects.5CFBL_Exercise.5CVJPES_FblExercise.5CExercise_1.5CDemo.5CDemoFlashDrv.5CBuild.5Cobj.5Cexternal.5CThirdParty.5CFlashLib.5CDrvFls_Rh850F1xRen01HisSub.5Cr_fcl_user_if..0 r_fcl_user_if.o        
+_flashHeader        flashdrv.o             
+_g_fcl_data_str     r_fcl_user_if.o         febfd2b8 febfd3b2 febfd3b6 febfd478
+                                            febfd016 febfd09e febfd0e4 febfd13e febfdb08
+                    r_fcl_hw_access.o       febfc1f4 febfc1fc febfc266 febfc306 febfc30a
+                                            febfc31a febfc326 febfc332 febfc360 febfc368
+                                            febfc3ae febfc4d8 febfc4dc febfc502 febfc50a
+                                            febfc52e febfc536 febfc5a2 febfc66e febfc672
+                                            febfc694 febfc856 febfc9ea febfca24 febfd4c6
+                                            febfd4ca febfd4f0 febfd5ee febfd700 febfd776
+                                            febfd7a6 febfd7ea febfd8a0 febfd974 febfda36
+                                            febfdae4
+_pflashParam        flashdrv.o              febfddb8 febfded8 febfdfca febfdfe0
+                                            febfdfea febfe000 febfe08e
+_rodata_END        
+_rodata_LIMIT      
+_rodata_START      
+_rosdata_END       
+_rosdata_LIMIT     
+_rosdata_START     
+_rozdata_END       
+_rozdata_LIMIT     
+_rozdata_START     
+_sbss_END          
+_sbss_LIMIT        
+_sbss_START        
+_sdabase_END       
+_sdabase_LIMIT     
+_sdabase_START     
+_sdata2_END        
+_sdata2_LIMIT      
+_sdata2_START      
+_sdata_END         
+_sdata_LIMIT       
+_sdata_START       
+_secinfo_END       
+_secinfo_LIMIT     
+_secinfo_START     
+_stack_END         
+_stack_LIMIT       
+_stack_START       
+_tdata_END         
+_tdata_LIMIT       
+_tdata_START       
+_text_END          
+_text_LIMIT        
+_text_START        
+_zbss_END          
+_zbss_LIMIT        
+_zbss_START        
+_zdata_END         
+_zdata_LIMIT       
+_zdata_START       
+brsStartupEntry    

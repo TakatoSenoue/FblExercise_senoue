@@ -1,0 +1,218 @@
+
+/** @page MakeSupport4 FAQ
+
+Linker error: "Argument list too long"
+======================================
+
+Question
+--------
+
+When I build my project, I get the linker error "Argument list too long".
+How can I solve this issue?
+
+Answer
+------
+
+The root cause is a Windows limitation regarding the maximum length of a cmd.exe command line, which is around 8192.
+For more details, see [this blog post](https://devblogs.microsoft.com/oldnewthing/20031210-00/?p=41553).
+
+As a workaround most compilers/linkers support passing the arguments or object file list via a response file. MakeSupport4 supports the usage of response files as follows:
+
+- Set `USE_RESPONSE_FILE_FOR_LINKAGE` to 1 in Makefile
+- Set `LDFLAGS_RESPONSE_FILE` in Makefile.static to a command line flag which is supported by the used compiler E.g. for gcc-based compiler this is often "@"
+- Set `RESPONSE_FILE_MULTILINE` to 1 in Makefile.static if cross-compiler supports multi-line response files (such as TI ARM LLVM compiler)
+
+\attention
+If you change the executable for the linker in Makefile (see variable LD), the response file flag defined in Makefile.static may no longer fit.
+
+If the used linker does not support the usage of response files, you can use the MakeSupport4 feature `LINK_LIBRARIES`. In Makefile.project.part.defines add the following line:
+
+\verbatim
+LINK_LIBRARIES=1
+\endverbatim
+
+\attention
+This currently only works in MICROSAR4 deliveries! `LINK_LIBRARIES` is not supported for FBL and CANbedded.
+
+
+Can MakeSupport4 be used on Linux?
+==================================
+
+Question
+--------
+
+The customer wants to build with our MakeSupport4 on Linux. I think it should be possible, because MakeSupport is based on Linux. Could you check regarding that?
+
+Answer
+------
+
+No, MakeSupport4 cannot be used on Linux. MakeSupport4 is based on Cygwin, which allows you to run Linux tools on Windows.
+MakeSupport4 also uses Cygwin-specific tools like cygpath.exe. Therefore, it would require some effort to remove this dependency on Cygwin.
+
+
+How can I configure custom output folders in MakeSupport4?
+==========================================================
+
+Question
+--------
+
+I would like to place the output folders outside of the Appl folder, but I am having trouble with it. I am getting the error:
+
+\verbatim
+make: *** No rule to make target '.....myproject/build/obj....Can.o', needed by 'StartApplication.elf'. Stop.
+\endverbatim
+
+How do I configure the folders correctly?
+
+Answer
+------
+
+There are two possibilities:
+
+If the output folder is inside the project root folder the following configuration works:
+
+\verbatim
+OUTPUT_ROOT = ../../../external/output
+OBJ_PATH = $(OUTPUT_ROOT)/obj
+ERR_PATH = $(OUTPUT_ROOT)/err
+LST_PATH = $(OUTPUT_ROOT)/lst
+LOG_PATH = $(OUTPUT_ROOT)/log
+LIB_PATH = $(OUTPUT_ROOT)/lib
+\endverbatim
+
+If the output folder shall be located outside of the project, the paths need to be absolute, e.g.
+
+\verbatim
+OUTPUT_ROOT = D:/myproject/output
+OBJ_PATH = $(OUTPUT_ROOT)/obj
+ERR_PATH = $(OUTPUT_ROOT)/err
+LST_PATH = $(OUTPUT_ROOT)/lst
+LOG_PATH = $(OUTPUT_ROOT)/log
+LIB_PATH = $(OUTPUT_ROOT)/lib
+\endverbatim
+
+
+Usage of MakeSupport4 without batch files m.bat, j.bat and b.bat
+================================================================
+
+Question
+--------
+
+I get the following error when executing make:
+
+\verbatim
+bash.exe: warning: could not find /tmp, please create!
+sh: realpath: command not found
+sh: uname: command not found
+sh: tr: command not found
+make: sh: Command not found.
+\endverbatim
+
+Answer
+------
+
+The Windows batch file m.bat is necessary to execute the build process because it does not just execute make but also sets different variables like `MAKESUPPORT_DIR` and the PATH and creates a `/tmp` folder needed by the cygwin environment. If you do not want to use the batch files, you can open a cmd console and execute the following commands:
+
+* Set `MAKESUPPORT_DIR` to the MakeSupport4 folder you want to use (relative to the used Appl folder)
+
+\verbatim
+set MAKESUPPORT_DIR=..\..\MakeSupport
+\endverbatim
+
+* Add `MakeSupport/cygwin_root/cmd` to the `PATH` variable
+
+\verbatim
+set PATH=%cd%\..\..\MakeSupport\cygwin_root\cmd;%PATH%
+\endverbatim
+
+* Create directory `/tmp` for Cygwin in `MakeSupport/cygwin_root/tmp`
+
+\verbatim
+mkdir %cd%\..\..\MakeSupport\cygwin_root\tmp 2> NUL
+\endverbatim
+
+\note
+You do this on your own risk. Calling the make executable directly is not supported from MakeSupport maintainer side.
+\endnote
+
+Source files are not built by MakeSupport
+=========================================
+
+Question
+--------
+
+Module sources, MCAL sources or application sources are not compiled; variables like `MODULE_SOURCE_LST_U` do not contain the sources that have been configured in Makefile.project.part.defines.
+The following error message occurs during build:
+
+\verbatim
+make[1]: *** No rule to make target '.../my_file.o', needed by 'MyProject.elf'.  Stop.
+\endverbatim
+
+How do I find the error in the setup? The structure of my project differs from the default delivery structure.
+
+Answer
+------
+
+When you execute the command
+
+\verbatim
+m.bat info
+\endverbatim
+
+or for verbose output
+
+\verbatim
+m.bat info V=1
+\endverbatim
+
+you can see if the build environment is configured correctly:
+
+* Are project paths correct?
+* Are all necessary source files listed?
+* Are the corresponding object paths correct?
+
+In your case you see that the generated object paths are not correct. They should have the same structure as your project (but always starting with `obj/`).
+The reason it that the project root path is not configured correctly. This path should contain all involved sub-folders. 
+See console output of `m.bat info`:
+
+\verbatim
+ *  ROOT                  : ../../../Supply/CoreMsr
+ *  PRJROOT               : ../../../Supply
+ *  ROOT_FROM_PRJROOT     : CoreMsr
+ *  APPL_DIR_FROM_PRJROOT : ../Integration/Appl/Make
+\endverbatim
+
+You can do this in the Makefile.project.part.defines:
+
+\verbatim
+# $(PRJROOT) specifies the path to the root directory of your project
+# Set the variable if source or header files outside of $(ROOT)/.. are used
+#------------------------------------------------------------------------------
+PRJROOT = ..\..\..
+\endverbatim
+
+The correct project paths look like this:
+
+\verbatim
+ *  ROOT                  : ../../../Supply/CoreMsr
+ *  PRJROOT               : ../../..
+ *  ROOT_FROM_PRJROOT     : Supply/CoreMsr
+ *  APPL_DIR_FROM_PRJROOT : Integration/Appl/Make
+\endverbatim
+
+Header files not found / Space in path
+======================================
+
+Question
+--------
+
+I encountered an issue where the MakeSupport could not locate some header files in the compiler path. Adding quotation marks did not resolve the problem.
+I can fix the issue by creating a symbolic link, but this is not my preferred solution. is there an alternative way to resolve this issue?
+
+Answer
+------
+
+Neither MakeSupport3 nor MakeSupport4 support spaces in paths due to known issues with GNU make and the compilers themselves.
+Therefore, we recommend installing tools in paths that do not contain any spaces.
+
+*/

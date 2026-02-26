@@ -1,0 +1,22 @@
+#
+#   TASKING VX-toolset for TriCore compiler
+#
+#  for detailed documentation please have a look at
+#  Makefile_ECO.config_template
+#
+#  Please test options
+#
+ECO_COMPILER_DEFINE_PREPROCESSING_SYMBOL_FLAG    = -D
+ECO_COMPILER_PREPROCESS_FILE_FLAGS               = -E
+ECO_COMPILER_PREPROCESS_FILE_OUTPUT_FILE_FLAG    = --output=
+ECO_CPP_SUPPORTS_DEPEND                          = 0
+ECO_COMPILER_PREPROCESS_STDOUT                   = 1
+
+eco_clean::
+	@$(ECHO) "CLEAN      ECO - temporary compiler files"
+	$(Q)$(RM) $(ECO_GEN_OBJS:.o=.lst) $(ECO_SYS_OBJS:.o=.lst)
+	$(Q)$(RM) $(ECO_GEN_OBJS:.o=.src) $(ECO_SYS_OBJS:.o=.src)
+  
+eco_clean::
+	@$(ECHO) "CLEAN      ECO - build files"
+	$(Q)$(RM) $(ECO_TARGET:.$(BINARY_SUFFIX)=.map) $(ECO_TARGET:.$(BINARY_SUFFIX)=.mdf) $(ECO_TARGET:.$(BINARY_SUFFIX)=.err)
