@@ -1,0 +1,23 @@
+################################################################################
+# AUTOSAR Renesas R4.0.3 & R4.2.2 SPI Driver Generation Tool for X1x
+# Run time      = [04 Mar 2026 - 11:46:35]
+#    Command line arguments = C:\Users\tsenoue\AppData\Local\Temp\DaVinci\Cfg-tsenoue2814423\Generation\Cfg_Gen-1772584554126-0\GenStep9014254302044405680\ECUC_Internal_Xslt2085798675612562184.arxml
+#	D:\usr\usage\Delivery\CBD19x\CBD1900263\D01\external\ThirdParty\Mcal_Rh850F1x\Supply\ASR_RH850_F1KM_42.13.00\X1X\F1x\modules\spi\generator\R422_SPI_F1x_BSWMDT.arxml
+#
+# Copyright(c) 2019-2021 Renesas Electronics Corporation. All rights reserved.
+################################################################################
+
+INF000001: Tool Version: MCALConfGen.exe version: 1.0.4, SpiX1x.dll 
+           version: 1.0.5
+INF000002: Command line arguments: MCALConfGen.exe -m Spi -O  
+           D:\usr\usage\Delivery\CBD19x\CBD1900263\D01\internal\Demo\2_DemoFbl\Appl\GenData  
+           C:\Users\tsenoue\AppData\Local\Temp\DaVinci\Cfg-tsenoue2814423\Generation\Cfg_Gen-1772584554126-0\GenStep9014254302044405680\ECUC_Internal_Xslt2085798675612562184.arxml  
+           D:\usr\usage\Delivery\CBD19x\CBD1900263\D01\external\ThirdParty\Mcal_Rh850F1x\Supply\ASR_RH850_F1KM_42.13.00\X1X\F1x\modules\spi\generator\R422_SPI_F1x_BSWMDT.arxml 
+           D:\usr\usage\Delivery\CBD19x\CBD1900263\D01\external\ThirdParty\Mcal_Rh850F1x\Supply\ASR_RH850_F1KM_42.13.00\X1X\F1x\common_family\generator\Sample_Application_F1x.trxml
+ERR083003: SPI Driver Component is not present in the input file(s).
+INF000004: Opened file  
+           <..\..\..\..\..\..\..\..\..\..\internal\Demo\2_DemoFbl\Appl\GenData\Spi.log> 
+           at [04 Mar 2026 - 11:46:35].
+INF000005: <1> Error(s) and <0> Warning(s) detected.
+INF000009: Execution terminated due to error in the input file.
+

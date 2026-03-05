@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_00048.xsd">
+  <AR-PACKAGES>
+    <AR-PACKAGE UUID="ff55d029-386d-43a2-b3c2-dfef4c7a5e36">
+      <SHORT-NAME>MICROSAR</SHORT-NAME>
+      <AR-PACKAGES>
+        <AR-PACKAGE UUID="c434488d-85eb-4849-976b-c7bb5594d5c0">
+          <SHORT-NAME>Crypto_30_LibCv_ib_bswmd</SHORT-NAME>
+          <AR-PACKAGES>
+            <AR-PACKAGE UUID="06c70155-e415-492a-ba18-86389f7bd927">
+              <SHORT-NAME>BswModuleDescriptions</SHORT-NAME>
+              <ELEMENTS>
+                <BSW-MODULE-DESCRIPTION UUID="518e2bb9-8677-4590-a249-59554b7a8398">
+                  <SHORT-NAME>Crypto</SHORT-NAME>
+                  <PROVIDED-ENTRYS>
+                    <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                      <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/MICROSAR/Crypto_30_LibCv_ib_bswmd/BswModuleDescriptions/Crypto_30_LibCv_MainFunction</BSW-MODULE-ENTRY-REF>
+                    </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                  </PROVIDED-ENTRYS>
+                  <INTERNAL-BEHAVIORS>
+                    <BSW-INTERNAL-BEHAVIOR UUID="d9f72184-af30-43fc-949d-f6c0e7a83bd1">
+                      <SHORT-NAME>Crypto_30_LibCv</SHORT-NAME>
+                      <EXCLUSIVE-AREAS>
+                        <EXCLUSIVE-AREA UUID="168745d2-0a50-4744-83fa-416d47eee580">
+                          <SHORT-NAME>CRYPTO_30_LIBCV_EXCLUSIVE_AREA_0</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL">This critical section protects workspace locking resources, the job queue and the NvBlock state. Furthermore, it ensures the consistency of the global RAM variables for the last job and default random source data.Therefore the critical section enclosed with CRYPTO_30_LIBCV_EXCLUSIVE_AREA_0 should never be interrupted by any other API. For more details, see DocTechRef.</L-2>
+                          </DESC>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="bcfc8df7-e98f-45d4-b4c6-39dcfcf876ec">
+                          <SHORT-NAME>CRYPTO_30_LIBCV_EXCLUSIVE_AREA_1</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL">This critical section protects key locking resources and ensures the consistency of the key data. If the CRYPTO is accessed by multiple partitions, either key locking has to be disabled (then this critical section implementation can be configured as None) or this critical section implementation has to be configured as Spinlock.Therefore the critical section enclosed with CRYPTO_30_LIBCV_EXCLUSIVE_AREA_1 should never be interrupted by any other API. For more details, see DocTechRef.</L-2>
+                          </DESC>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="4d139ef5-8dbd-48e9-8f6e-c20572376967">
+                          <SHORT-NAME>CRYPTO_30_LIBCV_EXCLUSIVE_AREA_2</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL">This critical section protects long-term workspace locking resources. If the CRYPTO is accessed by multiple partitions, either the services which use a long-term workspace have only to be used on one partition or this critical section implementation has to be configured as Spinlock. Therefore the critical section enclosed with CRYPTO_30_LIBCV_EXCLUSIVE_AREA_2 should never be interrupted by any other API. For more details, see DocTechRef.</L-2>
+                          </DESC>
+                        </EXCLUSIVE-AREA>
+                      </EXCLUSIVE-AREAS>
+                      <ENTITYS>
+                        <BSW-SCHEDULABLE-ENTITY UUID="4eeff687-7095-4655-8b42-7b30c2e5ed4c">
+                          <SHORT-NAME>Crypto_30_LibCv_MainFunction</SHORT-NAME>
+                          <CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                            <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/MICROSAR/Crypto_30_LibCv_ib_bswmd/BswModuleDescriptions/Crypto/Crypto_30_LibCv/CRYPTO_30_LIBCV_EXCLUSIVE_AREA_0</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                            <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/MICROSAR/Crypto_30_LibCv_ib_bswmd/BswModuleDescriptions/Crypto/Crypto_30_LibCv/CRYPTO_30_LIBCV_EXCLUSIVE_AREA_1</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                            <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/MICROSAR/Crypto_30_LibCv_ib_bswmd/BswModuleDescriptions/Crypto/Crypto_30_LibCv/CRYPTO_30_LIBCV_EXCLUSIVE_AREA_2</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                          </CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                          <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/MICROSAR/Crypto_30_LibCv_ib_bswmd/BswModuleDescriptions/Crypto_30_LibCv_MainFunction</IMPLEMENTED-ENTRY-REF>
+                        </BSW-SCHEDULABLE-ENTITY>
+                      </ENTITYS>
+                      <EVENTS>
+                        <BSW-TIMING-EVENT UUID="f3ddba2b-9653-4539-a5f4-5cb6b15a67e7">
+                          <SHORT-NAME>Crypto_30_LibCv_MainFunctionTimingEvent0</SHORT-NAME>
+                          <STARTS-ON-EVENT-REF DEST="BSW-SCHEDULABLE-ENTITY">/MICROSAR/Crypto_30_LibCv_ib_bswmd/BswModuleDescriptions/Crypto/Crypto_30_LibCv/Crypto_30_LibCv_MainFunction</STARTS-ON-EVENT-REF>
+                          <PERIOD>0.01</PERIOD>
+                        </BSW-TIMING-EVENT>
+                      </EVENTS>
+                    </BSW-INTERNAL-BEHAVIOR>
+                  </INTERNAL-BEHAVIORS>
+                </BSW-MODULE-DESCRIPTION>
+                <BSW-MODULE-ENTRY UUID="a285ec1d-de06-435b-b3d9-7c57a1805b9c">
+                  <SHORT-NAME>Crypto_30_LibCv_MainFunction</SHORT-NAME>
+                  <CALL-TYPE>SCHEDULED</CALL-TYPE>
+                  <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+                </BSW-MODULE-ENTRY>
+              </ELEMENTS>
+            </AR-PACKAGE>
+          </AR-PACKAGES>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>
