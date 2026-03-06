@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_00048.xsd">
+  <AR-PACKAGES>
+    <AR-PACKAGE UUID="ff55d029-386d-43a2-b3c2-dfef4c7a5e36">
+      <SHORT-NAME>MICROSAR</SHORT-NAME>
+      <AR-PACKAGES>
+        <AR-PACKAGE UUID="0658a3c1-620a-42f1-a05f-5621719320d9">
+          <SHORT-NAME>Det_ib_bswmd</SHORT-NAME>
+          <AR-PACKAGES>
+            <AR-PACKAGE UUID="ae5c25f3-1edb-4a15-ac0e-3ce150d784cc">
+              <SHORT-NAME>BswModuleDescriptions</SHORT-NAME>
+              <ELEMENTS>
+                <BSW-MODULE-DESCRIPTION UUID="b81845cd-b52b-4141-8fed-5ce1e8c2e178">
+                  <SHORT-NAME>Det</SHORT-NAME>
+                  <PROVIDED-ENTRYS>
+                    <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                      <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/MICROSAR/Det_ib_bswmd/BswModuleDescriptions/Det_Virtual</BSW-MODULE-ENTRY-REF>
+                    </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                  </PROVIDED-ENTRYS>
+                  <INTERNAL-BEHAVIORS>
+                    <BSW-INTERNAL-BEHAVIOR UUID="f4cb6dfb-13f9-4baa-84cd-7b93d66b713d">
+                      <SHORT-NAME>DetBehavior</SHORT-NAME>
+                      <EXCLUSIVE-AREAS>
+                        <EXCLUSIVE-AREA UUID="0068e0ae-81bb-4047-a49f-648bae7cd4d7">
+                          <SHORT-NAME>DET_EXCLUSIVE_AREA_0</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL">Critical section to guarantee atomic handling of log buffer, requires global interrupt disabling.</L-2>
+                          </DESC>
+                        </EXCLUSIVE-AREA>
+                      </EXCLUSIVE-AREAS>
+                      <ENTITYS>
+                        <BSW-CALLED-ENTITY UUID="085f0efc-3d9d-4211-99fd-14bdc7f9bd0c">
+                          <SHORT-NAME>Det_Virtual</SHORT-NAME>
+                          <CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                            <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/MICROSAR/Det_ib_bswmd/BswModuleDescriptions/Det/DetBehavior/DET_EXCLUSIVE_AREA_0</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                          </CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                          <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/MICROSAR/Det_ib_bswmd/BswModuleDescriptions/Det_Virtual</IMPLEMENTED-ENTRY-REF>
+                        </BSW-CALLED-ENTITY>
+                      </ENTITYS>
+                    </BSW-INTERNAL-BEHAVIOR>
+                  </INTERNAL-BEHAVIORS>
+                </BSW-MODULE-DESCRIPTION>
+                <BSW-MODULE-ENTRY UUID="78baef8e-a2ce-43e5-8941-0b6f9915ae95">
+                  <SHORT-NAME>Det_Virtual</SHORT-NAME>
+                  <CALL-TYPE>REGULAR</CALL-TYPE>
+                  <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+                </BSW-MODULE-ENTRY>
+              </ELEMENTS>
+            </AR-PACKAGE>
+          </AR-PACKAGES>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

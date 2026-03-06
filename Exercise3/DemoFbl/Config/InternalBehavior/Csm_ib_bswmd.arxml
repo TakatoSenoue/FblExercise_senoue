@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_4-3-0.xsd">
+  <AR-PACKAGES>
+    <AR-PACKAGE UUID="ff55d029-386d-43a2-b3c2-dfef4c7a5e36">
+      <SHORT-NAME>MICROSAR</SHORT-NAME>
+      <AR-PACKAGES>
+        <AR-PACKAGE UUID="702abb58-f391-4884-bd4a-47313447806b">
+          <SHORT-NAME>Csm_ib_bswmd</SHORT-NAME>
+          <AR-PACKAGES>
+            <AR-PACKAGE UUID="f1335721-76fd-44c7-8c77-b71e7d213e82">
+              <SHORT-NAME>BswModuleDescriptions</SHORT-NAME>
+              <ELEMENTS>
+                <BSW-MODULE-DESCRIPTION UUID="12e4be1c-5a0f-4b92-b370-16528823fd9e">
+                  <SHORT-NAME>Csm</SHORT-NAME>
+                  <PROVIDED-ENTRYS>
+                    <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                      <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/MICROSAR/Csm_ib_bswmd/BswModuleDescriptions/Csm_Virtual</BSW-MODULE-ENTRY-REF>
+                    </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                  </PROVIDED-ENTRYS>
+                  <INTERNAL-BEHAVIORS>
+                    <BSW-INTERNAL-BEHAVIOR UUID="a55cb6e3-e002-445d-876e-3d5a60ff9e97">
+                      <SHORT-NAME>Behavior</SHORT-NAME>
+                      <EXCLUSIVE-AREAS>
+                        <EXCLUSIVE-AREA UUID="2250111a-4564-4b03-8b60-b351c176ddad">
+                          <SHORT-NAME>CSM_EXCLUSIVE_AREA_0</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL">This critical section protects queuing resources that can be accessed from various contexts. Therefore the critical section enclosed with CSM_EXCLUSIVE_AREA_0 should never be interrupted by any Csm API which accesses queuing resources. For more details, see DocTechRef.</L-2>
+                          </DESC>
+                        </EXCLUSIVE-AREA>
+                      </EXCLUSIVE-AREAS>
+                      <ENTITYS>
+                        <BSW-CALLED-ENTITY UUID="d45454dc-2c11-4a53-abec-646f2d17a4c6">
+                          <SHORT-NAME>Csm_Virtual</SHORT-NAME>
+                          <CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                            <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/MICROSAR/Csm_ib_bswmd/BswModuleDescriptions/Csm/Behavior/CSM_EXCLUSIVE_AREA_0</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                          </CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                          <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/MICROSAR/Csm_ib_bswmd/BswModuleDescriptions/Csm_Virtual</IMPLEMENTED-ENTRY-REF>
+                        </BSW-CALLED-ENTITY>
+                      </ENTITYS>
+                    </BSW-INTERNAL-BEHAVIOR>
+                  </INTERNAL-BEHAVIORS>
+                </BSW-MODULE-DESCRIPTION>
+                <BSW-MODULE-ENTRY UUID="60dec10a-e29e-429d-b51a-51fbfd1361d7">
+                  <SHORT-NAME>Csm_Virtual</SHORT-NAME>
+                  <CALL-TYPE>REGULAR</CALL-TYPE>
+                  <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+                </BSW-MODULE-ENTRY>
+              </ELEMENTS>
+            </AR-PACKAGE>
+          </AR-PACKAGES>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

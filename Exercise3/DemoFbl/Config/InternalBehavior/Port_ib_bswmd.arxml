@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_00049.xsd">
+  <AR-PACKAGES>
+    <AR-PACKAGE UUID="9d33884e-a6c5-4067-8d03-ec426da67fb3">
+      <SHORT-NAME>Renesas</SHORT-NAME>
+      <AR-PACKAGES>
+        <AR-PACKAGE UUID="1c9a16bb-eb98-4e70-9b3d-94e68c2bb781">
+          <SHORT-NAME>Port_ib_bswmd</SHORT-NAME>
+          <AR-PACKAGES>
+            <AR-PACKAGE UUID="55a2ace1-8598-415a-a9ee-c152d781b7f8">
+              <SHORT-NAME>BswModuleDescriptions</SHORT-NAME>
+              <ELEMENTS>
+                <BSW-MODULE-DESCRIPTION UUID="d2567e6c-bc74-4320-9d7e-3bc6419dad49">
+                  <SHORT-NAME>Port</SHORT-NAME>
+                  <PROVIDED-ENTRYS>
+                    <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                      <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Renesas/Port_ib_bswmd/BswModuleDescriptions/Port_Virtual</BSW-MODULE-ENTRY-REF>
+                    </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                  </PROVIDED-ENTRYS>
+                  <INTERNAL-BEHAVIORS>
+                    <BSW-INTERNAL-BEHAVIOR UUID="40e7c3d1-5f54-494d-adaa-dfec70934682">
+                      <SHORT-NAME>PortBehavior</SHORT-NAME>
+                      <EXCLUSIVE-AREAS>
+                        <EXCLUSIVE-AREA UUID="b7d5f546-1bd6-49b7-89dc-8dda4d69e094">
+                          <SHORT-NAME>PORT_INIT_PROTECTION</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="ddd2bdf6-8c41-484e-b0d3-46c22adddc5e">
+                          <SHORT-NAME>PORT_SET_PIN_DIR_PROTECTION</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="6419e863-6c85-4a95-8439-7fcce7273888">
+                          <SHORT-NAME>PORT_SET_PIN_MODE_PROTECTION</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="f6f91573-4242-4a37-9e61-66f3087ebcd2">
+                          <SHORT-NAME>PORT_SET_TO_DIO_ALT_PROTECTION</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="1d4a5180-fe74-49d2-9456-5467061a2583">
+                          <SHORT-NAME>PORT_INIT_CONFIG_PROTECTION</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="ad5ce810-6853-4f0e-b546-c37d38f2bc85">
+                          <SHORT-NAME>PORT_REFRESH_PORT_INTERNAL_PROTECTION</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="8ba16e1f-7950-4cb3-8fc1-db3b82cd1fbc">
+                          <SHORT-NAME>PORT_FILTER_CONFIG_PROTECTION</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="5d3084aa-fa2b-4f10-b717-327fe9309bac">
+                          <SHORT-NAME>PORT_SET_PIN_DEFAULT_MODE_PROTECTION</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="df7b5330-9060-48a9-a7be-1f2ac54d659c">
+                          <SHORT-NAME>PORT_SET_PIN_DEFAULT_DIR_PROTECTION</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="6d9ab425-877b-4a56-8694-959ee8fdd210">
+                          <SHORT-NAME>PORT_CHECK_HW_CONSISTENCY_PROTECTION</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="4381b825-0668-45d9-aa00-c08651d155cc">
+                          <SHORT-NAME>PORT_REGISTER_PROTECTION</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                      </EXCLUSIVE-AREAS>
+                      <ENTITYS>
+                        <BSW-CALLED-ENTITY UUID="1e7fb12e-11fc-4309-9254-c98ab58d61d3">
+                          <SHORT-NAME>Port_Virtual</SHORT-NAME>
+                          <CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                            <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/Renesas/Port_ib_bswmd/BswModuleDescriptions/Port/PortBehavior/PORT_INIT_PROTECTION</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                            <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/Renesas/Port_ib_bswmd/BswModuleDescriptions/Port/PortBehavior/PORT_SET_PIN_DIR_PROTECTION</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                            <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/Renesas/Port_ib_bswmd/BswModuleDescriptions/Port/PortBehavior/PORT_SET_PIN_MODE_PROTECTION</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                            <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/Renesas/Port_ib_bswmd/BswModuleDescriptions/Port/PortBehavior/PORT_SET_TO_DIO_ALT_PROTECTION</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                            <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/Renesas/Port_ib_bswmd/BswModuleDescriptions/Port/PortBehavior/PORT_INIT_CONFIG_PROTECTION</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                            <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/Renesas/Port_ib_bswmd/BswModuleDescriptions/Port/PortBehavior/PORT_REFRESH_PORT_INTERNAL_PROTECTION</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                            <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/Renesas/Port_ib_bswmd/BswModuleDescriptions/Port/PortBehavior/PORT_FILTER_CONFIG_PROTECTION</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                            <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/Renesas/Port_ib_bswmd/BswModuleDescriptions/Port/PortBehavior/PORT_SET_PIN_DEFAULT_MODE_PROTECTION</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                            <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/Renesas/Port_ib_bswmd/BswModuleDescriptions/Port/PortBehavior/PORT_SET_PIN_DEFAULT_DIR_PROTECTION</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                            <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/Renesas/Port_ib_bswmd/BswModuleDescriptions/Port/PortBehavior/PORT_CHECK_HW_CONSISTENCY_PROTECTION</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                            <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/Renesas/Port_ib_bswmd/BswModuleDescriptions/Port/PortBehavior/PORT_REGISTER_PROTECTION</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                          </CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                          <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Renesas/Port_ib_bswmd/BswModuleDescriptions/Port_Virtual</IMPLEMENTED-ENTRY-REF>
+                        </BSW-CALLED-ENTITY>
+                      </ENTITYS>
+                    </BSW-INTERNAL-BEHAVIOR>
+                  </INTERNAL-BEHAVIORS>
+                </BSW-MODULE-DESCRIPTION>
+                <BSW-MODULE-ENTRY UUID="ade2c688-7cc8-41f6-8556-f67b44ddba9c">
+                  <SHORT-NAME>Port_Virtual</SHORT-NAME>
+                  <CALL-TYPE>REGULAR</CALL-TYPE>
+                  <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+                </BSW-MODULE-ENTRY>
+              </ELEMENTS>
+            </AR-PACKAGE>
+          </AR-PACKAGES>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>
